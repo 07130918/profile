@@ -4,6 +4,7 @@ import { aws_image, design, links } from '@/lib/consts';
 import { Box, Flex, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import { GrMapLocation } from 'react-icons/gr';
 
 const Home = () => {
     return (
@@ -57,6 +58,10 @@ const Home = () => {
                                 Kota Sato
                             </Text>
                         </Box>
+                        <HStack>
+                            <GrMapLocation />
+                            <Text>Tokyo/Japan 🇯🇵</Text>
+                        </HStack>
                         <HStack>
                             <SiGmail color={design.color.gmail} />
                             <Link href={links.gmail} isExternal>

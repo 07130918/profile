@@ -1,5 +1,6 @@
 import { Box, Button, TabList, TabPanel, TabPanels, TabProps, Tabs, useMultiStyleConfig, useTab } from '@chakra-ui/react';
 import ServiceTabPanel from './tab/ServiceTabPanel';
+import ProfileTabPanel from './tab/ProfileTabPanel';
 
 const CustomTabs = () => {
     const CustomTab = (props: TabProps) => {
@@ -26,11 +27,7 @@ const CustomTabs = () => {
                 <CustomTab>趣味</CustomTab>
             </TabList>
             <TabPanels>
-                <TabPanel>
-                    <Box p={4}>
-                        <p>プロフィールのコンテンツ</p>
-                    </Box>
-                </TabPanel>
+                <ProfileTabPanel />
                 <ServiceTabPanel />
                 <TabPanel>
                     <Box p={4}>
