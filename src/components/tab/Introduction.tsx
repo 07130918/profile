@@ -30,7 +30,7 @@ const Introduction = () => {
                     私は取り組む物事を通し常に成長し、新しい挑戦/目標に向かって前進することを大切にしています。
                 </Text>
                 <Text fontWeight='bold'>
-                    私の探究心と決断力を活かし、素晴らしいプロジェクトや経験を追求していきたいと考えています!!!
+                    自分の好奇心、探究心、決断力を活かし、素晴らしいプロジェクトや経験を追求していきます!!!
                 </Text>
             </Box>
             <Box boxShadow={design.boxShadow} py={4} px={10} borderRadius='lg' mt={6}>

@@ -13,7 +13,7 @@ import Introduction from './tab/Introduction';
 import ServiceTabPanel from './tab/ServiceTabPanel';
 import Skills from './tab/Skills';
 
-const CustomTabs = () => {
+const TabCard = () => {
     const CustomTab = (props: TabProps) => {
         const tabProps = useTab(props);
         const isSelected = !!tabProps['aria-selected'];
@@ -21,14 +21,16 @@ const CustomTabs = () => {
 
         return (
             <Button __css={{ ...styles.tab, fontSize: 'lg', px: 6, py: 3 }} {...tabProps}>
-                <Box as='span'>{isSelected ? '😎' : '😴'}</Box>
+                <Box as='span' mr={2}>
+                    {isSelected ? '😎' : '😴'}
+                </Box>
                 {tabProps.children}
             </Button>
         );
     };
 
     return (
-        <Tabs>
+        <Tabs isLazy>
             <TabList>
                 <CustomTab>Profile</CustomTab>
                 <CustomTab>Deployment</CustomTab>
@@ -61,4 +63,4 @@ const CustomTabs = () => {
     );
 };
 
-export default CustomTabs;
+export default TabCard;
