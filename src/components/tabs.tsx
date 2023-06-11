@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Introduction from './tab/Introduction';
 import ServiceTabPanel from './tab/ServiceTabPanel';
+import Skills from './tab/Skills';
 
 const CustomTabs = () => {
     const CustomTab = (props: TabProps) => {
@@ -33,6 +34,7 @@ const CustomTabs = () => {
                 <CustomTab>サービス(制作物)</CustomTab>
                 <CustomTab>経歴/スキル</CustomTab>
                 <CustomTab>趣味</CustomTab>
+                <CustomTab>サポート</CustomTab>
             </TabList>
             <TabPanels>
                 <TabPanel>
@@ -42,13 +44,16 @@ const CustomTabs = () => {
                     <ServiceTabPanel />
                 </TabPanel>
                 <TabPanel>
-                    <Box p={4}>
-                        <p>経歴/スキルのコンテンツ</p>
-                    </Box>
+                    <Skills />
                 </TabPanel>
                 <TabPanel>
                     <Box p={4}>
                         <p>趣味のコンテンツ</p>
+                    </Box>
+                </TabPanel>
+                <TabPanel>
+                    <Box p={4}>
+                        <p>Coming soon...</p>
                     </Box>
                 </TabPanel>
             </TabPanels>

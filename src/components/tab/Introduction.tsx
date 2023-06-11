@@ -1,6 +1,5 @@
 import { design, socialLink } from '@/lib/consts';
 import { Box, HStack, Heading, Link, Text } from '@chakra-ui/react';
-import { SiGmail } from 'react-icons/si';
 import { BiLink } from 'react-icons/bi';
 
 const Introduction = () => {
