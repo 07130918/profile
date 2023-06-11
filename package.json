@@ -6,7 +6,23 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "eslint src --ext .js,jsx,.ts,.tsx --fix",
+        "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "./**/*.{js,jsx,ts,tsx}": [
+            "npm run lint",
+            "npm run format"
+        ]
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "printWidth": 100
     },
     "dependencies": {
         "@chakra-ui/next-js": "^2.1.4",
@@ -26,6 +42,9 @@
         "@types/react-icons": "^3.0.0",
         "eslint": "8.42.0",
         "eslint-config-next": "13.4.4",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.2",
+        "prettier": "^2.8.8",
         "typescript": "5.1.3"
     }
 }

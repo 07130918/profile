@@ -9,7 +9,7 @@ export const design = {
     },
 };
 
-export const links = {
+export const socialLink = {
     gmail: 'mailto:tokyosato1@gmail.com',
     twitter: 'https://twitter.com/tech_guy_kay',
     github: 'https://github.com/07130918',
@@ -18,3 +18,21 @@ export const links = {
 };
 
 export const aws_image = 'AWS-Certified-Solutions-Architect-Associate_badge';
+
+export type TechStackItem = {
+    name: string;
+    type: 'icon' | 'image';
+    link: string;
+    icon?: JSX.Element;
+    image?: string;
+    alt?: string;
+};
+
+export type Project = {
+    name: string;
+    link: string;
+    externalLinkText: string;
+    githubLink: string;
+    githubRepoName: string;
+    techStacks: TechStackItem[];
+};

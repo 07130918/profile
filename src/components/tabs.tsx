@@ -1,6 +1,16 @@
-import { Box, Button, TabList, TabPanel, TabPanels, TabProps, Tabs, useMultiStyleConfig, useTab } from '@chakra-ui/react';
+import {
+    Box,
+    Button,
+    TabList,
+    TabPanel,
+    TabPanels,
+    TabProps,
+    Tabs,
+    useMultiStyleConfig,
+    useTab,
+} from '@chakra-ui/react';
+import Introduction from './tab/Introduction';
 import ServiceTabPanel from './tab/ServiceTabPanel';
-import ProfileTabPanel from './tab/ProfileTabPanel';
 
 const CustomTabs = () => {
     const CustomTab = (props: TabProps) => {
@@ -10,12 +20,10 @@ const CustomTabs = () => {
 
         return (
             <Button __css={{ ...styles.tab, fontSize: 'lg', px: 6, py: 3 }} {...tabProps}>
-                <Box as='span'>
-                    {isSelected ? '😎' : '😴'}
-                </Box>
+                <Box as='span'>{isSelected ? '😎' : '😴'}</Box>
                 {tabProps.children}
             </Button>
-        )
+        );
     };
 
     return (
@@ -27,8 +35,12 @@ const CustomTabs = () => {
                 <CustomTab>趣味</CustomTab>
             </TabList>
             <TabPanels>
-                <ProfileTabPanel />
-                <ServiceTabPanel />
+                <TabPanel>
+                    <Introduction />
+                </TabPanel>
+                <TabPanel>
+                    <ServiceTabPanel />
+                </TabPanel>
                 <TabPanel>
                     <Box p={4}>
                         <p>経歴/スキルのコンテンツ</p>
