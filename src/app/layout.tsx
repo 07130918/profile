@@ -1,13 +1,17 @@
-import { Providers } from './providers';
+import { Providers } from '@/components/providers';
+import Head from 'next/head';
 
 export const metadata = {
-    title: "Kota's profile",
-    description: 'This is a portfolio site of Kota.',
+    title: 'Hi! This is Kota.',
+    description: 'This is a portfolio web page of Kota.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='en'>
+            <Head>
+                <link rel='icon' href='/favicon.ico' sizes='any' />
+            </Head>
             <body>
                 <Providers>{children}</Providers>
             </body>

@@ -3,7 +3,7 @@ const design = {
     color: {
         gmail: '#c71610',
         twitter: '#08a0e9',
-        github: '171515',
+        github: '#171515',
         linkedIn: '#0072b1',
         facebook: '#3b5998',
     },
