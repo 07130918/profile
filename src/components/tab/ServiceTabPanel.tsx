@@ -103,7 +103,11 @@ const projects: ProjectProps[] = [
 
 const ServiceTabPanel = () => {
     return (
-        <Grid templateColumns='repeat(2, 1fr)' gap={6} p={4}>
+        <Grid
+            templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']}
+            gap={6}
+            p={4}
+        >
             {projects.map((project, index) => (
                 <Box key={index} borderRadius='lg' boxShadow={design.boxShadow} p={4}>
                     <Link href={project.link} _hover={{ textDecoration: 'none' }} isExternal>

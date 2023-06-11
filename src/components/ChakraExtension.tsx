@@ -41,7 +41,6 @@ export const PageContainer = (props: FlexProps) => (
     <Flex
         direction={['column', 'column', 'row']}
         w='96%'
-        h='90%'
         bg='white'
         borderRadius='lg'
         shadow='lg'
@@ -51,5 +50,5 @@ export const PageContainer = (props: FlexProps) => (
 );
 
 export const Card = (props: BoxProps) => (
-    <Box boxShadow={design.boxShadow} borderRadius='lg' h='84vh' overflow='auto' {...props} />
+    <Box boxShadow={design.boxShadow} borderRadius='lg' h='90vh' overflow='auto' {...props} />
 );
