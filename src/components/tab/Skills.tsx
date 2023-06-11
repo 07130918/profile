@@ -1,3 +1,4 @@
+import { TabContainer } from '@/components/ChakraExtension';
 import { serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
 import type { TechStack } from '@/lib/types';
@@ -86,7 +87,7 @@ const skillSets = [
 
 const Skills = () => {
     return (
-        <Box boxShadow={design.boxShadow} borderRadius='lg' py={6} px={10} mt={6}>
+        <TabContainer>
             <Heading fontSize='2xl' bgGradient={design.graduation.theme} bgClip='text' mb={3}>
                 My Skills
             </Heading>
@@ -111,7 +112,7 @@ const Skills = () => {
             <Box textAlign='center' mt={6}>
                 <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />
             </Box>
-        </Box>
+        </TabContainer>
     );
 };
 

@@ -1,12 +1,13 @@
+import { TabContainer } from '@/components/ChakraExtension';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
-import { Box, HStack, Heading, Link, Text } from '@chakra-ui/react';
+import { HStack, Heading, Link, Text } from '@chakra-ui/react';
 import { BiLink } from 'react-icons/bi';
 
 const Introduction = () => {
     return (
         <>
-            <Box boxShadow={design.boxShadow} py={6} px={10} borderRadius='lg' mt={6}>
+            <TabContainer>
                 <Heading fontSize='xl' mb={3}>
                     こんにちは、佐藤宏太です!
                 </Heading>
@@ -32,8 +33,8 @@ const Introduction = () => {
                 <Text fontWeight='bold'>
                     自分の好奇心、探究心、決断力を活かし、素晴らしいプロジェクトや経験を追求していきます!!!
                 </Text>
-            </Box>
-            <Box boxShadow={design.boxShadow} py={4} px={10} borderRadius='lg' mt={6}>
+            </TabContainer>
+            <TabContainer mt={6}>
                 <Heading fontSize='xl' mb={3}>
                     お仕事依頼はこちら!
                 </Heading>
@@ -52,7 +53,7 @@ const Introduction = () => {
                         tokyosato1@gmail.com
                     </Link>
                 </HStack>
-            </Box>
+            </TabContainer>
         </>
     );
 };

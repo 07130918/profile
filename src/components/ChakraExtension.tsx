@@ -52,3 +52,7 @@ export const PageContainer = (props: FlexProps) => (
 export const Card = (props: BoxProps) => (
     <Box boxShadow={design.boxShadow} borderRadius='lg' h='90vh' overflow='auto' {...props} />
 );
+
+export const TabContainer = (props: BoxProps) => (
+    <Box boxShadow={design.boxShadow} borderRadius='lg' py={5} px={10} {...props} />
+);
