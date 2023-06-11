@@ -9,8 +9,8 @@ import {
     useMultiStyleConfig,
     useTab,
 } from '@chakra-ui/react';
+import Deployments from './tab/Deployments';
 import Introduction from './tab/Introduction';
-import ServiceTabPanel from './tab/ServiceTabPanel';
 import Skills from './tab/Skills';
 
 const TabCard = () => {
@@ -43,7 +43,7 @@ const TabCard = () => {
                     <Introduction />
                 </TabPanel>
                 <TabPanel>
-                    <ServiceTabPanel />
+                    <Deployments />
                 </TabPanel>
                 <TabPanel>
                     <Skills />
