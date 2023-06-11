@@ -30,11 +30,11 @@ const CustomTabs = () => {
     return (
         <Tabs>
             <TabList>
-                <CustomTab>プロフィール</CustomTab>
-                <CustomTab>サービス(制作物)</CustomTab>
-                <CustomTab>経歴/スキル</CustomTab>
-                <CustomTab>趣味</CustomTab>
-                <CustomTab>サポート</CustomTab>
+                <CustomTab>Profile</CustomTab>
+                <CustomTab>Deployment</CustomTab>
+                <CustomTab>Career / Skills</CustomTab>
+                <CustomTab>Interest</CustomTab>
+                <CustomTab>Support</CustomTab>
             </TabList>
             <TabPanels>
                 <TabPanel>
@@ -48,7 +48,7 @@ const CustomTabs = () => {
                 </TabPanel>
                 <TabPanel>
                     <Box p={4}>
-                        <p>趣味のコンテンツ</p>
+                        <p>Coming soon...</p>
                     </Box>
                 </TabPanel>
                 <TabPanel>

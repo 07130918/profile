@@ -1,4 +1,5 @@
-import { design, socialLink } from '@/lib/consts';
+import { socialLink } from '@/lib/consts';
+import design from '@/lib/design';
 import { Box, HStack, Heading, Link, Text } from '@chakra-ui/react';
 import { BiLink } from 'react-icons/bi';
 
@@ -17,8 +18,9 @@ const Introduction = () => {
                     でソフトウェアエンジニアとして働いていますが、大学在学中には都市計画を専攻していました。特に構造力学と測量学について学ぶことは私にとって貴重な経験でした。
                 </Text>
                 <Text>
-                    現在、私はwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することに喜びを感じています。(このページも好奇心で作りました!)🧑🏻‍💻
+                    現在、私はwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することに喜びを感じています。
                 </Text>
+                <Text>(このページも好奇心で作りました!)🧑🏻‍💻</Text>
                 <Text>旅行が大好きです。(詳しくは、趣味のタブで!)</Text>
                 <Text>新しい場所や文化を探索が、私の好奇心と探究心が満たします!</Text>
                 <Text>
@@ -41,7 +43,7 @@ const Introduction = () => {
                     </Link>
                     <Link
                         href={socialLink.gmail}
-                        bgGradient='linear(to-r, #ff00cc, #3333cc)'
+                        bgGradient={design.graduation.theme}
                         bgClip='text'
                         fontWeight='bold'
                         textDecoration='underline'

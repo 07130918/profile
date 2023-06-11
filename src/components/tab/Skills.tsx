@@ -1,80 +1,93 @@
-import { design } from '@/lib/consts';
+import { serviceLink } from '@/lib/consts';
+import design from '@/lib/design';
+import type { TechStack } from '@/lib/types';
 import { Box, HStack, Heading, Image, Text } from '@chakra-ui/react';
-import { BiLink } from 'react-icons/bi';
-import { FaAws, FaDatabase, FaPython } from 'react-icons/fa';
-import { SiGooglecloud, SiJavascript, SiMysql, SiTypescript } from 'react-icons/si';
-import { TbBrandNextjs } from 'react-icons/tb';
+import {
+    AWSIcon,
+    DataBaseIcon,
+    GCPIcon,
+    JavaScriptIcon,
+    LangChainIcon,
+    MySQLIcon,
+    NextJsIcon,
+    PythonIcon,
+    TypeScriptIcon,
+} from '../ChakraExtension';
 import SkillItem from '../SkillItem';
 
-const techStackProgrammingLangs = [
-    {
-        icon: <FaPython size={24} color='#3776AB' />,
-        text: 'Python',
-    },
-    {
-        icon: <SiTypescript size={24} color='#3178C6' />,
-        text: 'TypeScript',
-    },
-    {
-        icon: <SiJavascript size={24} color='#F7DF1E' />,
-        text: 'JavaScript',
-    },
-    {
-        icon: <TbBrandNextjs size={24} color='#000000' />,
-        text: 'Next.js',
-    },
-    {
-        icon: <BiLink size={24} color='#3D9970' />,
-        text: 'LangChain',
-    },
-];
+const techStack: TechStack = {
+    programmingLangs: [
+        {
+            name: 'Python',
+            icon: <PythonIcon />,
+            link: serviceLink.python,
+        },
+        {
+            name: 'TypeScript',
+            icon: <TypeScriptIcon />,
+            link: serviceLink.ts,
+        },
+        {
+            name: 'JavaScript',
+            icon: <JavaScriptIcon />,
+            link: serviceLink.js,
+        },
+        {
+            name: 'Next.js',
+            icon: <NextJsIcon />,
+            link: serviceLink.nextjs,
+        },
+        {
+            name: 'LangChain',
+            icon: <LangChainIcon />,
+            link: serviceLink.langChain,
+        },
+    ],
+    databases: [
+        {
+            name: 'MySQL',
+            icon: <MySQLIcon />,
+            link: serviceLink.mysql,
+        },
+        {
+            name: 'NoSQL (DynamoDB)',
+            icon: <DataBaseIcon />,
+            link: serviceLink.dynamodb,
+        },
+    ],
+    cloudPlatforms: [
+        {
+            name: 'AWS',
+            icon: <AWSIcon />,
+            link: serviceLink.aws,
+        },
+        {
+            name: 'GCP',
+            icon: <GCPIcon />,
+            link: serviceLink.gcp,
+        },
+    ],
+};
 
-const techStackDatabases = [
-    {
-        icon: <SiMysql size={24} color='#4479A1' />,
-        text: 'MySQL',
-    },
-    {
-        icon: <FaDatabase size={24} color='#000000' />,
-        text: 'NoSQL (DynamoDB)',
-    },
-];
-
-const techStackCloudPlatforms = [
-    {
-        icon: <FaAws size={24} color='#FF9900' />,
-        text: 'AWS',
-    },
-    {
-        icon: <SiGooglecloud size={24} color='#4285F4' />,
-        text: 'GCP',
-    },
-];
-
-const skillItems = [
+const skillSets = [
     {
         genre: 'Programming Languages & Frameworks',
-        stackContents: techStackProgrammingLangs,
+        details: techStack.programmingLangs,
     },
     {
         genre: 'Databases',
-        stackContents: techStackDatabases,
+        details: techStack.databases,
     },
     {
         genre: 'Cloud Platforms',
-        stackContents: techStackCloudPlatforms,
+        details: techStack.cloudPlatforms,
     },
 ];
 
 const Skills = () => {
     return (
-        <Box boxShadow={design.boxShadow} py={6} px={10} borderRadius='lg' mt={6}>
-            <Heading
-                fontSize='2xl'
-                mb={3}
-                bgGradient='linear(to-r, #ff00cc, #3333cc)'
-                bgClip='text'
-            >
+        <Box boxShadow={design.boxShadow} borderRadius='lg' py={6} px={10} mt={6}>
+            <Heading fontSize='2xl' bgGradient={design.graduation.theme} bgClip='text' mb={3}>
                 My Skills
             </Heading>
             <Box mb={4}>
@@ -83,14 +96,14 @@ const Skills = () => {
                 </Heading>
                 <Text>Japanese / English</Text>
             </Box>
-            {skillItems.map(({ genre, stackContents }) => (
+            {skillSets.map(({ genre, details }) => (
                 <>
                     <Heading key={genre} fontSize='lg' mb={2}>
                         {genre}
                     </Heading>
                     <HStack>
-                        {stackContents.map(({ icon, text }) => (
-                            <SkillItem key={text} icon={icon} text={text} />
+                        {details.map(({ name, icon, link }) => (
+                            <SkillItem key={name} name={name} icon={icon} link={link} />
                         ))}
                     </HStack>
                 </>

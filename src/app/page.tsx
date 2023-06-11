@@ -1,6 +1,7 @@
 'use client';
 import CustomTabs from '@/components/tabs';
-import { aws_image, design, socialLink } from '@/lib/consts';
+import { socialLink } from '@/lib/consts';
+import design from '@/lib/design';
 import { Box, Flex, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
@@ -8,12 +9,7 @@ import { SiGmail } from 'react-icons/si';
 
 const Home = () => {
     return (
-        <Flex
-            bgGradient='linear(to-r, pink.300, orange.300)'
-            justify='center'
-            align='center'
-            minH='100vh'
-        >
+        <Flex bgGradient={design.graduation.gb} justify='center' align='center' minH='100vh'>
             <Flex w='96vw' h='90vh' bg='white' borderRadius='lg' shadow='lg' p={4}>
                 <Box
                     boxShadow={design.boxShadow}
@@ -27,7 +23,7 @@ const Home = () => {
                     <VStack align='start' spacing={2}>
                         <Box>
                             <Box
-                                bgGradient='linear(to-r, blue.100, blue.300)'
+                                bgGradient={design.graduation.blue}
                                 borderRadius='full'
                                 p={2}
                                 display='inline-flex'
@@ -35,8 +31,8 @@ const Home = () => {
                                 <Image
                                     src='/images/me.jpeg'
                                     alt='Kota Sato'
-                                    w='250px'
-                                    h='250px'
+                                    w={60}
+                                    h={60}
                                     borderRadius='full'
                                 />
                             </Box>
@@ -44,7 +40,7 @@ const Home = () => {
                                 as='h1'
                                 fontSize='3xl'
                                 fontWeight='bold'
-                                bgGradient='linear(to-r, #ff00cc, #3333cc)'
+                                bgGradient={design.graduation.theme}
                                 bgClip='text'
                                 mb={2}
                             >

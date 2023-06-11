@@ -1,16 +1,17 @@
-import { Flex, Text } from '@chakra-ui/react';
+import type { TechStackElement } from '@/lib/types';
+import { HStack } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 
-interface SkillItemProps {
-    icon: JSX.Element;
-    text: string;
-}
-
-const SkillItem = ({ icon, text }: SkillItemProps) => {
+const SkillItem = ({ name, icon, link }: TechStackElement) => {
     return (
-        <Flex key={text} alignItems='center' mb={4}>
-            {icon}
-            <Text ml={2}>{text}</Text>
-        </Flex>
+        <HStack key={name} alignItems='center' mb={4}>
+            <Link href={link} isExternal>
+                {icon}
+            </Link>
+            <Link href={link} ml={2} isExternal>
+                {name}
+            </Link>
+        </HStack>
     );
 };
 
