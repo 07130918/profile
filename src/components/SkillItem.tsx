@@ -8,7 +8,7 @@ const SkillItem = ({ name, icon, link }: TechStackElement) => {
             <Link href={link} isExternal>
                 {icon}
             </Link>
-            <Link href={link} ml={2} isExternal>
+            <Link href={link} isExternal>
                 {name}
             </Link>
         </HStack>

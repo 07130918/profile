@@ -2,7 +2,7 @@ import { Image } from '@chakra-ui/image';
 import { Box, BoxProps, Flex, FlexProps } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
-import { FaAws, FaDatabase, FaPython, FaVuejs } from 'react-icons/fa';
+import { FaAws, FaDatabase, FaPython, FaVuejs, FaReact } from 'react-icons/fa';
 import { IoLogoVercel } from 'react-icons/io5';
 import { SiChakraui, SiGooglecloud, SiJavascript, SiMysql, SiTypescript } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -22,7 +22,7 @@ export const LangChainImage = (props: any) => (
 export const MySQLIcon = (props: any) => <SiMysql size={24} color='#4479A1' {...props} />;
 export const NextJsIcon = (props: any) => <TbBrandNextjs size={24} color='#000000' {...props} />;
 export const PythonIcon = (props: any) => <FaPython size={24} color='#3776AB' {...props} />;
-export const ReactIcon = (props: any) => <FaPython size={24} color='#61DAFB' {...props} />;
+export const ReactIcon = (props: any) => <FaReact size={24} color='#61DAFB' {...props} />;
 export const TypeScriptIcon = (props: any) => <SiTypescript size={24} color='#3178C6' {...props} />;
 export const VueIcon = (props: any) => <FaVuejs size={24} color='#42B883' {...props} />;
 export const VercelIcon = (props: any) => <IoLogoVercel size={24} color='#000000' {...props} />;
