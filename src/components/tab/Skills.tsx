@@ -5,7 +5,7 @@ import type { TechStack } from '@/lib/types';
 import { Box, HStack, Heading, Image, Text } from '@chakra-ui/react';
 import {
     AWSIcon,
-    DataBaseIcon,
+    DynamoDBIcon,
     GCPIcon,
     JavaScriptIcon,
     LangChainIcon,
@@ -52,7 +52,7 @@ const techStack: TechStack = {
         },
         {
             name: 'NoSQL (DynamoDB)',
-            icon: <DataBaseIcon />,
+            icon: <DynamoDBIcon />,
             link: serviceLink.dynamodb,
         },
     ],
