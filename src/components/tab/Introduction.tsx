@@ -1,42 +1,50 @@
 import { TabContainer } from '@/components/ChakraExtension';
+import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
-import { HStack, Heading, Link, Text } from '@chakra-ui/react';
+import { text } from '@/lib/dictionary';
+import { Box, HStack, Heading, Link, Text } from '@chakra-ui/react';
+import { useContext } from 'react';
 import { BiLink } from 'react-icons/bi';
 
 const Introduction = () => {
+    const { lang } = useContext(LangContext);
+    const t = text[lang].introduction;
+
     return (
         <>
             <TabContainer>
                 <Heading fontSize='xl' mb={3}>
-                    こんにちは、佐藤宏太です!
+                    {t.greeting}
                 </Heading>
-                <Text>
-                    私はソフトウェア・エンジニアリングを専門とし、現在
-                    <Link href='https://www.arara.com/' textDecoration='underline'>
-                        アララ株式会社
-                    </Link>
-                    でソフトウェアエンジニアとして働いていますが、大学在学中には都市計画を専攻していました。特に構造力学と測量学について学ぶことは私にとって貴重な経験でした。
-                </Text>
-                <Text>
-                    現在、私はwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することに喜びを感じています。
-                </Text>
-                <Text>(このページも好奇心で作りました!)🧑🏻‍💻</Text>
-                <Text>旅行が大好きです。(詳しくは、趣味のタブで!)</Text>
-                <Text>新しい場所や文化を探索が、私の好奇心と探究心が満たします!</Text>
-                <Text>
-                    最近は英語にも熱中しています。母国語ではない言語で物事を理解し、コミュニケーションが取れることに喜びを感じています。
-                </Text>
-                <Text>
-                    私は取り組む物事を通し常に成長し、新しい挑戦/目標に向かって前進することを大切にしています。
-                </Text>
-                <Text fontWeight='bold'>
-                    自分の好奇心、探究心、決断力を活かし、素晴らしいプロジェクトや経験を追求していきます!!!
-                </Text>
+                <Box mb={3}>
+                    <Text>
+                        {t.link.work_at}
+                        <Link href='https://www.arara.com/' textDecoration='underline'>
+                            {t.link.inc}
+                        </Link>
+                    </Text>
+                    <Text>{t.link.major}</Text>
+                </Box>
+                <Box mb={3}>
+                    <Text>{t.study}</Text>
+                    <Text>{t.current} </Text>
+                </Box>
+                <Box mb={3}>
+                    <Text>{t.travel}</Text>
+                    <Text>{t.satisfaction}</Text>
+                </Box>
+                <Box mb={3}>
+                    <Text>{t.into}</Text>
+                </Box>
+                <Box mb={3}>
+                    <Text>{t.value}</Text>
+                </Box>
+                <Text fontWeight='bold'>{t.mindset} </Text>
             </TabContainer>
             <TabContainer mt={6}>
                 <Heading fontSize='xl' mb={3}>
-                    お仕事依頼はこちら!
+                    {t.job_contact}
                 </Heading>
                 <HStack>
                     <Link href={socialLink.gmail} isExternal>

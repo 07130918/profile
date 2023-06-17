@@ -1,14 +1,19 @@
+import { LangContext } from '@/components/providers';
 import {
     Box,
     Button,
+    HStack,
+    Link,
     TabList,
     TabPanel,
     TabPanels,
     TabProps,
     Tabs,
+    Text,
     useMultiStyleConfig,
     useTab,
 } from '@chakra-ui/react';
+import { useContext } from 'react';
 import Deployments from './tab/Deployments';
 import Introduction from './tab/Introduction';
 import Skills from './tab/Skills';
@@ -29,35 +34,52 @@ const TabCard = () => {
         );
     };
 
+    const { setLang } = useContext(LangContext);
+
+    const tabs = [
+        { label: 'Profile', Component: Introduction },
+        { label: 'Deployment', Component: Deployments },
+        { label: 'Career / Skills', Component: Skills },
+        {
+            label: 'Interest',
+            Component: () => (
+                <Box p={4}>
+                    <p>Coming soon...</p>
+                </Box>
+            ),
+        },
+        {
+            label: 'Support',
+            Component: () => (
+                <Box p={4}>
+                    <p>Coming soon...</p>
+                </Box>
+            ),
+        },
+    ];
+
     return (
         <Tabs isLazy>
+            <HStack>
+                <Link color='blue.400' onClick={() => setLang('en')}>
+                    English
+                </Link>
+                <Text color='blue.400'>/</Text>
+                <Link color='blue.400' onClick={() => setLang('ja')}>
+                    Japanese
+                </Link>
+            </HStack>
             <TabList>
-                <CustomTab>Profile</CustomTab>
-                <CustomTab>Deployment</CustomTab>
-                <CustomTab>Career / Skills</CustomTab>
-                <CustomTab>Interest</CustomTab>
-                <CustomTab>Support</CustomTab>
+                {tabs.map(({ label }) => (
+                    <CustomTab key={label}>{label}</CustomTab>
+                ))}
             </TabList>
             <TabPanels>
-                <TabPanel>
-                    <Introduction />
-                </TabPanel>
-                <TabPanel>
-                    <Deployments />
-                </TabPanel>
-                <TabPanel>
-                    <Skills />
-                </TabPanel>
-                <TabPanel>
-                    <Box p={4}>
-                        <p>Coming soon...</p>
-                    </Box>
-                </TabPanel>
-                <TabPanel>
-                    <Box p={4}>
-                        <p>Coming soon...</p>
-                    </Box>
-                </TabPanel>
+                {tabs.map(({ Component }, index) => (
+                    <TabPanel key={index}>
+                        <Component />
+                    </TabPanel>
+                ))}
             </TabPanels>
         </Tabs>
     );

@@ -11,7 +11,6 @@ export type TechStack = {
 };
 
 export type ProjectElementProps = {
-    name: string;
     link: string;
     externalLinkText: string;
     githubLink: string;

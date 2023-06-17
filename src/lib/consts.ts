@@ -29,28 +29,24 @@ export const serviceLink = {
 
 export const projectsElement: ProjectsElementProps = {
     gpProofreader: {
-        name: '英文校正webアプリ',
         link: 'https://gp-proofreader.vercel.app/',
         externalLinkText: 'GP-proofreader',
         githubLink: 'https://github.com/07130918/LLM-Playground',
         githubRepoName: 'LLM-Playground',
     },
     scribbles: {
-        name: 'メモ帳Chrome拡張機能',
         link: 'https://chrome.google.com/webstore/detail/scribbles/kjbdhcdgdcipnifdhnpldjibglpjnjib?hl=ja&authuser=0',
         externalLinkText: 'Scribbles',
         githubLink: 'https://github.com/07130918/Scribbles',
         githubRepoName: 'Scribbles',
     },
     wordPopQuiz: {
-        name: '英単語クイズ',
         link: 'https://word-pop-quiz.vercel.app/',
         externalLinkText: 'Word Pop Quiz',
         githubLink: 'https://github.com/07130918/word-pop-quiz',
         githubRepoName: 'word-pop-quiz',
     },
     toDoList: {
-        name: 'To-DoリストChrome拡張機能',
         link: 'https://chrome.google.com/webstore/detail/to-do-list/chaiaabmmjdihkcjlpmbadcdmefaljib?hl=ja&authuser=0',
         externalLinkText: 'Simple To-Do List',
         githubLink: 'https://github.com/07130918/ChromeExtensions',

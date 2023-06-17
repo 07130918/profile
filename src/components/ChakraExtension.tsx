@@ -1,3 +1,4 @@
+import design from '@/lib/design';
 import { Image } from '@chakra-ui/image';
 import { Box, BoxProps, Flex, FlexProps } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
@@ -13,8 +14,6 @@ import {
     SiTypescript,
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
-
-import design from '@/lib/design';
 
 export const AWSIcon = (props: any) => <FaAws size={24} color='#FF9900' {...props} />;
 export const ChakraIcon = (props: any) => <SiChakraui size={24} color='#319795' {...props} />;

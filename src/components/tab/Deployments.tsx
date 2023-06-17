@@ -1,7 +1,10 @@
+import { LangContext } from '@/components/providers';
 import { projectsElement, serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
+import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
 import { Box, Grid, HStack, Heading, Link, Wrap, WrapItem } from '@chakra-ui/react';
+import { useContext } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
 import {
@@ -102,6 +105,9 @@ const projects: ProjectProps[] = [
 ];
 
 const ServiceTabPanel = () => {
+    const { lang } = useContext(LangContext);
+    const t = text[lang].deployments;
+
     return (
         <Grid
             templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']}
@@ -117,7 +123,7 @@ const ServiceTabPanel = () => {
                             bgClip='text'
                             fontWeight='extrabold'
                         >
-                            {project.name}
+                            {t[index].title}
                         </Heading>
                     </Link>
                     <Box mt={2}>
