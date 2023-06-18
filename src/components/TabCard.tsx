@@ -17,6 +17,7 @@ import { useContext } from 'react';
 import Deployments from './tab/Deployments';
 import Introduction from './tab/Introduction';
 import Skills from './tab/Skills';
+import Support from './tab/Support';
 
 const TabCard = () => {
     const CustomTab = (props: TabProps) => {
@@ -40,22 +41,7 @@ const TabCard = () => {
         { label: 'Profile', Component: Introduction },
         { label: 'Deployment', Component: Deployments },
         { label: 'Career / Skills', Component: Skills },
-        {
-            label: 'Interest',
-            Component: () => (
-                <Box p={4}>
-                    <p>Coming soon...</p>
-                </Box>
-            ),
-        },
-        {
-            label: 'Support',
-            Component: () => (
-                <Box p={4}>
-                    <p>Coming soon...</p>
-                </Box>
-            ),
-        },
+        { label: 'Support', Component: Support },
     ];
 
     return (

@@ -8,31 +8,31 @@ import { SiGmail } from 'react-icons/si';
 const ProfileCard = () => {
     const socialMediaLinks = [
         {
-            icon: SiGmail,
+            Icon: SiGmail,
             color: design.color.gmail,
             href: socialLink.gmail,
             text: 'tokyosato1@gmail.com',
         },
         {
-            icon: FaTwitter,
+            Icon: FaTwitter,
             color: design.color.twitter,
             href: socialLink.twitter,
             text: '@tech_guy_kay',
         },
         {
-            icon: FaGithub,
+            Icon: FaGithub,
             color: design.color.github,
             href: 'https://github.com/07130918',
             text: '07130918',
         },
         {
-            icon: FaLinkedin,
+            Icon: FaLinkedin,
             color: design.color.linkedIn,
             href: socialLink.linkedIn,
             text: 'kota-sato-228364215',
         },
         {
-            icon: FaFacebook,
+            Icon: FaFacebook,
             color: design.color.facebook,
             href: socialLink.facebook,
             text: '100069795974235',
@@ -65,7 +65,7 @@ const ProfileCard = () => {
                 <GrMapLocation />
                 <Text>Tokyo / Japan 🇯🇵</Text>
             </HStack>
-            {socialMediaLinks.map(({ icon: Icon, color, href, text }) => (
+            {socialMediaLinks.map(({ Icon, color, href, text }) => (
                 <HStack key={href}>
                     <Link href={href} isExternal>
                         <Icon color={color} />
