@@ -1,6 +1,6 @@
 import design from '@/lib/design';
 import { Image } from '@chakra-ui/image';
-import { Box, BoxProps, Flex, FlexProps } from '@chakra-ui/react';
+import { Box, BoxProps, Flex, FlexProps, Link } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
 import { FaAws, FaPython, FaReact, FaVuejs } from 'react-icons/fa';
@@ -62,5 +62,20 @@ export const Card = (props: BoxProps) => (
 );
 
 export const TabContainer = (props: BoxProps) => (
-    <Box boxShadow={design.boxShadow} borderRadius='lg' py={5} px={10} {...props} />
+    <Box boxShadow={design.boxShadow} borderRadius='lg' py={4} px={6} {...props} />
+);
+
+export const TextBox = (props: BoxProps) => <Box mb={3} {...props} />;
+
+export const ExLink = ({
+    href,
+    children,
+    ...rest
+}: {
+    href: string;
+    children: string | JSX.Element;
+}) => (
+    <Link href={href} isExternal {...rest}>
+        {children}
+    </Link>
 );

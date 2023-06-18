@@ -4,6 +4,7 @@ import { Box, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
+import { ExLink } from './ChakraExtension';
 
 const ProfileCard = () => {
     const socialMediaLinks = [
@@ -52,24 +53,30 @@ const ProfileCard = () => {
                 />
             </Box>
             <Text
-                as='h1'
                 fontSize='3xl'
                 fontWeight='bold'
                 bgGradient={design.graduation.theme}
                 bgClip='text'
-                mb={2}
             >
                 Kota Sato
             </Text>
+            <ExLink href='https://www.buymeacoffee.com/hi.im.kota'>
+                <Image
+                    src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png'
+                    alt='Buy Me A Coffee'
+                    h='50px'
+                    w='180px'
+                />
+            </ExLink>
             <HStack>
                 <GrMapLocation />
                 <Text>Tokyo / Japan 🇯🇵</Text>
             </HStack>
             {socialMediaLinks.map(({ Icon, color, href, text }) => (
                 <HStack key={href}>
-                    <Link href={href} isExternal>
+                    <ExLink href={href}>
                         <Icon color={color} />
-                    </Link>
+                    </ExLink>
                     <Link href={href} color={color} isExternal>
                         {text}
                     </Link>

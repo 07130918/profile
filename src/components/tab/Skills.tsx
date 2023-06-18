@@ -103,15 +103,13 @@ const Skills = () => {
                         {genre}
                     </Heading>
                     <HStack>
-                        {details.map(({ name, icon, link }) => (
-                            <SkillItem key={name} name={name} icon={icon} link={link} />
+                        {details.map(({ name, icon, link }, i) => (
+                            <SkillItem key={i} name={name} icon={icon} link={link} />
                         ))}
                     </HStack>
                 </>
             ))}
-            <Box textAlign='center' mt={6}>
-                <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />
-            </Box>
+            <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />
         </TabContainer>
     );
 };

@@ -8,6 +8,8 @@ export const socialLink = {
     github: 'https://github.com/07130918',
     linkedIn: 'https://www.linkedin.com/in/kota-sato-228364215/',
     facebook: 'https://www.facebook.com/profile.php?id=100069795974235',
+    buyMeACoffee: 'https://www.buymeacoffee.com/hi.im.kota',
+    paypal: 'https://www.paypal.com/paypalme/kotawebdev',
 };
 
 export const serviceLink = {

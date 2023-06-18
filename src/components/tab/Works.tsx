@@ -104,7 +104,7 @@ const projects: ProjectProps[] = [
     },
 ];
 
-const ServiceTabPanel = () => {
+const Works = () => {
     const { lang } = useContext(LangContext);
     const t = text[lang].deployments;
 
@@ -160,4 +160,4 @@ const ServiceTabPanel = () => {
     );
 };
 
-export default ServiceTabPanel;
+export default Works;

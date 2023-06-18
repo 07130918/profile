@@ -14,10 +14,10 @@ import {
     useTab,
 } from '@chakra-ui/react';
 import { useContext } from 'react';
-import Deployments from './tab/Deployments';
 import Introduction from './tab/Introduction';
 import Skills from './tab/Skills';
 import Support from './tab/Support';
+import Works from './tab/Works';
 
 const TabCard = () => {
     const CustomTab = (props: TabProps) => {
@@ -39,7 +39,7 @@ const TabCard = () => {
 
     const tabs = [
         { label: 'Profile', Component: Introduction },
-        { label: 'Deployment', Component: Deployments },
+        { label: 'Works', Component: Works },
         { label: 'Career / Skills', Component: Skills },
         { label: 'Support', Component: Support },
     ];

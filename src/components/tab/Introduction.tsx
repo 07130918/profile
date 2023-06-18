@@ -1,9 +1,9 @@
-import { TabContainer } from '@/components/ChakraExtension';
+import { ExLink, TabContainer, TextBox } from '@/components/ChakraExtension';
 import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
-import { Box, HStack, Heading, Link, Text } from '@chakra-ui/react';
+import { HStack, Heading, Link, Text } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { BiLink } from 'react-icons/bi';
 
@@ -11,45 +11,45 @@ const Introduction = () => {
     const { lang } = useContext(LangContext);
     const t = text[lang].introduction;
 
+    const renderSection = (texts: string[]) => {
+        return (
+            <TextBox>
+                {texts.map((t, i) => (
+                    <Text key={i}>{t}</Text>
+                ))}
+            </TextBox>
+        );
+    };
+
     return (
         <>
             <TabContainer>
                 <Heading fontSize='xl' mb={3}>
                     {t.greeting}
                 </Heading>
-                <Box mb={3}>
+                <TextBox>
                     <Text>
-                        {t.link.work_at}
-                        <Link href='https://www.arara.com/' textDecoration='underline'>
-                            {t.link.inc}
+                        {t.work.at}
+                        <Link href='https://www.arara.com/' textDecoration='underline' isExternal>
+                            {t.work.inc}
                         </Link>
                     </Text>
-                    <Text>{t.link.major}</Text>
-                </Box>
-                <Box mb={3}>
-                    <Text>{t.study}</Text>
-                    <Text>{t.current} </Text>
-                </Box>
-                <Box mb={3}>
-                    <Text>{t.travel}</Text>
-                    <Text>{t.satisfaction}</Text>
-                </Box>
-                <Box mb={3}>
-                    <Text>{t.into}</Text>
-                </Box>
-                <Box mb={3}>
-                    <Text>{t.value}</Text>
-                </Box>
-                <Text fontWeight='bold'>{t.mindset} </Text>
+                    <Text>{t.major}</Text>
+                </TextBox>
+                {renderSection([t.study, t.current])}
+                {renderSection([t.travel, t.satisfaction])}
+                {renderSection([t.into])}
+                {renderSection([t.value])}
+                <Text fontWeight='bold'>{t.mindset}</Text>
             </TabContainer>
-            <TabContainer mt={6}>
+            <TabContainer mt={4}>
                 <Heading fontSize='xl' mb={3}>
                     {t.job_contact}
                 </Heading>
                 <HStack>
-                    <Link href={socialLink.gmail} isExternal>
+                    <ExLink href={socialLink.gmail}>
                         <BiLink color={design.color.gmail} />
-                    </Link>
+                    </ExLink>
                     <Link
                         href={socialLink.gmail}
                         bgGradient={design.graduation.theme}
