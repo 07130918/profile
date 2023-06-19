@@ -1,6 +1,7 @@
 import design from '@/lib/design';
+import type { ExLinkProps } from '@/lib/types';
 import { Image } from '@chakra-ui/image';
-import { Box, BoxProps, Flex, FlexProps, Link } from '@chakra-ui/react';
+import { Box, BoxProps, Flex, FlexProps, Link, LinkProps } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
 import { FaAws, FaPython, FaReact, FaVuejs } from 'react-icons/fa';
@@ -68,15 +69,8 @@ export const TabContainer = (props: BoxProps) => (
 
 export const TextBox = (props: BoxProps) => <Box mb={3} {...props} />;
 
-export const ExLink = ({
-    href,
-    children,
-    ...rest
-}: {
-    href: string;
-    children: string | JSX.Element;
-}) => (
-    <Link href={href} isExternal {...rest}>
+export const ExLink = ({ href, children, ...props }: ExLinkProps & LinkProps) => (
+    <Link href={href} isExternal {...props}>
         {children}
     </Link>
 );

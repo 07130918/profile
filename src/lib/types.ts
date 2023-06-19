@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type TechStackElement = {
     name: string;
     icon: JSX.Element;
@@ -27,3 +29,8 @@ export type ProjectsElementProps = {
 export interface ProjectProps extends ProjectElementProps {
     techStacks: TechStackElement[];
 }
+
+export type ExLinkProps = {
+    href: string;
+    children: string | ReactNode;
+};

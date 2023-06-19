@@ -81,9 +81,9 @@ const ProfileCard = () => {
                         <ExLink href={href}>
                             <Icon color={color} />
                         </ExLink>
-                        <Link href={href} color={color} isExternal>
+                        <ExLink href={href} color={color}>
                             {text}
-                        </Link>
+                        </ExLink>
                     </HStack>
                 ))}
             </Box>

@@ -1,3 +1,4 @@
+import { ExLink } from '@/components/ChakraExtension';
 import { LangContext } from '@/components/providers';
 import { projectsElement, serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
@@ -116,7 +117,7 @@ const Works = () => {
         >
             {projects.map((project, index) => (
                 <Box key={index} borderRadius='lg' boxShadow={design.boxShadow} p={4}>
-                    <Link href={project.link} _hover={{ textDecoration: 'none' }} isExternal>
+                    <ExLink href={project.link} _hover={{ textDecoration: 'none' }}>
                         <Heading
                             size='lg'
                             bgGradient={design.graduation.theme}
@@ -125,21 +126,19 @@ const Works = () => {
                         >
                             {t[index].title}
                         </Heading>
-                    </Link>
+                    </ExLink>
                     <Box mt={2}>
                         <HStack>
                             <BiLinkExternal color='#2f81f7' />
-                            <Link href={project.link} color='#2f81f7' isExternal>
+                            <ExLink href={project.link} color='#2f81f7'>
                                 {project.externalLinkText}
-                            </Link>
+                            </ExLink>
                         </HStack>
                     </Box>
                     <Box mt={2}>
                         <HStack>
                             <FaGithub />
-                            <Link href={project.githubLink} isExternal>
-                                {project.githubRepoName}
-                            </Link>
+                            <ExLink href={project.githubLink}>{project.githubRepoName}</ExLink>
                         </HStack>
                     </Box>
                     <Wrap mt={5}>
@@ -147,9 +146,7 @@ const Works = () => {
                             <WrapItem key={index}>
                                 <HStack>
                                     {techStack.icon}
-                                    <Link href={techStack.link} isExternal>
-                                        {techStack.name}
-                                    </Link>
+                                    <ExLink href={techStack.link}>{techStack.name}</ExLink>
                                 </HStack>
                             </WrapItem>
                         ))}

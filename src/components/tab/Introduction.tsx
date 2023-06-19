@@ -30,9 +30,9 @@ const Introduction = () => {
                 <TextBox>
                     <Text>
                         {t.work.at}
-                        <Link href='https://www.arara.com/' textDecoration='underline' isExternal>
+                        <ExLink href='https://www.arara.com/' textDecoration='underline'>
                             {t.work.inc}
-                        </Link>
+                        </ExLink>
                     </Text>
                     <Text>{t.major}</Text>
                 </TextBox>
@@ -50,16 +50,15 @@ const Introduction = () => {
                     <ExLink href={socialLink.gmail}>
                         <BiLink color={design.color.gmail} />
                     </ExLink>
-                    <Link
+                    <ExLink
                         href={socialLink.gmail}
                         bgGradient={design.graduation.theme}
                         bgClip='text'
                         fontWeight='bold'
                         textDecoration='underline'
-                        isExternal
                     >
                         tokyosato1@gmail.com
-                    </Link>
+                    </ExLink>
                 </HStack>
             </TabContainer>
         </>
