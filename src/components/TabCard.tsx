@@ -55,14 +55,14 @@ const TabCard = () => {
                     Japanese
                 </Link>
             </HStack>
-            <TabList>
+            <TabList overflowX='scroll'>
                 {tabs.map(({ label }) => (
                     <CustomTab key={label}>{label}</CustomTab>
                 ))}
             </TabList>
             <TabPanels>
                 {tabs.map(({ Component }, index) => (
-                    <TabPanel key={index}>
+                    <TabPanel p={[1, 1, 4]} key={index}>
                         <Component />
                     </TabPanel>
                 ))}

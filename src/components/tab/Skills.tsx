@@ -1,8 +1,9 @@
 import { TabContainer } from '@/components/ChakraExtension';
 import { serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
+import useResponsive from '@/lib/designHooks';
 import type { TechStack } from '@/lib/types';
-import { Box, HStack, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import {
     AWSIcon,
     DynamoDBIcon,
@@ -86,6 +87,8 @@ const skillSets = [
 ];
 
 const Skills = () => {
+    const { dColumnBase } = useResponsive();
+
     return (
         <TabContainer>
             <Heading fontSize='2xl' bgGradient={design.graduation.theme} bgClip='text' mb={3}>
@@ -102,11 +105,11 @@ const Skills = () => {
                     <Heading key={genre} fontSize='lg' mb={2}>
                         {genre}
                     </Heading>
-                    <HStack>
+                    <Stack direction={dColumnBase}>
                         {details.map(({ name, icon, link }, i) => (
                             <SkillItem key={i} name={name} icon={icon} link={link} />
                         ))}
-                    </HStack>
+                    </Stack>
                 </>
             ))}
             <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />

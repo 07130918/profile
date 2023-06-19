@@ -1,6 +1,7 @@
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
-import { Box, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
+import useResponsive from '@/lib/designHooks';
+import { Box, HStack, Image, Link, Stack, Text } from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
@@ -40,49 +41,53 @@ const ProfileCard = () => {
         },
     ];
 
+    const { pSmall, mBase, imageSize, dRowBase } = useResponsive();
+
     return (
-        <VStack align='start'>
-            <Box bgGradient={design.graduation.blue} borderRadius='full' p={2}>
+        <Stack direction={dRowBase} align='start'>
+            <Box bgGradient={design.graduation.blue} borderRadius='full' p={pSmall}>
                 <Image
                     src='/images/me.jpeg'
                     alt='Kota Sato'
                     objectFit='cover'
-                    w={60}
-                    h={60}
+                    w={imageSize}
+                    h={imageSize}
                     borderRadius='full'
                 />
             </Box>
-            <Text
-                fontSize='3xl'
-                fontWeight='bold'
-                bgGradient={design.graduation.theme}
-                bgClip='text'
-            >
-                Kota Sato
-            </Text>
-            <ExLink href='https://www.buymeacoffee.com/hi.im.kota'>
-                <Image
-                    src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png'
-                    alt='Buy Me A Coffee'
-                    h='50px'
-                    w='180px'
-                />
-            </ExLink>
-            <HStack>
-                <GrMapLocation />
-                <Text>Tokyo / Japan 🇯🇵</Text>
-            </HStack>
-            {socialMediaLinks.map(({ Icon, color, href, text }) => (
-                <HStack key={href}>
-                    <ExLink href={href}>
-                        <Icon color={color} />
-                    </ExLink>
-                    <Link href={href} color={color} isExternal>
-                        {text}
-                    </Link>
+            <Box ml={mBase}>
+                <Text
+                    fontSize='3xl'
+                    fontWeight='bold'
+                    bgGradient={design.graduation.theme}
+                    bgClip='text'
+                >
+                    Kota Sato
+                </Text>
+                <ExLink href='https://www.buymeacoffee.com/hi.im.kota'>
+                    <Image
+                        src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png'
+                        alt='Buy Me A Coffee'
+                        h='50px'
+                        w='180px'
+                    />
+                </ExLink>
+                <HStack>
+                    <GrMapLocation />
+                    <Text>Tokyo / Japan 🇯🇵</Text>
                 </HStack>
-            ))}
-        </VStack>
+                {socialMediaLinks.map(({ Icon, color, href, text }) => (
+                    <HStack key={href}>
+                        <ExLink href={href}>
+                            <Icon color={color} />
+                        </ExLink>
+                        <Link href={href} color={color} isExternal>
+                            {text}
+                        </Link>
+                    </HStack>
+                ))}
+            </Box>
+        </Stack>
     );
 };
 

@@ -49,16 +49,17 @@ export const PageContainer = (props: FlexProps) => (
     <Flex
         direction={['column', 'column', 'row']}
         w='96%'
+        h={['100%', '100%', '90vh']}
         bg='white'
         borderRadius='lg'
         shadow='lg'
-        p={4}
+        p={[1, 1, 4]}
         {...props}
     />
 );
 
 export const Card = (props: BoxProps) => (
-    <Box boxShadow={design.boxShadow} borderRadius='lg' h='90vh' overflow='auto' {...props} />
+    <Box boxShadow={design.boxShadow} borderRadius='lg' overflow='auto' {...props} />
 );
 
 export const TabContainer = (props: BoxProps) => (

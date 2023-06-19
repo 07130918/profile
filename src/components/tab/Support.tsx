@@ -1,9 +1,11 @@
 import { ExLink, TabContainer } from '@/components/ChakraExtension';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
-import { Box, HStack, Image, Text } from '@chakra-ui/react';
+import { Box, HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
 
 const Support = () => {
+    const [isLargerThan480] = useMediaQuery('(min-width: 480px)');
+
     return (
         <TabContainer>
             <Box p={2}>
@@ -35,14 +37,16 @@ const Support = () => {
                                 w='300px'
                             />
                         </ExLink>
-                        <Box ml={10}>
-                            <Image
-                                src='/images/buymeacoffeeqr.png'
-                                alt='Buy Me A Coffee QR Code'
-                                h={100}
-                                w={100}
-                            />
-                        </Box>
+                        {isLargerThan480 && (
+                            <Box ml={10}>
+                                <Image
+                                    src='/images/buymeacoffeeqr.png'
+                                    alt='Buy Me A Coffee QR Code'
+                                    h={100}
+                                    w={100}
+                                />
+                            </Box>
+                        )}
                     </HStack>
                 </TabContainer>
                 <TabContainer>
