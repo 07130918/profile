@@ -13,10 +13,11 @@ const useResponsive = () => {
     const mBase = useBreakpointValue({ base: 3, md: 0 });
     const dRowBase = useBreakpointValue<StackDirection>({ base: 'row', md: 'column' });
     const dColumnBase = useBreakpointValue<StackDirection>({ base: 'column', sm: 'row' });
+    const fs = useBreakpointValue({ base: 'md', md: 'lg' });
 
     const imageSize = useBreakpointValue({ base: '60px', md: '60' });
 
-    return { h, mb, w, p, pSmall, px, py, ml, mBase, imageSize, dRowBase, dColumnBase };
+    return { h, mb, w, p, pSmall, px, py, ml, mBase, imageSize, dRowBase, dColumnBase, fs };
 };
 
 export default useResponsive;

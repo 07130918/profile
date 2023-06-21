@@ -1,17 +1,17 @@
 import { LangContext } from '@/components/providers';
+import useResponsive from '@/lib/designHooks';
 import {
     Box,
-    Button,
     HStack,
     Link,
+    Stack,
+    Tab,
     TabList,
     TabPanel,
     TabPanels,
-    TabProps,
     Tabs,
     Text,
-    useMultiStyleConfig,
-    useTab,
+    useBreakpointValue,
 } from '@chakra-ui/react';
 import { useContext } from 'react';
 import Introduction from './tab/Introduction';
@@ -20,28 +20,15 @@ import Support from './tab/Support';
 import Works from './tab/Works';
 
 const TabCard = () => {
-    const CustomTab = (props: TabProps) => {
-        const tabProps = useTab(props);
-        const isSelected = !!tabProps['aria-selected'];
-        const styles = useMultiStyleConfig('Tabs', tabProps);
-
-        return (
-            <Button __css={{ ...styles.tab, fontSize: 'lg', px: 6, py: 3 }} {...tabProps}>
-                <Box as='span' mr={2}>
-                    {isSelected ? '😎' : '😴'}
-                </Box>
-                {tabProps.children}
-            </Button>
-        );
-    };
-
     const { setLang } = useContext(LangContext);
+    const { dColumnBase, fs } = useResponsive();
+    const py = useBreakpointValue({ base: 0, md: 3 });
 
     const tabs = [
-        { label: 'Profile', Component: Introduction },
-        { label: 'Works', Component: Works },
-        { label: 'Career / Skills', Component: Skills },
-        { label: 'Support', Component: Support },
+        { label: 'Profile', e: '😎', Component: Introduction },
+        { label: 'Works', e: '🎨', Component: Works },
+        { label: 'Career / Skills', e: '👨‍💻', Component: Skills },
+        { label: 'Support', e: '🤝', Component: Support },
     ];
 
     return (
@@ -55,9 +42,14 @@ const TabCard = () => {
                     Japanese
                 </Link>
             </HStack>
-            <TabList overflowX='scroll'>
-                {tabs.map(({ label }) => (
-                    <CustomTab key={label}>{label}</CustomTab>
+            <TabList fontSize={fs}>
+                {tabs.map(({ label, e }) => (
+                    <Tab key={label} fontSize={fs} py={py} overflowX='hidden'>
+                        <Stack direction={dColumnBase} gap={0}>
+                            <Box>{e}</Box>
+                            <Box>{label}</Box>
+                        </Stack>
+                    </Tab>
                 ))}
             </TabList>
             <TabPanels>
