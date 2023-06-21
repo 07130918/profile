@@ -1,7 +1,7 @@
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import useResponsive from '@/lib/designHooks';
-import { Box, HStack, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
@@ -41,11 +41,11 @@ const ProfileCard = () => {
         },
     ];
 
-    const { pSmall, mBase, imageSize, dRowBase } = useResponsive();
+    const { p12: p, ml30: ml, imageSize, dRowBase } = useResponsive();
 
     return (
         <Stack direction={dRowBase} align='start'>
-            <Box bgGradient={design.graduation.blue} borderRadius='full' p={pSmall}>
+            <Box bgGradient={design.graduation.blue} borderRadius='full' p={p}>
                 <Image
                     src='/images/me.jpeg'
                     alt='Kota Sato'
@@ -55,7 +55,7 @@ const ProfileCard = () => {
                     borderRadius='full'
                 />
             </Box>
-            <Box ml={mBase}>
+            <Box ml={ml}>
                 <Text
                     fontSize='3xl'
                     fontWeight='bold'
@@ -74,7 +74,7 @@ const ProfileCard = () => {
                 </ExLink>
                 <HStack>
                     <GrMapLocation />
-                    <Text>Tokyo / Japan 🇯🇵</Text>
+                    <Text>Tokyo / Japan</Text>
                 </HStack>
                 {socialMediaLinks.map(({ Icon, color, href, text }) => (
                     <HStack key={href}>
