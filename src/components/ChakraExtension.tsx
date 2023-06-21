@@ -50,7 +50,7 @@ export const PageContainer = (props: FlexProps) => (
     <Flex
         direction={['column', 'column', 'row']}
         w='96%'
-        h={['100%', '100%', '90vh']}
+        h={['100%', '100%', '94vh']}
         bg='white'
         borderRadius='lg'
         shadow='lg'

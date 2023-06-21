@@ -3,7 +3,7 @@ import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
-import { HStack, Heading, Link, Text } from '@chakra-ui/react';
+import { HStack, Heading, Text } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { BiLink } from 'react-icons/bi';
 
@@ -29,17 +29,17 @@ const Introduction = () => {
                 </Heading>
                 <TextBox>
                     <Text>
-                        {t.work.at}
+                        {t.work.now}
                         <ExLink href='https://www.arara.com/' textDecoration='underline'>
                             {t.work.inc}
                         </ExLink>
+                        {t.work.addition}
                     </Text>
                     <Text>{t.major}</Text>
                 </TextBox>
                 {renderSection([t.study, t.current])}
                 {renderSection([t.travel, t.satisfaction])}
-                {renderSection([t.into])}
-                {renderSection([t.value])}
+                {renderSection([t.into, t.value])}
                 <Text fontWeight='bold'>{t.mindset}</Text>
             </TabContainer>
             <TabContainer mt={4}>
