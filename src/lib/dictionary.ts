@@ -10,12 +10,12 @@ export const text = {
             major: 'Despite having a university degree in City Planning, my passion for software engineering has led me to my profession today.',
             study: 'In fact, studying of structural mechanics and surveying was enriching and has been invaluable in my career.',
             current:
-                "I'm currently focusing on web application development. I not only find joy in exploring new technologies and ideas, but also bringing them to life.",
+                "I'm currently focusing on web application development. I don't only find joy in exploring new technologies and ideas, but also bringing them to life.",
             travel: 'I love traveling! 🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭',
             satisfaction:
                 'Exploring new places and cultures satisfies my curiosity and quest for knowledge!',
             into: "I've been passionate about English lately. It brings me joy to comprehend and converse in a language that's not my mother tongue.",
-            value: 'In life, I highly value continuous growth through the endeavors I undertake, always striving towards fresh challenges and goals.',
+            value: 'In life, I highly value continuous growth through the endeavors I undertake, always strive towards fresh challenges and goals.',
             mindset:
                 'I will persist in pursuing captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
             job_contact: 'Contact me for work inquiries!',
