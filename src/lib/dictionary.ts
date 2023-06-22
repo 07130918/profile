@@ -11,13 +11,13 @@ export const text = {
             study: 'In fact, studying of structural mechanics and surveying was enriching and has been invaluable in my career.',
             current:
                 "I'm currently focusing on web application development. I don't only find joy in exploring new technologies and ideas, but also bringing them to life.",
-            travel: 'I love traveling! 🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭',
+            travel: 'Besides, I love traveling! 🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭',
             satisfaction:
-                'Exploring new places and cultures satisfies my curiosity and quest for knowledge!',
-            into: "I've been passionate about English lately. It brings me joy to comprehend and converse in a language that's not my mother tongue.",
-            value: 'In life, I highly value continuous growth through the endeavors I undertake, always strive towards fresh challenges and goals.',
+                'Exploring new places and immersing myself into divergent cultures satisfies my curious mind, broadens horizons and my on-going quest for knowledge!',
+            into: "I've also been passionate about English lately. It brings me joy to comprehend and converse in a second language.",
+            value: 'In life, I highly value continuous growth through endeavors. I always strive towards new fresh challenges and goals.',
             mindset:
-                'I will persist in pursuing captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
+                'I will persist in pursuit of captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
             job_contact: 'Contact me for work inquiries!',
         },
         deployments: [
