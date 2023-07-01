@@ -101,8 +101,8 @@ const Skills = () => {
                 <Text>Japanese / English</Text>
             </Box>
             {skillSets.map(({ genre, details }) => (
-                <>
-                    <Heading key={genre} fontSize='lg' mb={2}>
+                <Box key={genre}>
+                    <Heading fontSize='lg' mb={2}>
                         {genre}
                     </Heading>
                     <Stack direction={dColumnBase}>
@@ -110,7 +110,7 @@ const Skills = () => {
                             <SkillItem key={i} name={name} icon={icon} link={link} />
                         ))}
                     </Stack>
-                </>
+                </Box>
             ))}
             <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />
         </TabContainer>
