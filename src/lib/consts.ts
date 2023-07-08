@@ -1,6 +1,13 @@
 import { ProjectsElementProps } from './types';
 
-export const aws_image = 'AWS-Certified-Solutions-Architect-Associate_badge';
+export const bmcImage = {
+    src: 'https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png',
+    alt: 'Buy Me A Coffee',
+    qr: {
+        src: '/images/buymeacoffeeqr.png',
+        alt: 'Buy Me A Coffee QR Code',
+    },
+};
 
 export const socialLink = {
     gmail: 'mailto:tokyosato1@gmail.com',

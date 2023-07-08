@@ -1,4 +1,4 @@
-import { socialLink } from '@/lib/consts';
+import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import useResponsive from '@/lib/designHooks';
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
@@ -41,7 +41,7 @@ const ProfileCard = () => {
         },
     ];
 
-    const { p12: p, ml30: ml, imageSize, dRowBase } = useResponsive();
+    const { p12: p, imageSize, dRowBase } = useResponsive();
 
     return (
         <Stack direction={dRowBase} align='start'>
@@ -55,7 +55,7 @@ const ProfileCard = () => {
                     borderRadius='full'
                 />
             </Box>
-            <Box ml={ml}>
+            <Stack gap={0}>
                 <Text
                     fontSize='3xl'
                     fontWeight='bold'
@@ -64,14 +64,6 @@ const ProfileCard = () => {
                 >
                     Kota Sato
                 </Text>
-                <ExLink href='https://www.buymeacoffee.com/hi.im.kota'>
-                    <Image
-                        src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png'
-                        alt='Buy Me A Coffee'
-                        h='50px'
-                        w='180px'
-                    />
-                </ExLink>
                 <HStack>
                     <GrMapLocation />
                     <Text>Tokyo / Japan</Text>
@@ -86,7 +78,10 @@ const ProfileCard = () => {
                         </ExLink>
                     </HStack>
                 ))}
-            </Box>
+                <ExLink href={socialLink.buyMeACoffee}>
+                    <Image src={bmcImage.src} alt={bmcImage.alt} h='50px' w='180px' />
+                </ExLink>
+            </Stack>
         </Stack>
     );
 };

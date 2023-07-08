@@ -1,5 +1,5 @@
 import { ExLink, TabContainer } from '@/components/ChakraExtension';
-import { socialLink } from '@/lib/consts';
+import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
 
@@ -21,20 +21,10 @@ const Support = () => {
             </Text>
             <HStack>
                 <ExLink href={socialLink.buyMeACoffee}>
-                    <Image
-                        src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png'
-                        alt='Buy Me A Coffee'
-                        h='82px'
-                        w='300px'
-                    />
+                    <Image src={bmcImage.src} alt={bmcImage.alt} h='82px' w='300px' />
                 </ExLink>
                 {isLargerThan480 && (
-                    <Image
-                        src='/images/buymeacoffeeqr.png'
-                        alt='Buy Me A Coffee QR Code'
-                        h={100}
-                        w={100}
-                    />
+                    <Image src={bmcImage.qr.src} alt={bmcImage.qr.alt} h={100} w={100} />
                 )}
             </HStack>
             <ExLink href={socialLink.paypal}>
