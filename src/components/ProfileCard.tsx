@@ -2,6 +2,7 @@ import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import useResponsive from '@/lib/designHooks';
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
+import { useSearchParams } from 'next/navigation';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
@@ -43,11 +44,15 @@ const ProfileCard = () => {
 
     const { p12: p, imageSize, dRowBase } = useResponsive();
 
+    const searchParams = useSearchParams();
+    const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
+    const imageNumber = ref === 'linkedIn' ? 0 : Math.floor(Math.random() * 2) + 1;
+
     return (
         <Stack direction={dRowBase} align='start'>
             <Box bgGradient={design.graduation.blue} borderRadius='full' p={p}>
                 <Image
-                    src='/images/me.jpeg'
+                    src={`/images/me/${imageNumber}.jpeg`}
                     alt='Kota Sato'
                     objectFit='cover'
                     w={imageSize}

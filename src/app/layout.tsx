@@ -1,7 +1,8 @@
 import { Providers } from '@/components/providers';
+import { Metadata } from 'next';
 import Head from 'next/head';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Hi! This is Kota.',
     description: 'This is a portfolio web page of Kota.',
 };
