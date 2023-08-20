@@ -8,6 +8,8 @@ import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
 import { ExLink } from './ChakraExtension';
 
+const refList = ['linkedIn', 'job-hunting'];
+
 const ProfileCard = () => {
     const socialMediaLinks = [
         {
@@ -46,7 +48,7 @@ const ProfileCard = () => {
 
     const searchParams = useSearchParams();
     const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
-    const imageNumber = ref === 'linkedIn' ? 0 : Math.floor(Math.random() * 2) + 1;
+    const imageNumber = ref && refList.includes(ref) ? 0 : Math.floor(Math.random() * 2) + 1;
 
     return (
         <Stack direction={dRowBase} align='start'>
