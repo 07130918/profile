@@ -48,7 +48,7 @@ const ProfileCard = () => {
 
     const searchParams = useSearchParams();
     const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
-    const imageNumber = ref && refList.includes(ref) ? 0 : Math.floor(Math.random() * 2) + 1;
+    const imageNumber = ref && refList.includes(ref) ? 0 : Math.floor(Math.random() * 3) + 1;
 
     return (
         <Stack direction={dRowBase} align='start'>
