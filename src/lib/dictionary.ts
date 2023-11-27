@@ -1,3 +1,5 @@
+const countryFlagsEmoji = '🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭 🇳🇿';
+
 export const text = {
     en: {
         introduction: {
@@ -11,7 +13,7 @@ export const text = {
             study: 'In fact, studying of structural mechanics and surveying was enriching and has been invaluable in my career.',
             current:
                 "I'm currently focusing on web application development. I don't only find joy in exploring new technologies and ideas, but also bringing them to life.",
-            travel: 'Besides, I love traveling! 🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭',
+            travel: `Besides, I love traveling! ${countryFlagsEmoji}`,
             satisfaction:
                 'Exploring new places and immersing myself into divergent cultures satisfies my curious mind, broadens horizons and my on-going quest for knowledge!',
             into: "I've also been passionate about English lately. It brings me joy to comprehend and converse in a second language.",
@@ -39,7 +41,7 @@ export const text = {
             study: '特に構造力学と測量学について学ぶことは私にとって貴重な経験でした。',
             current:
                 '現在、私はwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することに喜びを感じています。(このページも好奇心で作りました!)🧑🏻‍💻',
-            travel: '旅行が大好きです! 🇯🇵 🇬🇧 🇸🇬 🇻🇳 🇦🇺 🇵🇭',
+            travel: `旅行が大好きです! ${countryFlagsEmoji}`,
             satisfaction: '新しい場所や文化を探索することが、好奇心と探究心を満たします!',
             into: '最近は英語にも熱中しています。母国語ではない言語で物事を理解し、コミュニケーションが取れることに喜びを感じています。',
             value: '取り組む物事を通し常に成長し、新しい挑戦/目標に向かって前進することを大切にしています。',
