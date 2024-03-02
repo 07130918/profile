@@ -53,7 +53,6 @@ const ProfileCard = () => {
             align='start'
             p={{ base: 2, md: 6 }}
             h={{ md: '90hv' }}
-            mb={{ base: 3, md: 0 }}
         >
             <Box bgGradient={design.graduation.blue} borderRadius='full' p={{ base: 1, md: 2 }}>
                 <Image
