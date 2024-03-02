@@ -56,7 +56,7 @@ const ProfileCard = () => {
         >
             <Box bgGradient={design.graduation.blue} borderRadius='full' p={{ base: 1, md: 2 }}>
                 <Image
-                    src={`/images/me/${imageNumber}.jpeg`}
+                    src={`/images/me/${imageNumber}.jpg`}
                     alt='Kota Sato'
                     objectFit='cover'
                     w={{ base: '60px', md: '60' }}
