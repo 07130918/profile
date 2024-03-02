@@ -1,9 +1,9 @@
+import Lang from '@/components/Lang';
+import Introduction from '@/components/tab/Introduction';
+import Skills from '@/components/tab/Skills';
+import Support from '@/components/tab/Support';
+import Works from '@/components/tab/Works';
 import { Box, Stack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
-import Lang from './Lang';
-import Introduction from './tab/Introduction';
-import Skills from './tab/Skills';
-import Support from './tab/Support';
-import Works from './tab/Works';
 
 const TabCard = () => {
     const tabs = [

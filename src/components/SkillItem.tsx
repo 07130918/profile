@@ -1,5 +1,5 @@
 import type { TechStackElement } from '@/lib/types';
-import { HStack, Box } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { ExLink } from './ChakraExtension';
 
 const SkillItem = ({ name, icon, link }: TechStackElement) => {

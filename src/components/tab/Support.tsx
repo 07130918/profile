@@ -5,7 +5,6 @@ import { HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
 
 const Support = () => {
     const [isLargerThan480] = useMediaQuery('(min-width: 480px)');
-
     return (
         <TabContainer>
             <Text

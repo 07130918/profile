@@ -6,7 +6,9 @@ export const text = {
             greeting: "Hello there, my name is Kota and I'm a professional software developer.",
             work: {
                 now: 'I am currently working at ',
-                inc: 'Arara Inc.',
+                inc_1: 'TechsPlus Inc.',
+                and: ' and ',
+                inc_2: 'Arara Inc.',
                 addition: ', where I specialize in software engineering.',
             },
             major: 'Despite having a university degree in City Planning, my passion for software engineering has led me to my profession today.',
@@ -34,7 +36,9 @@ export const text = {
             greeting: 'こんにちは、佐藤宏太です!',
             work: {
                 now: '私は現在、',
-                inc: 'アララ株式会社',
+                inc_1: 'TechsPlus株式会社',
+                and: 'と',
+                inc_2: 'アララ株式会社',
                 addition: 'でソフトウェアエンジニアとして働いています。',
             },
             major: '大学在学中には都市計画を専攻していました。',

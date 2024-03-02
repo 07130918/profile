@@ -3,7 +3,6 @@ import { HStack, Link, Text } from '@chakra-ui/react';
 import { useContext } from 'react';
 
 const c = 'blue.400';
-
 const Lang = () => {
     const { setLang } = useContext(LangContext);
 
