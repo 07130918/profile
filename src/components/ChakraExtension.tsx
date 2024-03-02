@@ -44,7 +44,7 @@ export const TabContainer = (props: BoxProps) => (
     <Box p={4} borderRadius='lg' borderColor='gray.300' borderWidth='1px' {...props} />
 );
 
-export const Section = (props: BoxProps) => <Box mb={3} {...props} />;
+export const Paragraph = (props: BoxProps) => <Box mb={3} {...props} />;
 
 export const ExLink = ({ href, children, ...props }: ExLinkProps & LinkProps) => (
     <Link href={href} isExternal {...props}>

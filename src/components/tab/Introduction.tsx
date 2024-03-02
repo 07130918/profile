@@ -1,4 +1,5 @@
-import { ExLink, Section, TabContainer } from '@/components/ChakraExtension';
+import { ExLink, Paragraph, TabContainer } from '@/components/ChakraExtension';
+import Section from '@/components/Section';
 import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
@@ -10,23 +11,12 @@ import { useContext } from 'react';
 const Introduction = () => {
     const { lang } = useContext(LangContext);
     const t = text[lang].introduction;
-
-    const renderSection = (texts: string[]) => {
-        return (
-            <Section>
-                {texts.map((t, i) => (
-                    <Text key={i}>{t}</Text>
-                ))}
-            </Section>
-        );
-    };
-
     return (
         <TabContainer>
             <Heading fontSize='xl' mb={3}>
                 {t.greeting}
             </Heading>
-            <Section>
+            <Paragraph>
                 <Text>
                     {t.work.now}
                     <ExLink href='https://www.arara.com/' textDecoration='underline'>
@@ -35,10 +25,10 @@ const Introduction = () => {
                     {t.work.addition}
                 </Text>
                 <Text>{t.major}</Text>
-            </Section>
-            {renderSection([t.study, t.current])}
-            {renderSection([t.travel, t.satisfaction])}
-            {renderSection([t.into, t.value])}
+            </Paragraph>
+            <Section texts={[t.study, t.current]} />
+            <Section texts={[t.travel, t.satisfaction]} />
+            <Section texts={[t.into, t.value]} />
             <Text fontWeight='bold'>{t.mindset}</Text>
             <Box pt={6}>
                 <Heading fontSize='xl'>{t.job_contact}</Heading>
