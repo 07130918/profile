@@ -1,4 +1,3 @@
-import useResponsive from '@/lib/designHooks';
 import { Box, Stack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import Lang from './Lang';
 import Introduction from './tab/Introduction';
@@ -7,8 +6,6 @@ import Support from './tab/Support';
 import Works from './tab/Works';
 
 const TabCard = () => {
-    const { dColumnBase, fs, py03: py } = useResponsive();
-
     const tabs = [
         { label: 'Profile', e: '😎', Component: Introduction },
         { label: 'Works', e: '🎨', Component: Works },
@@ -17,12 +14,23 @@ const TabCard = () => {
     ];
 
     return (
-        <Tabs isLazy>
+        <Tabs
+            isLazy
+            w={{ base: '100%', md: '75%' }}
+            px={{ base: 2, md: 8 }}
+            py={{ base: 2, md: 4 }}
+            ml={{ base: 0, md: 8 }}
+        >
             <Lang />
-            <TabList fontSize={fs}>
+            <TabList fontSize={{ base: 'md', md: 'lg' }}>
                 {tabs.map(({ label, e }) => (
-                    <Tab key={label} fontSize={fs} py={py} overflowX='hidden'>
-                        <Stack direction={dColumnBase} gap={0}>
+                    <Tab
+                        key={label}
+                        fontSize={{ base: 'md', md: 'lg' }}
+                        py={{ base: 0, md: 3 }}
+                        overflowX='hidden'
+                    >
+                        <Stack direction={{ base: 'column', sm: 'row' }} gap={0}>
                             <Box>{e}</Box>
                             <Box>{label}</Box>
                         </Stack>

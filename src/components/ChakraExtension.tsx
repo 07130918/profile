@@ -64,10 +64,10 @@ export const Card = (props: BoxProps) => (
 );
 
 export const TabContainer = (props: BoxProps) => (
-    <Box boxShadow={design.boxShadow} borderRadius='lg' py={4} px={6} {...props} />
+    <Box p={4} borderRadius='lg' borderColor='gray.300' borderWidth='1px' {...props} />
 );
 
-export const TextBox = (props: BoxProps) => <Box mb={3} {...props} />;
+export const Section = (props: BoxProps) => <Box mb={3} {...props} />;
 
 export const ExLink = ({ href, children, ...props }: ExLinkProps & LinkProps) => (
     <Link href={href} isExternal {...props}>

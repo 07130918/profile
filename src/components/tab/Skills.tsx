@@ -1,9 +1,3 @@
-import { TabContainer } from '@/components/ChakraExtension';
-import { serviceLink } from '@/lib/consts';
-import design from '@/lib/design';
-import useResponsive from '@/lib/designHooks';
-import type { TechStack } from '@/lib/types';
-import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import {
     AWSIcon,
     DynamoDBIcon,
@@ -13,9 +7,14 @@ import {
     MySQLIcon,
     NextJsIcon,
     PythonIcon,
+    TabContainer,
     TypeScriptIcon,
-} from '../ChakraExtension';
-import SkillItem from '../SkillItem';
+} from '@/components/ChakraExtension';
+import SkillItem from '@/components/SkillItem';
+import { serviceLink } from '@/lib/consts';
+import design from '@/lib/design';
+import type { TechStack } from '@/lib/types';
+import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 
 const techStack: TechStack = {
     programmingLangs: [
@@ -87,8 +86,6 @@ const skillSets = [
 ];
 
 const Skills = () => {
-    const { dColumnBase } = useResponsive();
-
     return (
         <TabContainer>
             <Heading fontSize='2xl' bgGradient={design.graduation.theme} bgClip='text' mb={3}>
@@ -105,7 +102,7 @@ const Skills = () => {
                     <Heading fontSize='lg' mb={2}>
                         {genre}
                     </Heading>
-                    <Stack direction={dColumnBase}>
+                    <Stack direction={{ base: 'column', sm: 'row' }}>
                         {details.map(({ name, icon, link }, i) => (
                             <SkillItem key={i} name={name} icon={icon} link={link} />
                         ))}

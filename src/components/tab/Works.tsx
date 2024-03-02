@@ -1,25 +1,26 @@
-import { ExLink } from '@/components/ChakraExtension';
-import { LangContext } from '@/components/providers';
-import { projectsElement, serviceLink } from '@/lib/consts';
-import design from '@/lib/design';
-import { text } from '@/lib/dictionary';
-import type { ProjectProps, TechStackElement } from '@/lib/types';
-import { Box, Grid, HStack, Heading, Link, Wrap, WrapItem } from '@chakra-ui/react';
-import { useContext } from 'react';
-import { BiLinkExternal } from 'react-icons/bi';
-import { FaGithub } from 'react-icons/fa';
 import {
     ChakraIcon,
     ChromeIcon,
+    ExLink,
     JavaScriptIcon,
     LangChainImage,
     NextJsIcon,
     PythonIcon,
     ReactIcon,
+    TabContainer,
     TypeScriptIcon,
     VercelIcon,
     VueIcon,
-} from '../ChakraExtension';
+} from '@/components/ChakraExtension';
+import { LangContext } from '@/components/providers';
+import { projectsElement, serviceLink } from '@/lib/consts';
+import design from '@/lib/design';
+import { text } from '@/lib/dictionary';
+import type { ProjectProps, TechStackElement } from '@/lib/types';
+import { Grid, HStack, Heading, Wrap, WrapItem } from '@chakra-ui/react';
+import { useContext } from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
 
 const techStack: Record<string, TechStackElement> = {
     python: {
@@ -110,13 +111,9 @@ const Works = () => {
     const t = text[lang].deployments;
 
     return (
-        <Grid
-            templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']}
-            gap={6}
-            p={4}
-        >
-            {projects.map((project, index) => (
-                <Box key={index} borderRadius='lg' boxShadow={design.boxShadow} p={4}>
+        <Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']} gap={6}>
+            {projects.map((project, i) => (
+                <TabContainer key={i}>
                     <ExLink href={project.link} _hover={{ textDecoration: 'none' }}>
                         <Heading
                             size='lg'
@@ -124,26 +121,22 @@ const Works = () => {
                             bgClip='text'
                             fontWeight='extrabold'
                         >
-                            {t[index].title}
+                            {t[i].title}
                         </Heading>
                     </ExLink>
-                    <Box mt={2}>
-                        <HStack>
-                            <BiLinkExternal color='#2f81f7' />
-                            <ExLink href={project.link} color='#2f81f7'>
-                                {project.externalLinkText}
-                            </ExLink>
-                        </HStack>
-                    </Box>
-                    <Box mt={2}>
-                        <HStack>
-                            <FaGithub />
-                            <ExLink href={project.githubLink}>{project.githubRepoName}</ExLink>
-                        </HStack>
-                    </Box>
-                    <Wrap mt={5}>
-                        {project.techStacks.map((techStack, index) => (
-                            <WrapItem key={index}>
+                    <HStack pt={1}>
+                        <BiLinkExternal color='#2f81f7' />
+                        <ExLink href={project.link} color='#2f81f7'>
+                            {project.externalLinkText}
+                        </ExLink>
+                    </HStack>
+                    <HStack pt={1}>
+                        <FaGithub />
+                        <ExLink href={project.githubLink}>{project.githubRepoName}</ExLink>
+                    </HStack>
+                    <Wrap pt={1}>
+                        {project.techStacks.map((techStack, idx) => (
+                            <WrapItem key={idx}>
                                 <HStack>
                                     {techStack.icon}
                                     <ExLink href={techStack.link}>{techStack.name}</ExLink>
@@ -151,7 +144,7 @@ const Works = () => {
                             </WrapItem>
                         ))}
                     </Wrap>
-                </Box>
+                </TabContainer>
             ))}
         </Grid>
     );
