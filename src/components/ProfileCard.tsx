@@ -1,3 +1,4 @@
+import { ExLink } from '@/components/ChakraExtension';
 import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
@@ -5,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
-import { ExLink } from './ChakraExtension';
 
 const refList = ['linkedIn', 'job-hunting'];
 
@@ -78,7 +78,7 @@ const ProfileCard = () => {
                 </Text>
                 <HStack pt={{ base: 0, md: 2 }}>
                     <GrMapLocation />
-                    <Text>Tokyo / Japan</Text>
+                    <Text>Tokyo/Japan</Text>
                 </HStack>
                 {socialMediaLinks.map(({ Icon, color, href, text }) => (
                     <HStack key={href}>

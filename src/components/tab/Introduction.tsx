@@ -3,9 +3,9 @@ import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
+import { EmailIcon } from '@chakra-ui/icons';
 import { Box, HStack, Heading, Text } from '@chakra-ui/react';
 import { useContext } from 'react';
-import { BiLink } from 'react-icons/bi';
 
 const Introduction = () => {
     const { lang } = useContext(LangContext);
@@ -40,11 +40,11 @@ const Introduction = () => {
             {renderSection([t.travel, t.satisfaction])}
             {renderSection([t.into, t.value])}
             <Text fontWeight='bold'>{t.mindset}</Text>
-            <Box py={8}>
+            <Box pt={6}>
                 <Heading fontSize='xl'>{t.job_contact}</Heading>
                 <HStack>
                     <ExLink href={socialLink.gmail}>
-                        <BiLink color={design.color.gmail} />
+                        <EmailIcon color={design.color.gmail} />
                     </ExLink>
                     <ExLink
                         href={socialLink.gmail}

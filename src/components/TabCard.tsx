@@ -17,9 +17,8 @@ const TabCard = () => {
         <Tabs
             isLazy
             w={{ base: '100%', md: '75%' }}
-            px={{ base: 2, md: 8 }}
-            py={{ base: 2, md: 4 }}
-            ml={{ base: 0, md: 8 }}
+            px={{ base: 1, md: 4 }}
+            py={{ base: 0, md: 4 }}
         >
             <Lang />
             <TabList fontSize={{ base: 'md', md: 'lg' }}>
