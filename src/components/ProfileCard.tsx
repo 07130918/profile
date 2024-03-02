@@ -1,7 +1,7 @@
 import { ExLink } from '@/components/ChakraExtension';
 import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
-import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, HStack, Image, Stack, Text, useMediaQuery } from '@chakra-ui/react';
 import { useSearchParams } from 'next/navigation';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -44,6 +44,7 @@ const ProfileCard = () => {
         },
     ];
 
+    const [isLargerThan480] = useMediaQuery('(min-width: 480px)');
     const searchParams = useSearchParams();
     const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
     const imageNumber = ref && refList.includes(ref) ? 0 : Math.floor(Math.random() * 3) + 1;
@@ -95,6 +96,14 @@ const ProfileCard = () => {
                         <Image src={bmcImage.src} alt={bmcImage.alt} h='50px' w='180px' />
                     </ExLink>
                 </Box>
+                {isLargerThan480 && (
+                    <>
+                        <ExLink href={socialLink.paypal}>
+                            <Image src='/images/paypal.png' alt='Paypal' h='90px' w='180px' />
+                        </ExLink>
+                        <Image src={bmcImage.qr.src} alt={bmcImage.qr.alt} h={100} w={100} />
+                    </>
+                )}
             </Stack>
         </Stack>
     );
