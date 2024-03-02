@@ -46,7 +46,6 @@ const ProfileCard = () => {
     const searchParams = useSearchParams();
     const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
     const imageNumber = ref && refList.includes(ref) ? 0 : Math.floor(Math.random() * 3) + 1;
-
     return (
         <Stack
             direction={{ base: 'row', md: 'column' }}
@@ -59,12 +58,12 @@ const ProfileCard = () => {
                     src={`/images/me/${imageNumber}.jpg`}
                     alt='Kota Sato'
                     objectFit='cover'
-                    w={{ base: '60px', md: '60' }}
-                    h={{ base: '60px', md: '60' }}
                     borderRadius='full'
+                    w={{ base: '90px', md: '60' }}
+                    h={{ base: '90px', md: '60' }}
                 />
             </Box>
-            <Stack gap={0} pl={4}>
+            <Stack gap={0} pl={{ base: 0, md: 4 }}>
                 <Text
                     fontSize='3xl'
                     fontWeight='bold'
