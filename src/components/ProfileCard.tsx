@@ -65,7 +65,7 @@ const ProfileCard = () => {
                     borderRadius='full'
                 />
             </Box>
-            <Stack gap={0}>
+            <Stack gap={0} pl={4}>
                 <Text
                     fontSize='3xl'
                     fontWeight='bold'
@@ -74,7 +74,10 @@ const ProfileCard = () => {
                 >
                     Kota Sato
                 </Text>
-                <HStack>
+                <Text fontSize='lg' color='gray.500'>
+                    (he/him)
+                </Text>
+                <HStack pt={{ base: 0, md: 2 }}>
                     <GrMapLocation />
                     <Text>Tokyo / Japan</Text>
                 </HStack>
@@ -88,9 +91,11 @@ const ProfileCard = () => {
                         </ExLink>
                     </HStack>
                 ))}
-                <ExLink href={socialLink.buyMeACoffee}>
-                    <Image src={bmcImage.src} alt={bmcImage.alt} h='50px' w='180px' />
-                </ExLink>
+                <Box pt={2}>
+                    <ExLink href={socialLink.buyMeACoffee}>
+                        <Image src={bmcImage.src} alt={bmcImage.alt} h='50px' w='180px' />
+                    </ExLink>
+                </Box>
             </Stack>
         </Stack>
     );
