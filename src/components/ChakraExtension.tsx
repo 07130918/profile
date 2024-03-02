@@ -1,7 +1,7 @@
 import design from '@/lib/design';
 import type { ExLinkProps } from '@/lib/types';
 import { Image } from '@chakra-ui/image';
-import { Box, BoxProps, Flex, FlexProps, Link, LinkProps } from '@chakra-ui/react';
+import { Box, BoxProps, Link, LinkProps } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
 import { FaAws, FaPython, FaReact, FaVuejs } from 'react-icons/fa';
@@ -35,29 +35,6 @@ export const ReactIcon = (props: any) => <FaReact size={24} color='#61DAFB' {...
 export const TypeScriptIcon = (props: any) => <SiTypescript size={24} color='#3178C6' {...props} />;
 export const VueIcon = (props: any) => <FaVuejs size={24} color='#42B883' {...props} />;
 export const VercelIcon = (props: any) => <IoLogoVercel size={24} color='#000000' {...props} />;
-
-export const PageWrapper = (props: FlexProps) => (
-    <Flex
-        bgGradient={design.graduation.gb}
-        justify='center'
-        align='center'
-        minH='100vh'
-        {...props}
-    />
-);
-
-export const PageContainer = (props: FlexProps) => (
-    <Flex
-        direction={['column', 'column', 'row']}
-        w='96%'
-        h={['100%', '100%', '94vh']}
-        bg='white'
-        borderRadius='lg'
-        shadow='lg'
-        p={[1, 1, 4]}
-        {...props}
-    />
-);
 
 export const Card = (props: BoxProps) => (
     <Box boxShadow={design.boxShadow} borderRadius='lg' overflow='auto' {...props} />
