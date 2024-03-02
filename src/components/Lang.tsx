@@ -8,7 +8,7 @@ const Lang = () => {
     const { setLang } = useContext(LangContext);
 
     return (
-        <HStack>
+        <HStack pl={{ base: 2, md: 0 }}>
             <Link color={c} onClick={() => setLang('en')}>
                 English
             </Link>
