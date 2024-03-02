@@ -2,7 +2,7 @@ const design = {
     boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.6)',
     color: {
         gmail: '#c71610',
-        twitter: '#08a0e9',
+        x: '#0B0B0B',
         github: '#171515',
         linkedIn: '#0072b1',
         facebook: '#3b5998',

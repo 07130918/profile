@@ -11,7 +11,7 @@ export const bmcImage = {
 
 export const socialLink = {
     gmail: 'mailto:tokyosato1@gmail.com',
-    twitter: 'https://twitter.com/tech_guy_kay',
+    x: 'https://twitter.com/tech_guy_kay',
     github: 'https://github.com/07130918',
     linkedIn: 'https://www.linkedin.com/in/kota-sato-228364215/',
     facebook: 'https://www.facebook.com/profile.php?id=100069795974235',

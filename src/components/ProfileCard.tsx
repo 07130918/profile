@@ -3,7 +3,8 @@ import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import { useSearchParams } from 'next/navigation';
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { GrMapLocation } from 'react-icons/gr';
 import { SiGmail } from 'react-icons/si';
 
@@ -18,15 +19,15 @@ const ProfileCard = () => {
             text: 'tokyosato1@gmail.com',
         },
         {
-            Icon: FaTwitter,
-            color: design.color.twitter,
-            href: socialLink.twitter,
+            Icon: FaXTwitter,
+            color: design.color.x,
+            href: socialLink.x,
             text: '@tech_guy_kay',
         },
         {
             Icon: FaGithub,
             color: design.color.github,
-            href: 'https://github.com/07130918',
+            href: socialLink.github,
             text: '07130918',
         },
         {
@@ -39,7 +40,7 @@ const ProfileCard = () => {
             Icon: FaFacebook,
             color: design.color.facebook,
             href: socialLink.facebook,
-            text: '100069795974235',
+            text: 'Kota-Sato',
         },
     ];
 
