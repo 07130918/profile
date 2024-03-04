@@ -57,7 +57,7 @@ const ProfileCard = () => {
         >
             <Box bgGradient={design.graduation.blue} borderRadius='full' p={{ base: 1, md: 2 }}>
                 <Image
-                    src={`/images/me/${imageNumber}.jpg`}
+                    src={`images/me/${imageNumber}.jpg`}
                     alt='Kota Sato'
                     objectFit='cover'
                     borderRadius='full'
@@ -99,7 +99,7 @@ const ProfileCard = () => {
                 {isLargerThan480 && (
                     <>
                         <ExLink href={socialLink.paypal}>
-                            <Image src='/images/paypal.png' alt='Paypal' h='90px' w='180px' />
+                            <Image src='images/paypal.png' alt='Paypal' h='90px' w='180px' />
                         </ExLink>
                         <Image src={bmcImage.qr.src} alt={bmcImage.qr.alt} h={100} w={100} />
                     </>

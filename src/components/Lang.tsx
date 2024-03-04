@@ -1,4 +1,4 @@
-import { LangContext } from '@/components/providers';
+import { LangContext } from '@/app/providers';
 import { HStack, Link, Text } from '@chakra-ui/react';
 import { useContext } from 'react';
 

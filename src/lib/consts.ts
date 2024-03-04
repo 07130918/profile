@@ -1,10 +1,11 @@
 import { ProjectsElementProps } from './types';
 
+// Buy Me A Coffee
 export const bmcImage = {
     src: 'https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png',
     alt: 'Buy Me A Coffee',
     qr: {
-        src: '/images/buymeacoffeeqr.png',
+        src: 'images/buymeacoffeeqr.png',
         alt: 'Buy Me A Coffee QR Code',
     },
 };
@@ -37,10 +38,22 @@ export const serviceLink = {
 };
 
 export const projectsElement: ProjectsElementProps = {
+    wordPopQuiz: {
+        link: 'https://word-pop-quiz.vercel.app/',
+        externalLinkText: 'Word Pop Quiz',
+        githubLink: 'https://github.com/07130918/word-pop-quiz',
+        githubRepoName: 'word-pop-quiz',
+    },
+    emailForge: {
+        link: 'https://everybody-can-make-emails-easily.vercel.app/',
+        externalLinkText: 'EMail Forge',
+        githubLink: 'https://github.com/07130918/EmailForge',
+        githubRepoName: 'EmailForge',
+    },
     gpProofreader: {
         link: 'https://gp-proofreader.vercel.app/',
         externalLinkText: 'GP-proofreader',
-        githubLink: 'https://github.com/07130918/LLM-Playground',
+        githubLink: 'https://github.com/07130918/LLM-Playground/tree/main/proofread-web-app',
         githubRepoName: 'LLM-Playground',
     },
     scribbles: {
@@ -48,12 +61,6 @@ export const projectsElement: ProjectsElementProps = {
         externalLinkText: 'Scribbles',
         githubLink: 'https://github.com/07130918/Scribbles',
         githubRepoName: 'Scribbles',
-    },
-    wordPopQuiz: {
-        link: 'https://word-pop-quiz.vercel.app/',
-        externalLinkText: 'Word Pop Quiz',
-        githubLink: 'https://github.com/07130918/word-pop-quiz',
-        githubRepoName: 'word-pop-quiz',
     },
     toDoList: {
         link: 'https://chrome.google.com/webstore/detail/to-do-list/chaiaabmmjdihkcjlpmbadcdmefaljib?hl=ja&authuser=0',

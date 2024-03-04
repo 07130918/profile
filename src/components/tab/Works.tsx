@@ -1,3 +1,4 @@
+import { LangContext } from '@/app/providers';
 import {
     ChakraIcon,
     ChromeIcon,
@@ -12,12 +13,12 @@ import {
     VercelIcon,
     VueIcon,
 } from '@/components/ChakraExtension';
-import { LangContext } from '@/components/providers';
 import { projectsElement, serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
-import { Grid, HStack, Heading, Wrap, WrapItem } from '@chakra-ui/react';
+import { Box, Grid, HStack, Heading, Link, Stack, Wrap, WrapItem } from '@chakra-ui/react';
+import Image from 'next/image';
 import { useContext } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
@@ -77,6 +78,14 @@ const techStack: Record<string, TechStackElement> = {
 
 const projects: ProjectProps[] = [
     {
+        ...projectsElement.wordPopQuiz,
+        techStacks: [techStack.ts, techStack.nextjs, techStack.chakra, techStack.vercel],
+    },
+    {
+        ...projectsElement.emailForge,
+        techStacks: [techStack.ts, techStack.nextjs, techStack.chakra, techStack.vercel],
+    },
+    {
         ...projectsElement.gpProofreader,
         techStacks: [
             techStack.ts,
@@ -97,10 +106,6 @@ const projects: ProjectProps[] = [
         ],
     },
     {
-        ...projectsElement.wordPopQuiz,
-        techStacks: [techStack.ts, techStack.nextjs, techStack.chakra, techStack.vercel],
-    },
-    {
         ...projectsElement.toDoList,
         techStacks: [techStack.js, techStack.vue, techStack.chromeExtension],
     },
@@ -108,7 +113,7 @@ const projects: ProjectProps[] = [
 
 const Works = () => {
     const { lang } = useContext(LangContext);
-    const t = text[lang].deployments;
+    const deployments = text[lang].deployments;
 
     return (
         <Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']} gap={6}>
@@ -121,20 +126,22 @@ const Works = () => {
                             bgClip='text'
                             fontWeight='extrabold'
                         >
-                            {t[i].title}
+                            {deployments[i].title}
                         </Heading>
                     </ExLink>
-                    <HStack pt={1}>
-                        <BiLinkExternal color='#2f81f7' />
-                        <ExLink href={project.link} color='#2f81f7'>
-                            {project.externalLinkText}
-                        </ExLink>
-                    </HStack>
-                    <HStack pt={1}>
-                        <FaGithub />
-                        <ExLink href={project.githubLink}>{project.githubRepoName}</ExLink>
-                    </HStack>
-                    <Wrap pt={1}>
+                    <Stack spacing={0} pt={2} direction={{ base: 'column', md: 'row' }}>
+                        <HStack>
+                            <BiLinkExternal color='#2f81f7' />
+                            <ExLink href={project.link} color='#2f81f7'>
+                                {project.externalLinkText}
+                            </ExLink>
+                        </HStack>
+                        <HStack pl={{ base: 0, md: 2 }}>
+                            <FaGithub />
+                            <ExLink href={project.githubLink}>{project.githubRepoName}</ExLink>
+                        </HStack>
+                    </Stack>
+                    <Wrap pt={2}>
                         {project.techStacks.map((techStack, idx) => (
                             <WrapItem key={idx}>
                                 <HStack>
@@ -143,6 +150,18 @@ const Works = () => {
                                 </HStack>
                             </WrapItem>
                         ))}
+                        {projects[i].githubRepoName === 'EmailForge' && (
+                            <Box pl={{ base: 0, md: 2 }}>
+                                <Link href='https://openai.com/' isExternal>
+                                    <Image
+                                        src='/images/OpenAI.jpg'
+                                        alt='OpenAI'
+                                        width={130}
+                                        height={130}
+                                    />
+                                </Link>
+                            </Box>
+                        )}
                     </Wrap>
                 </TabContainer>
             ))}

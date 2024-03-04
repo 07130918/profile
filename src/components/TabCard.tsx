@@ -29,7 +29,7 @@ const TabCard = () => {
                         py={{ base: 0, md: 3 }}
                         overflowX='hidden'
                     >
-                        <Stack direction={{ base: 'column', sm: 'row' }} gap={0}>
+                        <Stack direction={{ base: 'column', sm: 'row' }} gap={{ base: 0, sm: 2 }}>
                             <Box>{e}</Box>
                             <Box>{label}</Box>
                         </Stack>
@@ -37,8 +37,8 @@ const TabCard = () => {
                 ))}
             </TabList>
             <TabPanels>
-                {tabs.map(({ Component }, index) => (
-                    <TabPanel p={[1, 1, 4]} key={index}>
+                {tabs.map(({ Component, label }) => (
+                    <TabPanel key={label}>
                         <Component />
                     </TabPanel>
                 ))}

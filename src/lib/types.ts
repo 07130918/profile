@@ -20,9 +20,10 @@ export type ProjectElementProps = {
 };
 
 export type ProjectsElementProps = {
+    wordPopQuiz: ProjectElementProps;
+    emailForge: ProjectElementProps;
     gpProofreader: ProjectElementProps;
     scribbles: ProjectElementProps;
-    wordPopQuiz: ProjectElementProps;
     toDoList: ProjectElementProps;
 };
 

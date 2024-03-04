@@ -25,9 +25,10 @@ export const text = {
             job_contact: 'Contact me for work inquiries!',
         },
         deployments: [
+            { title: 'English Vocabulary Quiz Web App' },
+            { title: 'Email Body Generator Web App' },
             { title: 'English Proofreading Web App' },
             { title: 'Notepad Chrome Extension' },
-            { title: 'English Vocabulary Quiz Web App' },
             { title: 'To-Do List Chrome Extension' },
         ],
     },
@@ -54,9 +55,10 @@ export const text = {
             job_contact: 'お仕事依頼はこちら!',
         },
         deployments: [
+            { title: '英単語クイズwebアプリ' },
+            { title: 'Eメール本文生成webアプリ' },
             { title: '英文校正webアプリ' },
             { title: 'メモ帳Chrome拡張機能' },
-            { title: '英単語クイズwebアプリ' },
             { title: 'To-DoリストChrome拡張機能' },
         ],
     },
