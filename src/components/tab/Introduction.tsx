@@ -20,11 +20,7 @@ const Introduction = () => {
                 <Text>
                     {t.work.now}
                     <ExLink href='https://techsplus.co.jp' textDecoration='underline'>
-                        {t.work.inc_1}
-                    </ExLink>
-                    {t.work.and}
-                    <ExLink href='https://www.arara.com' textDecoration='underline'>
-                        {t.work.inc_2}
+                        {t.work.inc}
                     </ExLink>
                     {t.work.addition}
                 </Text>

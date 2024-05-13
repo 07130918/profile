@@ -1,28 +1,26 @@
-const countryFlagsEmoji = '🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦';
+const countryFlagsEmoji = '🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷';
 
 export const text = {
     en: {
         introduction: {
-            greeting: "Hello there, my name is Kota and I'm a professional software developer.",
+            greeting: "Hi there! my name is Kota and I'm a professional software developer.",
             work: {
-                now: 'I am currently working at ',
-                inc_1: 'TechsPlus Inc.',
-                and: ' and ',
-                inc_2: 'Arara Inc.',
-                addition: ', where I specialize in software engineering.',
+                now: 'I currently work at ',
+                inc: 'TechsPlus Inc. ',
+                addition: 'where I specialize in software engineering.',
             },
-            major: 'Despite having a university degree in City Planning, my passion for software engineering has led me to my profession today.',
-            study: 'In fact, studying of structural mechanics and surveying was enriching and has been invaluable in my career.',
+            major: 'Even though I majored in City Planning during my university days, my passion for software engineering led me to where I am today.',
+            study: 'Studying structural mechanics and surveying was particularly enriching for me and has proven invaluable in my career.',
             current:
-                "I'm currently focusing on web application development. I don't only find joy in exploring new technologies and ideas, but also bringing them to life.",
-            travel: `Besides, I love traveling! ${countryFlagsEmoji}`,
+                "These days, I'm focusing on web application development. Not only do I enjoy exploring new technologies and ideas, but I also find joy in bringing them to life.",
+            travel: `I absolutely love traveling! ${countryFlagsEmoji}`,
             satisfaction:
                 'Exploring new places and immersing myself into divergent cultures satisfies my curious mind, broadens horizons and my on-going quest for knowledge!',
             into: "I've also been passionate about English lately. It brings me joy to comprehend and converse in a second language.",
             value: 'In life, I highly value continuous growth through endeavors. I always strive towards new fresh challenges and goals.',
             mindset:
                 'I will persist in pursuit of captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
-            job_contact: 'Contact me for work inquiries!',
+            job_contact: 'Feel free to contact me for work inquiries!',
         },
         deployments: [
             { title: 'English Vocabulary Quiz Web App' },
@@ -36,10 +34,8 @@ export const text = {
         introduction: {
             greeting: 'こんにちは、佐藤宏太です!',
             work: {
-                now: '私は現在、',
-                inc_1: 'TechsPlus株式会社',
-                and: 'と',
-                inc_2: 'アララ株式会社',
+                now: '私は今、',
+                inc: 'TechsPlus株式会社',
                 addition: 'でソフトウェアエンジニアとして働いています。',
             },
             major: '大学在学中には都市計画を専攻していました。',
@@ -47,11 +43,11 @@ export const text = {
             current:
                 '現在、私はwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することに喜びを感じています。(このページも好奇心で作りました!)🧑🏻‍💻',
             travel: `旅行が大好きです! ${countryFlagsEmoji}`,
-            satisfaction: '新しい場所や文化を探索することが、好奇心と探究心を満たします!',
-            into: '最近は英語にも熱中しています。母国語ではない言語で物事を理解し、コミュニケーションが取れることに喜びを感じています。',
+            satisfaction: '新しい場所や文化を探索することが大好きです!',
+            into: '最近は英語にもハマっていて、母国語ではない言語で物事を理解し、コミュニケーションが取れることに喜びを感じています。',
             value: '取り組む物事を通し常に成長し、新しい挑戦/目標に向かって前進することを大切にしています。',
             mindset:
-                '自分の好奇心、探究心、決断力を活かし、素晴らしいプロジェクトや経験を追求していきます!!!',
+                '自分の好奇心と探究心、そして決断力を最大限に活かして、素晴らしいプロジェクトを通し経験を重ねていきたいと思っています!!!',
             job_contact: 'お仕事依頼はこちら!',
         },
         deployments: [
