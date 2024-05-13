@@ -12,42 +12,47 @@ const Introduction = () => {
     const { lang } = useContext(LangContext);
     const t = text[lang].introduction;
     return (
-        <TabContainer>
-            <Heading fontSize='xl' mb={3}>
-                {t.greeting}
-            </Heading>
-            <Paragraph>
-                <Text>
-                    {t.work.now}
-                    <ExLink href='https://techsplus.co.jp' textDecoration='underline'>
-                        {t.work.inc}
-                    </ExLink>
-                    {t.work.addition}
-                </Text>
-                <Text>{t.major}</Text>
-            </Paragraph>
-            <Section texts={[t.study, t.current]} />
-            <Section texts={[t.travel, t.satisfaction]} />
-            <Section texts={[t.into, t.value]} />
-            <Text fontWeight='bold'>{t.mindset}</Text>
-            <Box pt={6}>
-                <Heading fontSize='xl'>{t.job_contact}</Heading>
-                <HStack>
-                    <ExLink href={socialLink.gmail}>
-                        <EmailIcon color={design.color.gmail} />
-                    </ExLink>
-                    <ExLink
-                        href={socialLink.gmail}
-                        bgGradient={design.graduation.theme}
-                        bgClip='text'
-                        fontWeight='bold'
-                        textDecoration='underline'
-                    >
-                        tokyosato1@gmail.com
-                    </ExLink>
-                </HStack>
-            </Box>
-        </TabContainer>
+        <>
+            <TabContainer>
+                <Heading fontSize='xl' mb={3}>
+                    {t.greeting}
+                </Heading>
+                <Paragraph>
+                    <Text>
+                        {t.work.now}
+                        <ExLink href='https://techsplus.co.jp' textDecoration='underline'>
+                            {t.work.inc}
+                        </ExLink>
+                        {t.work.addition}
+                    </Text>
+                    <Text>{t.major}</Text>
+                </Paragraph>
+                <Section texts={[t.study, t.current]} />
+                <Section texts={[t.travel, t.satisfaction]} />
+                <Section texts={[t.into, t.value]} />
+                <Text fontWeight='bold'>{t.mindset}</Text>
+            </TabContainer>
+            <Box pt={4} />
+            <TabContainer>
+                <Box>
+                    <Heading fontSize='xl'>{t.job_contact}</Heading>
+                    <HStack>
+                        <ExLink href={socialLink.gmail}>
+                            <EmailIcon color={design.color.gmail} />
+                        </ExLink>
+                        <ExLink
+                            href={socialLink.gmail}
+                            bgGradient={design.graduation.theme}
+                            bgClip='text'
+                            fontWeight='bold'
+                            textDecoration='underline'
+                        >
+                            tokyosato1@gmail.com
+                        </ExLink>
+                    </HStack>
+                </Box>
+            </TabContainer>
+        </>
     );
 };
 
