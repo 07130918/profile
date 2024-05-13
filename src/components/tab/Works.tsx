@@ -1,4 +1,3 @@
-import { LangContext } from '@/app/providers';
 import {
     ChakraIcon,
     ChromeIcon,
@@ -13,6 +12,7 @@ import {
     VercelIcon,
     VueIcon,
 } from '@/components/ChakraExtension';
+import { LangContext } from '@/components/providers';
 import { projectsElement, serviceLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';

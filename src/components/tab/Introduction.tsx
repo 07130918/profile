@@ -1,6 +1,6 @@
-import { LangContext } from '@/app/providers';
 import { ExLink, Paragraph, TabContainer } from '@/components/ChakraExtension';
 import Section from '@/components/Section';
+import { LangContext } from '@/components/providers';
 import { socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';

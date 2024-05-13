@@ -1,8 +1,7 @@
 'use client';
-
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
-import { Dispatch, SetStateAction, createContext, useState } from 'react';
+import { Dispatch, SetStateAction, Suspense, createContext, useState } from 'react';
 
 type Lang = 'en' | 'ja';
 
@@ -19,7 +18,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
     return (
         <CacheProvider>
             <LangContext.Provider value={{ lang, setLang }}>
-                <ChakraProvider>{children}</ChakraProvider>
+                <ChakraProvider>
+                    <Suspense>{children}</Suspense>
+                </ChakraProvider>
             </LangContext.Provider>
         </CacheProvider>
     );
