@@ -161,10 +161,12 @@ export default function Main() {
                     </Text>
                 </Paragraph>
                 <Text>{t.current}</Text>
-                <HStack>
-                    <Text>{t.travel}</Text>
-                    <Text color='black'>🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭</Text>
-                </HStack>
+                <Text>
+                    {t.travel}{' '}
+                    <Text color='black' as='span'>
+                        🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
+                    </Text>
+                </Text>
                 <Text>{t.into}</Text>
                 <Text fontWeight='bold' color='whiteAlpha.600' pt={2}>
                     {t.mindset}
