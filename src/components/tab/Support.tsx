@@ -10,15 +10,15 @@ const Support = () => {
             <Text
                 fontSize='3xl'
                 fontWeight='bold'
-                bgGradient={design.graduation.blue2}
+                bgGradient={design.graduation.rainbow}
                 bgClip='text'
             >
                 Thank you for seeing this tab!
             </Text>
-            <Text fontSize='xl' fontWeight='bold' bgGradient={design.graduation.gb} bgClip='text'>
-                You can help me effortlessly
+            <Text fontSize='xl' fontWeight='bold' color='whiteAlpha.900' pb={4}>
+                You can send me some tips easily!
             </Text>
-            <HStack>
+            <HStack spacing={8}>
                 <ExLink href={socialLink.buyMeACoffee}>
                     <Image src={bmcImage.src} alt={bmcImage.alt} h='82px' w='300px' />
                 </ExLink>

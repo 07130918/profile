@@ -12,7 +12,6 @@ import {
 } from '@/components/ChakraExtension';
 import SkillItem from '@/components/SkillItem';
 import { serviceLink } from '@/lib/consts';
-import design from '@/lib/design';
 import type { TechStack } from '@/lib/types';
 import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 
@@ -87,8 +86,8 @@ const skillSets = [
 
 const Skills = () => {
     return (
-        <TabContainer>
-            <Heading fontSize='2xl' bgGradient={design.graduation.theme} bgClip='text' mb={3}>
+        <TabContainer bgGradient='linear(180deg, #fff, #adadad)' bgClip='text'>
+            <Heading fontSize='2xl' color='#FAFAFA' mb={3}>
                 My Skills
             </Heading>
             <Box mb={4}>
@@ -103,8 +102,8 @@ const Skills = () => {
                         {genre}
                     </Heading>
                     <Stack direction={{ base: 'column', sm: 'row' }}>
-                        {details.map(({ name, icon, link }, i) => (
-                            <SkillItem key={i} name={name} icon={icon} link={link} />
+                        {details.map(({ name, icon, link }) => (
+                            <SkillItem key={name} name={name} icon={icon} link={link} />
                         ))}
                     </Stack>
                 </Box>

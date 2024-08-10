@@ -1,4 +1,4 @@
-import { ExLink } from '@/components/ChakraExtension';
+import { ExLink, WhiteLinearText } from '@/components/ChakraExtension';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
 import { bmcImage, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
@@ -38,7 +38,7 @@ export default function ProfileCard() {
                             <Text
                                 fontSize='2xl'
                                 fontWeight='bold'
-                                bgGradient={design.graduation.theme}
+                                bgGradient={design.graduation.rainbow}
                                 bgClip='text'
                             >
                                 Kota Sato
@@ -75,7 +75,7 @@ export default function ProfileCard() {
                         <Text
                             fontSize='3xl'
                             fontWeight='bold'
-                            bgGradient={design.graduation.theme}
+                            bgGradient={design.graduation.rainbow}
                             bgClip='text'
                         >
                             Kota Sato
@@ -85,7 +85,7 @@ export default function ProfileCard() {
                         </Text>
                         <HStack>
                             <GrMapLocation />
-                            <Text>Tokyo/Japan</Text>
+                            <WhiteLinearText>Tokyo/Japan</WhiteLinearText>
                         </HStack>
                         <SocialMediaLinks />
                         <Box pt={2}>

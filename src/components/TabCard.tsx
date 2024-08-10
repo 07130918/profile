@@ -1,8 +1,7 @@
 import Lang from '@/components/Lang';
-import Introduction from '@/components/tab/Introduction';
+import Main from '@/components/tab/Main';
 import Skills from '@/components/tab/Skills';
 import Support from '@/components/tab/Support';
-import Works from '@/components/tab/Works';
 import {
     Box,
     Stack,
@@ -16,8 +15,7 @@ import {
 
 const TabCard = () => {
     const tabs = [
-        { label: 'Profile', e: '😎', Component: Introduction },
-        { label: 'Works', e: '🎨', Component: Works },
+        { label: 'Profile', e: '😎', Component: Main },
         { label: 'Career / Skills', e: '👨‍💻', Component: Skills },
         { label: 'Support', e: '🤝', Component: Support },
     ];

@@ -40,7 +40,7 @@ export default function SocialMediaLinks() {
                 <WrapItem key={href} w={{ base: 'calc(50% - 4px)', md: '100%' }}>
                     <HStack w='100%' spacing={2}>
                         <ExLink href={href}>
-                            <Icon color='white' />
+                            <Icon color='whiteAlpha.600' />
                         </ExLink>
                         <ExLink
                             href={href}
