@@ -1,7 +1,7 @@
 import design from '@/lib/design';
 import type { ExLinkProps } from '@/lib/types';
 import { Image } from '@chakra-ui/image';
-import type { BoxProps, TextProps } from '@chakra-ui/react';
+import type { BoxProps, TextProps, LinkProps } from '@chakra-ui/react';
 import { Box, Link, Text } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
