@@ -121,7 +121,7 @@ export default function Main() {
     return (
         <>
             <TabContainer bgGradient='linear(180deg, #fff, #adadad)' bgClip='text'>
-                <Heading fontSize='xl' mb={3} color='#FAFAFA'>
+                <Heading fontSize='xl' mb={3} color='whiteAlpha.900'>
                     {t.greeting}
                 </Heading>
                 <Paragraph>
@@ -144,7 +144,7 @@ export default function Main() {
                     <Text color='black'>🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭</Text>
                 </HStack>
                 <Text>{t.into}</Text>
-                <Text fontWeight='bold' color='#FAFAFA' pt={2}>
+                <Text fontWeight='bold' color='whiteAlpha.600' pt={2}>
                     {t.mindset}
                 </Text>
             </TabContainer>
@@ -174,7 +174,7 @@ export default function Main() {
             <Stack pt={2}>
                 <Text
                     fontWeight='bold'
-                    fontSize='4xl'
+                    fontSize={{ base: '3xl', md: '4xl' }}
                     bgGradient='linear(180deg, #fff, #adadad)'
                     bgClip='text'
                 >
