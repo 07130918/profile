@@ -4,7 +4,9 @@ export const text = {
             greeting: "Hi there! My name is Kota. I'm a professional software developer.",
             work: {
                 now: 'I currently work at ',
-                inc: 'TechsPlus Inc. ',
+                inc1: 'TechsPlus Inc. ',
+                and: 'and ',
+                inc2: 'AICE Inc. ',
                 addition: 'where I specialize in software engineering.',
             },
             current:
@@ -27,8 +29,10 @@ export const text = {
         introduction: {
             greeting: 'こんにちは、佐藤宏太です!',
             work: {
-                now: '私は今、',
-                inc: 'TechsPlus株式会社',
+                now: '私は、',
+                inc1: 'TechsPlus株式会社',
+                and: 'と',
+                inc2: 'AICE株式会社',
                 addition: 'でソフトウェアエンジニアとして働いています。',
             },
             current:

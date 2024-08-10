@@ -133,7 +133,16 @@ export default function Main() {
                             textDecorationColor='pink.300'
                             color='pink.300'
                         >
-                            {t.work.inc}
+                            {t.work.inc1}
+                        </ExLink>
+                        <Text as='span'>{t.work.and}</Text>
+                        <ExLink
+                            href='https://aice.co.jp/'
+                            textDecoration='underline'
+                            textDecorationColor='pink.300'
+                            color='pink.300'
+                        >
+                            {t.work.inc2}
                         </ExLink>
                         {t.work.addition}
                     </Text>
