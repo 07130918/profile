@@ -52,8 +52,8 @@ const ProfileCard = () => {
         <Stack
             direction={{ base: 'row', md: 'column' }}
             align='start'
-            p={{ base: 2, md: 6 }}
-            h={{ md: '90hv' }}
+            pt={{ base: 2, md: 0 }}
+            px={{ base: 2, md: 0 }}
         >
             <Box bgGradient={design.graduation.blue} borderRadius='full' p={{ base: 1, md: 2 }}>
                 <Image
@@ -77,7 +77,7 @@ const ProfileCard = () => {
                 <Text fontSize='lg' color='gray.500'>
                     (he/him)
                 </Text>
-                <HStack pt={{ base: 0, md: 2 }}>
+                <HStack pt={{ base: 0, md: 1 }}>
                     <GrMapLocation />
                     <Text>Tokyo/Japan</Text>
                 </HStack>
