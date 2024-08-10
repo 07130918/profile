@@ -8,26 +8,53 @@ const Support = () => {
     return (
         <TabContainer>
             <Text
-                fontSize='3xl'
+                fontSize={{ base: 'xl', md: '3xl' }}
                 fontWeight='bold'
-                bgGradient={design.graduation.blue2}
+                bgGradient={design.graduation.rainbow}
                 bgClip='text'
             >
                 Thank you for seeing this tab!
             </Text>
-            <Text fontSize='xl' fontWeight='bold' bgGradient={design.graduation.gb} bgClip='text'>
-                You can help me effortlessly
+            <Text
+                fontSize={{ base: 'md', md: 'xl' }}
+                fontWeight='bold'
+                color='whiteAlpha.900'
+                py={2}
+            >
+                You can send me some tips easily!
             </Text>
-            <HStack>
+            <HStack spacing={8}>
                 <ExLink href={socialLink.buyMeACoffee}>
-                    <Image src={bmcImage.src} alt={bmcImage.alt} h='82px' w='300px' />
+                    <Image
+                        src={bmcImage.src}
+                        alt={bmcImage.alt}
+                        h={{
+                            base: '50px',
+                            md: '82px',
+                        }}
+                        w={{
+                            base: '200px',
+                            md: '300px',
+                        }}
+                    />
                 </ExLink>
                 {isLargerThan480 && (
                     <Image src={bmcImage.qr.src} alt={bmcImage.qr.alt} h={100} w={100} />
                 )}
             </HStack>
             <ExLink href={socialLink.paypal}>
-                <Image src='/images/paypal.png' alt='Paypal' h='100px' w='200px' />
+                <Image
+                    src='/images/paypal.png'
+                    alt='Paypal'
+                    h={{
+                        base: '90px',
+                        md: '100px',
+                    }}
+                    w={{
+                        base: '180px',
+                        md: '200px',
+                    }}
+                />
             </ExLink>
         </TabContainer>
     );

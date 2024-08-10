@@ -9,7 +9,8 @@ const design = {
     },
     graduation: {
         gb: 'linear(to-r, pink.300, orange.300)',
-        theme: 'linear(to-r, #ff00cc, #3333cc)',
+        theme: 'linear(180deg, #fff, #adadad)',
+        rainbow: 'linear(to-r, #ff00cc, #3333cc)',
         blue: 'linear(to-r, blue.100, blue.300)',
         blue2: 'linear(to-r, #79CFF2, #324F94)',
     },
