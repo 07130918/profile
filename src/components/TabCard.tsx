@@ -3,7 +3,16 @@ import Introduction from '@/components/tab/Introduction';
 import Skills from '@/components/tab/Skills';
 import Support from '@/components/tab/Support';
 import Works from '@/components/tab/Works';
-import { Box, Stack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import {
+    Box,
+    Stack,
+    Tab,
+    TabIndicator,
+    TabList,
+    TabPanel,
+    TabPanels,
+    Tabs,
+} from '@chakra-ui/react';
 
 const TabCard = () => {
     const tabs = [
@@ -19,6 +28,8 @@ const TabCard = () => {
             w={{ base: '100%', md: '75%' }}
             px={{ base: 1, md: 4 }}
             py={{ base: 0, md: 4 }}
+            position='relative'
+            variant='unstyled'
         >
             <Lang />
             <TabList fontSize={{ base: 'md', md: 'lg' }}>
@@ -36,6 +47,7 @@ const TabCard = () => {
                     </Tab>
                 ))}
             </TabList>
+            <TabIndicator mt='-1.5px' height='2px' bg='whiteAlpha.600' borderRadius='1px' />
             <TabPanels>
                 {tabs.map(({ Component, label }) => (
                     <TabPanel key={label}>
