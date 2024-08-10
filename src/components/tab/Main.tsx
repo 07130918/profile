@@ -14,12 +14,24 @@ import {
     VueIcon,
 } from '@/components/ChakraExtension';
 import { LangContext } from '@/components/providers';
-import { projectsElement, serviceLink, socialLink } from '@/lib/consts';
+import { bmcImage, projectsElement, serviceLink, socialLink } from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
 import { EmailIcon } from '@chakra-ui/icons';
-import { Box, Grid, HStack, Heading, Link, Stack, Text, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+    Box,
+    Image as ChakraImage,
+    Grid,
+    HStack,
+    Heading,
+    Link,
+    Stack,
+    Text,
+    Wrap,
+    WrapItem,
+    useBreakpointValue,
+} from '@chakra-ui/react';
 import Image from 'next/image';
 import { useContext } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
@@ -117,6 +129,7 @@ export default function Main() {
     const { lang } = useContext(LangContext);
     const t = text[lang].introduction;
     const deployments = text[lang].deployments;
+    const isMobile = useBreakpointValue({ base: true, md: false });
 
     return (
         <>
@@ -179,6 +192,15 @@ export default function Main() {
                     </HStack>
                 </Box>
             </TabContainer>
+            {isMobile && (
+                <Stack pt={4} alignItems='center'>
+                    <Stack>
+                        <ExLink href={socialLink.buyMeACoffee}>
+                            <ChakraImage src={bmcImage.src} alt={bmcImage.alt} h='50px' w='200px' />
+                        </ExLink>
+                    </Stack>
+                </Stack>
+            )}
             <Stack h='10dvh' />
             <Stack pt={2}>
                 <Text

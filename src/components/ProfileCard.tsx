@@ -49,11 +49,6 @@ export default function ProfileCard() {
                         </VStack>
                     </HStack>
                     <SocialMediaLinks />
-                    <Stack>
-                        <ExLink href={socialLink.buyMeACoffee}>
-                            <Image src={bmcImage.src} alt={bmcImage.alt} h='40px' w='160px' />
-                        </ExLink>
-                    </Stack>
                 </>
             ) : (
                 <Stack w='20vw'>
