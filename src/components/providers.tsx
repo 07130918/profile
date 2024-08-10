@@ -7,12 +7,13 @@ import { Suspense, createContext, useState } from 'react';
 type Lang = 'en' | 'ja';
 
 const language = { en: 'en', ja: 'ja' } as const;
-export const LangContext = createContext(
-    {} as {
-        lang: Lang;
-        setLang: Dispatch<SetStateAction<Lang>>;
-    },
-);
+export const LangContext = createContext({
+    lang: language.en,
+    setLang: (() => {}) as Dispatch<SetStateAction<Lang>>,
+} as {
+    lang: Lang;
+    setLang: Dispatch<SetStateAction<Lang>>;
+});
 
 const theme = extendTheme({
     config: {
