@@ -167,7 +167,12 @@ export default function Main() {
                         🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
                     </Text>
                 </Text>
-                <Text>{t.into}</Text>
+                <Text>
+                    {t.into}{' '}
+                    <Text color='black' as='span'>
+                        🛫
+                    </Text>
+                </Text>
                 <Text fontWeight='bold' color='whiteAlpha.600' pt={2}>
                     {t.mindset}
                 </Text>
@@ -203,7 +208,7 @@ export default function Main() {
                     </Stack>
                 </Stack>
             )}
-            <Stack h='10dvh' />
+            <Stack h='6dvh' />
             <Stack pt={2}>
                 <Text
                     fontWeight='bold'

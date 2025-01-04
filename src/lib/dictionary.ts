@@ -12,7 +12,7 @@ export const text = {
             current:
                 "These days, I'm mainly focusing on web application development. Not only do I enjoy exploring new technologies and ideas, but I also find joy in bringing them to life.",
             travel: 'I absolutely love traveling!',
-            into: "I've also been passionate about English lately. It brings me joy to comprehend and converse in a second language.",
+            into: "I'm also into English and poker lately.",
             mindset:
                 'I will persist in pursuit of captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
             job_contact: 'Feel free to contact me!',
@@ -29,18 +29,18 @@ export const text = {
         introduction: {
             greeting: 'こんにちは、佐藤宏太です!',
             work: {
-                now: '私は、',
+                now: '私は現在、',
                 inc1: 'TechsPlus株式会社',
                 and: 'と',
                 inc2: 'AICE株式会社',
                 addition: 'でソフトウェアエンジニアとして働いています。',
             },
             current:
-                '私は主にwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化するのが好きです。(このページも好奇心で作りました!)',
+                '主にwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することが好きです。(このページも好奇心で作りました!)',
             travel: '旅行が大好きです!',
-            into: '最近は英語にもハマっていて、母国語ではない言語で物事を理解し、コミュニケーションが取れることに喜びを感じています。',
+            into: '最近は英語とポーカーにハマっています。',
             mindset:
-                '自分の好奇心と探究心、そして決断力を最大限に活かして、素晴らしいプロジェクトを通し経験を重ねていきたいと思っています!!!',
+                '自分の好奇心と探究心、そして決断力を最大限に活かして、面白いプロジェクトを通し経験を重ねていきたいと思っています!!!',
             job_contact: 'お仕事依頼はこちら!',
         },
         deployments: [
