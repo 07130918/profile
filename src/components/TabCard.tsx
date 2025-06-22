@@ -1,4 +1,3 @@
-import Lang from '@/components/Lang';
 import Main from '@/components/tab/Main';
 import Skills from '@/components/tab/Skills';
 import Support from '@/components/tab/Support';
@@ -29,7 +28,6 @@ const TabCard = () => {
             position='relative'
             variant='unstyled'
         >
-            <Lang />
             <TabList fontSize={{ base: 'md', md: 'lg' }}>
                 {tabs.map(({ label, e }) => (
                     <Tab
