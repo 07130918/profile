@@ -1,20 +1,22 @@
 export const text = {
     en: {
         introduction: {
-            greeting: "Hi there! My name is Kota. I'm a professional software developer.",
+            greeting:
+                "Hi there! My name is Kota. I'm a professional software developer from Tokyo.",
             work: {
                 now: 'I currently work at ',
                 inc1: 'TechsPlus Inc. ',
                 and: 'and ',
                 inc2: 'AICE Inc. ',
-                addition: 'where I specialize in software engineering.',
+                addition:
+                    'where I build full-stack web applications that serve thousands of users.',
             },
             current:
-                "These days, I'm mainly focusing on web application development. Not only do I enjoy exploring new technologies and ideas, but I also find joy in bringing them to life.",
+                "I love building things from scratch! From lecture management systems to student review platforms, I've created web apps that make people's lives easier. My sweet spot is taking complex problems and turning them into simple, elegant solutions using TypeScript and Python.",
             travel: 'I absolutely love traveling!',
-            into: "I'm also into English and poker lately.",
+            into: "I'm also really into English and poker lately. (Fun fact: I ended up getting my AWS certification while diving into cloud architecture!)",
             mindset:
-                'I will persist in pursuit of captivating projects and experiences, leveraging my natural curiosity, inquisitiveness, and decisive abilities!!!',
+                "Always curious, always building. Whether it's a new tech stack or a fun side project, I believe the best way to learn is by getting your hands dirty and creating something awesome!",
             job_contact: 'Feel free to contact me!',
         },
         deployments: [
@@ -33,14 +35,14 @@ export const text = {
                 inc1: 'TechsPlus株式会社',
                 and: 'と',
                 inc2: 'AICE株式会社',
-                addition: 'でソフトウェアエンジニアとして働いています。',
+                addition: 'で、数千人が使うWebアプリケーションを開発しています。',
             },
             current:
-                '主にwebアプリの開発に取り組んでいます。新しい技術やアイデアを探求し、それを具現化することが好きです。(このページも好奇心で作りました!)',
+                'ゼロから何かを作り上げるのが大好きです! 講師管理システムから学生向けレビューサイトまで、人々の生活を便利にするWebアプリを作ってきました。TypeScriptやPythonを使って複雑な問題をシンプルで美しいソリューションに変えるのが得意です。',
             travel: '旅行が大好きです!',
-            into: '最近は英語とポーカーにハマっています。',
+            into: '最近は英語とポーカーにハマっています。(実はクラウド設計をいじっているうちにAWS資格も取りました!)',
             mindset:
-                '自分の好奇心と探究心、そして決断力を最大限に活かして、面白いプロジェクトを通し経験を重ねていきたいと思っています!!!',
+                '好奇心旺盛で、常に何かを作り続けています。新しい技術スタックでも面白いサイドプロジェクトでも、手を動かしてものを作るのが一番の学習方法だと信じています！',
             job_contact: 'お仕事依頼はこちら!',
         },
         deployments: [
