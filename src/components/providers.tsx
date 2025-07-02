@@ -1,5 +1,6 @@
 'use client';
-import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { system } from '@/lib/theme';
+import { ChakraProvider } from '@chakra-ui/react';
 import type { Dispatch, SetStateAction } from 'react';
 import { Suspense, createContext, useState } from 'react';
 
@@ -18,16 +19,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     const [lang, setLang] = useState<Lang>(language.en);
     return (
         <LangContext.Provider value={{ lang, setLang }}>
-            <ChakraProvider value={defaultSystem}>
-                <style jsx global>{`
-                    html, body {
-                        background-color: #000 !important;
-                        color: #fff !important;
-                    }
-                    *:not(svg):not(path) {
-                        color: white;
-                    }
-                `}</style>
+            <ChakraProvider value={system}>
                 <Suspense>{children}</Suspense>
             </ChakraProvider>
         </LangContext.Provider>
