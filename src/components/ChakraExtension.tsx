@@ -16,7 +16,16 @@ import {
 import { TbBrandNextjs } from 'react-icons/tb';
 
 export const AWSIcon = (props: any) => (
-    <FaAws size={24} color="#FF9900" {...props} />
+    <Box as="span" data-aws-icon="true" className="aws-icon" {...props}>
+        <FaAws
+            size={24}
+            style={{
+                color: "#FF9900",
+                fill: "#FF9900",
+                filter: "none"
+            }}
+        />
+    </Box>
 );
 export const ChakraIcon = (props: any) => <SiChakraui size={24} {...props} />;
 export const ChromeIcon = (props: any) => <AiFillChrome size={24} {...props} />;
@@ -24,7 +33,16 @@ export const DynamoDBIcon = (props: any) => (
     <SiAmazondynamodb size={24} {...props} />
 );
 export const GCPIcon = (props: any) => (
-    <SiGooglecloud size={24} color="#4285F4" {...props} />
+    <Box as="span" data-gcp-icon="true" className="gcp-icon" {...props}>
+        <SiGooglecloud
+            size={24}
+            style={{
+                color: "#4285F4",
+                fill: "#4285F4",
+                filter: "none"
+            }}
+        />
+    </Box>
 );
 export const JavaScriptIcon = (props: any) => (
     <SiJavascript size={24} {...props} />
