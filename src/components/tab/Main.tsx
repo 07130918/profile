@@ -20,7 +20,6 @@ import {
     serviceLink,
     socialLink,
 } from '@/lib/consts';
-import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
 import { EmailIcon } from '@chakra-ui/icons';
@@ -35,7 +34,6 @@ import {
     Text,
     Wrap,
     WrapItem,
-    useBreakpointValue,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useContext } from 'react';
@@ -144,13 +142,15 @@ export default function Main() {
     const { lang } = useContext(LangContext);
     const t = text[lang].introduction;
     const deployments = text[lang].deployments;
-    const isMobile = useBreakpointValue({ base: true, md: false });
 
     return (
         <>
             <TabContainer
-                bgGradient="linear(180deg, #fff, #adadad)"
+                bgGradient="to-r"
+                gradientFrom="#fff"
+                gradientTo="#adadad"
                 bgClip="text"
+                color="transparent"
             >
                 <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
                     {t.greeting}
@@ -200,8 +200,11 @@ export default function Main() {
                 <Box>
                     <Heading
                         fontSize="xl"
-                        bgGradient="linear(180deg, #fff, #adadad)"
+                        bgGradient="to-r"
+                        gradientFrom="#fff"
+                        gradientTo="#adadad"
                         bgClip="text"
+                        color="transparent"
                     >
                         {t.job_contact}
                     </Heading>
@@ -211,8 +214,11 @@ export default function Main() {
                         </ExLink>
                         <ExLink
                             href={socialLink.gmail}
-                            bgGradient={design.graduation.rainbow}
+                            bgGradient="to-r"
+                            gradientFrom="#ff00cc"
+                            gradientTo="#3333cc"
                             bgClip="text"
+                            color="transparent"
                             fontWeight="bold"
                             textDecoration="underline"
                         >
@@ -221,7 +227,7 @@ export default function Main() {
                     </HStack>
                 </Box>
             </TabContainer>
-            {isMobile && (
+            <Box display={{ base: 'block', md: 'none' }}>
                 <Stack pt={4} alignItems="center">
                     <Stack>
                         <ExLink href={socialLink.buyMeACoffee}>
@@ -234,14 +240,17 @@ export default function Main() {
                         </ExLink>
                     </Stack>
                 </Stack>
-            )}
+            </Box>
             <Stack h="6dvh" />
             <Stack pt={2}>
                 <Text
                     fontWeight="bold"
                     fontSize={{ base: '3xl', md: '4xl' }}
-                    bgGradient="linear(180deg, #fff, #adadad)"
+                    bgGradient="to-r"
+                    gradientFrom="#fff"
+                    gradientTo="#adadad"
                     bgClip="text"
+                    color="transparent"
                 >
                     My personal projects
                 </Text>
@@ -268,15 +277,18 @@ export default function Main() {
                         >
                             <Heading
                                 size="lg"
-                                bgGradient={design.graduation.rainbow}
+                                bgGradient="to-r"
+                                gradientFrom="#ff00cc"
+                                gradientTo="#3333cc"
                                 bgClip="text"
+                                color="transparent"
                                 fontWeight="extrabold"
                             >
                                 {deployments[i].title}
                             </Heading>
                         </ExLink>
                         <Stack
-                            spacing={0}
+                            gap={0}
                             pt={2}
                             direction={{ base: 'column', md: 'row' }}
                         >
@@ -321,7 +333,11 @@ export default function Main() {
                             ))}
                             {projects[i].githubRepoName === 'EmailForge' && (
                                 <Box pl={{ base: 0, md: 2 }}>
-                                    <Link href="https://openai.com/" isExternal>
+                                    <Link
+                                        href="https://openai.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <Image
                                             src="/images/OpenAI.jpg"
                                             alt="OpenAI"
