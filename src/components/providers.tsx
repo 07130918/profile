@@ -24,7 +24,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         background-color: #000 !important;
                         color: #fff !important;
                     }
-                    * {
+                    *:not(svg):not(path) {
                         color: white;
                     }
                 `}</style>
