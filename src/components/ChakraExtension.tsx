@@ -27,10 +27,14 @@ export const AWSIcon = (props: any) => (
         />
     </Box>
 );
-export const ChakraIcon = (props: any) => <SiChakraui size={24} {...props} />;
-export const ChromeIcon = (props: any) => <AiFillChrome size={24} {...props} />;
+export const ChakraIcon = (props: any) => (
+    <SiChakraui size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const ChromeIcon = (props: any) => (
+    <AiFillChrome size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const DynamoDBIcon = (props: any) => (
-    <SiAmazondynamodb size={24} {...props} />
+    <SiAmazondynamodb size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
 export const GCPIcon = (props: any) => (
     <Box as="span" data-gcp-icon="true" className="gcp-icon" {...props}>
@@ -45,23 +49,35 @@ export const GCPIcon = (props: any) => (
     </Box>
 );
 export const JavaScriptIcon = (props: any) => (
-    <SiJavascript size={24} {...props} />
+    <SiJavascript size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const LangChainIcon = (props: any) => <BiLink size={24} {...props} />;
+export const LangChainIcon = (props: any) => (
+    <BiLink size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const LangChainImage = (props: any) => (
     <Image src="/images/langchain.png" alt="LangChain" w={5} h={5} {...props} />
 );
-export const MySQLIcon = (props: any) => <SiMysql size={24} {...props} />;
+export const MySQLIcon = (props: any) => (
+    <SiMysql size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const NextJsIcon = (props: any) => (
-    <TbBrandNextjs size={24} {...props} />
+    <TbBrandNextjs size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const PythonIcon = (props: any) => <FaPython size={24} {...props} />;
-export const ReactIcon = (props: any) => <FaReact size={24} {...props} />;
+export const PythonIcon = (props: any) => (
+    <FaPython size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const ReactIcon = (props: any) => (
+    <FaReact size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const TypeScriptIcon = (props: any) => (
-    <SiTypescript size={24} {...props} />
+    <SiTypescript size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const VueIcon = (props: any) => <FaVuejs size={24} {...props} />;
-export const VercelIcon = (props: any) => <IoLogoVercel size={24} {...props} />;
+export const VueIcon = (props: any) => (
+    <FaVuejs size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const VercelIcon = (props: any) => (
+    <IoLogoVercel size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 
 export const Card = (props: BoxProps) => (
     <Box

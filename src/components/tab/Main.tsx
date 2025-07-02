@@ -210,7 +210,9 @@ export default function Main() {
                     </Heading>
                     <HStack pt={2}>
                         <ExLink href={socialLink.gmail}>
-                            <EmailIcon color="white" />
+                            <Box color="white">
+                                <EmailIcon />
+                            </Box>
                         </ExLink>
                         <ExLink
                             href={socialLink.gmail}
@@ -319,7 +321,9 @@ export default function Main() {
                             {project.techStacks.map((techStack) => (
                                 <WrapItem key={techStack.link}>
                                     <HStack>
-                                        {techStack.icon}
+                                        <ExLink href={techStack.link}>
+                                            {techStack.icon}
+                                        </ExLink>
                                         <ExLink
                                             href={techStack.link}
                                             bgGradient="to-r"
