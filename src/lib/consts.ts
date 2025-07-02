@@ -15,8 +15,6 @@ export const socialLink = {
     x: 'https://twitter.com/tech_guy_kay' as const,
     github: 'https://github.com/07130918' as const,
     linkedIn: 'https://www.linkedin.com/in/kota-sato-228364215/' as const,
-    facebook:
-        'https://www.facebook.com/profile.php?id=100069795974235' as const,
     buyMeACoffee: 'https://www.buymeacoffee.com/hi.im.kota' as const,
     paypal: 'https://www.paypal.com/paypalme/kotawebdev' as const,
 } as const;

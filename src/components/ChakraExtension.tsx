@@ -1,8 +1,6 @@
-import design from '@/lib/design';
 import type { ExLinkProps } from '@/lib/types';
-import { Image } from '@chakra-ui/image';
 import type { BoxProps, LinkProps, TextProps } from '@chakra-ui/react';
-import { Box, Link, Text } from '@chakra-ui/react';
+import { Box, Image, Link, Text } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
 import { FaAws, FaPython, FaReact, FaVuejs } from 'react-icons/fa';
@@ -49,7 +47,7 @@ export const VercelIcon = (props: any) => <IoLogoVercel size={24} {...props} />;
 
 export const Card = (props: BoxProps) => (
     <Box
-        boxShadow={design.boxShadow}
+        boxShadow="0px 4px 10px rgba(0, 0, 0, 0.6)"
         borderRadius="lg"
         overflow="auto"
         {...props}
@@ -73,11 +71,18 @@ export const ExLink = ({
     children,
     ...props
 }: ExLinkProps & LinkProps) => (
-    <Link href={href} isExternal {...props}>
+    <Link href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
     </Link>
 );
 
 export const WhiteLinearText = (props: TextProps) => (
-    <Text bgGradient="linear(180deg, #fff, #adadad)" bgClip="text" {...props} />
+    <Text
+        bgGradient="to-r"
+        gradientFrom="#fff"
+        gradientTo="#adadad"
+        bgClip="text"
+        color="transparent"
+        {...props}
+    />
 );

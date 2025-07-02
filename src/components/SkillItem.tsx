@@ -10,8 +10,11 @@ const SkillItem = ({ name, icon, link }: TechStackElement) => {
             </ExLink>
             <ExLink
                 href={link}
-                bgGradient="linear(180deg, #fff, #adadad)"
+                bgGradient="to-r"
+                gradientFrom="#fff"
+                gradientTo="#adadad"
                 bgClip="text"
+                color="transparent"
             >
                 {name}
             </ExLink>

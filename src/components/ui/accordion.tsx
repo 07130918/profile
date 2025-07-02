@@ -4,6 +4,7 @@ import { LuChevronDown } from "react-icons/lu"
 
 interface AccordionItemTriggerProps extends Accordion.ItemTriggerProps {
   indicatorPlacement?: "start" | "end"
+  children?: React.ReactNode
 }
 
 export const AccordionItemTrigger = React.forwardRef<

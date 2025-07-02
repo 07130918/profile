@@ -1,17 +1,19 @@
 import { ExLink, TabContainer } from '@/components/ChakraExtension';
 import { bmcImage, socialLink } from '@/lib/consts';
-import design from '@/lib/design';
-import { HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
+
+import { HStack, Image, Text } from '@chakra-ui/react';
 
 const Support = () => {
-    const [isLargerThan480] = useMediaQuery('(min-width: 480px)');
     return (
         <TabContainer>
             <Text
                 fontSize={{ base: 'xl', md: '3xl' }}
                 fontWeight="bold"
-                bgGradient={design.graduation.rainbow}
+                bgGradient="to-r"
+                gradientFrom="#ff00cc"
+                gradientTo="#3333cc"
                 bgClip="text"
+                color="transparent"
             >
                 Thank you for seeing this tab!
             </Text>
@@ -23,7 +25,7 @@ const Support = () => {
             >
                 You can send me some tips easily!
             </Text>
-            <HStack spacing={8}>
+            <HStack gap={8}>
                 <ExLink href={socialLink.buyMeACoffee}>
                     <Image
                         src={bmcImage.src}
@@ -38,14 +40,13 @@ const Support = () => {
                         }}
                     />
                 </ExLink>
-                {isLargerThan480 && (
-                    <Image
-                        src={bmcImage.qr.src}
-                        alt={bmcImage.qr.alt}
-                        h={100}
-                        w={100}
-                    />
-                )}
+                <Image
+                    src={bmcImage.qr.src}
+                    alt={bmcImage.qr.alt}
+                    h={100}
+                    w={100}
+                    display={{ base: 'none', sm: 'block' }}
+                />
             </HStack>
             <ExLink href={socialLink.paypal}>
                 <Image

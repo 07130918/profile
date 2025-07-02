@@ -1,7 +1,6 @@
 import { ExLink } from '@/components/ChakraExtension';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
 import { bmcImage, socialLink } from '@/lib/consts';
-import design from '@/lib/design';
 import { Box, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import { useSearchParams } from 'next/navigation';
 import { GrMapLocation } from 'react-icons/gr';
@@ -24,7 +23,9 @@ export default function ProfileCard() {
             <Box display={{ base: 'block', md: 'none' }}>
                 <HStack gap={4} align="start" w="100%">
                     <Box
-                        bgGradient={design.graduation.blue}
+                        bgGradient="to-r"
+                        gradientFrom="blue.100"
+                        gradientTo="blue.300"
                         borderRadius="full"
                         p={1}
                     >
