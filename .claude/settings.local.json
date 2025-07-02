@@ -10,7 +10,8 @@
       "Bash(npm run lint)",
       "Bash(rm:*)",
       "Bash(find:*)",
-      "Bash(true)"
+      "Bash(true)",
+      "Bash(npx @chakra-ui/cli snippet:*)"
     ],
     "deny": []
   }
