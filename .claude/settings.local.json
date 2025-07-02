@@ -1,6 +1,16 @@
 {
-    "permissions": {
-        "allow": ["Bash(npm run dev:*)", "Bash(npm run build:*)"],
-        "deny": []
-    }
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)",
+      "mcp__o3__o3-search",
+      "Bash(npm run lint)",
+      "Bash(rm:*)",
+      "Bash(find:*)"
+    ],
+    "deny": []
+  }
 }
