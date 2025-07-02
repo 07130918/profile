@@ -1,6 +1,6 @@
 import { ExLink } from '@/components/ChakraExtension';
 import { socialLink } from '@/lib/consts';
-import { HStack, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import { HStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
@@ -30,7 +30,7 @@ const socialMediaLinks = [
 
 export default function SocialMediaLinks() {
     return (
-        <VStack gap={1} py={{ base: 6, md: 0 }}>
+        <Wrap gap={1} py={{ base: 6, md: 0 }}>
             {socialMediaLinks.map(({ Icon, href, text }) => (
                 <WrapItem
                     key={href}
@@ -52,6 +52,6 @@ export default function SocialMediaLinks() {
                     </HStack>
                 </WrapItem>
             ))}
-        </VStack>
+        </Wrap>
     );
 }
