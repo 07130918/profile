@@ -6,9 +6,11 @@ export const metadata: Metadata = {
     description: 'This is a portfolio web page of Kota.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+    children,
+}: { children: React.ReactNode }) {
     return (
-        <html lang='en'>
+        <html lang="en">
             <body>
                 <Providers>{children}</Providers>
             </body>

@@ -14,7 +14,12 @@ import {
     VueIcon,
 } from '@/components/ChakraExtension';
 import { LangContext } from '@/components/providers';
-import { bmcImage, projectsElement, serviceLink, socialLink } from '@/lib/consts';
+import {
+    bmcImage,
+    projectsElement,
+    serviceLink,
+    socialLink,
+} from '@/lib/consts';
 import design from '@/lib/design';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
@@ -93,11 +98,21 @@ const techStack: Record<string, TechStackElement> = {
 const projects: ProjectProps[] = [
     {
         ...projectsElement.wordPopQuiz,
-        techStacks: [techStack.ts, techStack.nextjs, techStack.chakra, techStack.vercel],
+        techStacks: [
+            techStack.ts,
+            techStack.nextjs,
+            techStack.chakra,
+            techStack.vercel,
+        ],
     },
     {
         ...projectsElement.emailForge,
-        techStacks: [techStack.ts, techStack.nextjs, techStack.chakra, techStack.vercel],
+        techStacks: [
+            techStack.ts,
+            techStack.nextjs,
+            techStack.chakra,
+            techStack.vercel,
+        ],
     },
     {
         ...projectsElement.gpProofreader,
@@ -133,27 +148,30 @@ export default function Main() {
 
     return (
         <>
-            <TabContainer bgGradient='linear(180deg, #fff, #adadad)' bgClip='text'>
-                <Heading fontSize='xl' mb={3} color='whiteAlpha.900'>
+            <TabContainer
+                bgGradient="linear(180deg, #fff, #adadad)"
+                bgClip="text"
+            >
+                <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
                     {t.greeting}
                 </Heading>
                 <Paragraph>
                     <Text>
                         {t.work.now}
                         <ExLink
-                            href='https://techsplus.co.jp'
-                            textDecoration='underline'
-                            textDecorationColor='pink.300'
-                            color='pink.300'
+                            href="https://techsplus.co.jp"
+                            textDecoration="underline"
+                            textDecorationColor="pink.300"
+                            color="pink.300"
                         >
                             {t.work.inc1}
                         </ExLink>
-                        <Text as='span'>{t.work.and}</Text>
+                        <Text as="span">{t.work.and}</Text>
                         <ExLink
-                            href='https://aice.co.jp/'
-                            textDecoration='underline'
-                            textDecorationColor='pink.300'
-                            color='pink.300'
+                            href="https://aice.co.jp/"
+                            textDecoration="underline"
+                            textDecorationColor="pink.300"
+                            color="pink.300"
                         >
                             {t.work.inc2}
                         </ExLink>
@@ -163,36 +181,40 @@ export default function Main() {
                 <Text>{t.current}</Text>
                 <Text>
                     {t.travel}{' '}
-                    <Text color='black' as='span'>
+                    <Text color="black" as="span">
                         🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
                     </Text>
                 </Text>
                 <Text>
                     {t.into}{' '}
-                    <Text color='black' as='span'>
+                    <Text color="black" as="span">
                         🛫
                     </Text>
                 </Text>
-                <Text fontWeight='bold' color='whiteAlpha.600' pt={2}>
+                <Text fontWeight="bold" color="whiteAlpha.600" pt={2}>
                     {t.mindset}
                 </Text>
             </TabContainer>
             <Box pt={4} />
             <TabContainer>
                 <Box>
-                    <Heading fontSize='xl' bgGradient='linear(180deg, #fff, #adadad)' bgClip='text'>
+                    <Heading
+                        fontSize="xl"
+                        bgGradient="linear(180deg, #fff, #adadad)"
+                        bgClip="text"
+                    >
                         {t.job_contact}
                     </Heading>
                     <HStack pt={2}>
                         <ExLink href={socialLink.gmail}>
-                            <EmailIcon color='white' />
+                            <EmailIcon color="white" />
                         </ExLink>
                         <ExLink
                             href={socialLink.gmail}
                             bgGradient={design.graduation.rainbow}
-                            bgClip='text'
-                            fontWeight='bold'
-                            textDecoration='underline'
+                            bgClip="text"
+                            fontWeight="bold"
+                            textDecoration="underline"
                         >
                             tokyosato1@gmail.com
                         </ExLink>
@@ -200,49 +222,73 @@ export default function Main() {
                 </Box>
             </TabContainer>
             {isMobile && (
-                <Stack pt={4} alignItems='center'>
+                <Stack pt={4} alignItems="center">
                     <Stack>
                         <ExLink href={socialLink.buyMeACoffee}>
-                            <ChakraImage src={bmcImage.src} alt={bmcImage.alt} h='50px' w='200px' />
+                            <ChakraImage
+                                src={bmcImage.src}
+                                alt={bmcImage.alt}
+                                h="50px"
+                                w="200px"
+                            />
                         </ExLink>
                     </Stack>
                 </Stack>
             )}
-            <Stack h='6dvh' />
+            <Stack h="6dvh" />
             <Stack pt={2}>
                 <Text
-                    fontWeight='bold'
+                    fontWeight="bold"
                     fontSize={{ base: '3xl', md: '4xl' }}
-                    bgGradient='linear(180deg, #fff, #adadad)'
-                    bgClip='text'
+                    bgGradient="linear(180deg, #fff, #adadad)"
+                    bgClip="text"
                 >
                     My personal projects
                 </Text>
-                <Stack w='100%' borderTop='1px' borderTopColor='whiteAlpha.600' pb={4} />
+                <Stack
+                    w="100%"
+                    borderTop="1px"
+                    borderTopColor="whiteAlpha.600"
+                    pb={4}
+                />
             </Stack>
-            <Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']} gap={6}>
+            <Grid
+                templateColumns={[
+                    'repeat(1, 1fr)',
+                    'repeat(1, 1fr)',
+                    'repeat(2, 1fr)',
+                ]}
+                gap={6}
+            >
                 {projects.map((project, i) => (
                     <TabContainer key={project.link}>
-                        <ExLink href={project.link} _hover={{ textDecoration: 'none' }}>
+                        <ExLink
+                            href={project.link}
+                            _hover={{ textDecoration: 'none' }}
+                        >
                             <Heading
-                                size='lg'
+                                size="lg"
                                 bgGradient={design.graduation.rainbow}
-                                bgClip='text'
-                                fontWeight='extrabold'
+                                bgClip="text"
+                                fontWeight="extrabold"
                             >
                                 {deployments[i].title}
                             </Heading>
                         </ExLink>
-                        <Stack spacing={0} pt={2} direction={{ base: 'column', md: 'row' }}>
+                        <Stack
+                            spacing={0}
+                            pt={2}
+                            direction={{ base: 'column', md: 'row' }}
+                        >
                             <HStack>
-                                <BiLinkExternal color='whiteAlpha.600' />
+                                <BiLinkExternal color="whiteAlpha.600" />
                                 <ExLink
                                     href={project.link}
-                                    bgGradient='linear(180deg, #fff, #adadad)'
-                                    bgClip='text'
-                                    textDecoration='underline'
-                                    textDecorationColor='#ADADAD'
-                                    color='#fff'
+                                    bgGradient="linear(180deg, #fff, #adadad)"
+                                    bgClip="text"
+                                    textDecoration="underline"
+                                    textDecorationColor="#ADADAD"
+                                    color="#fff"
                                 >
                                     {project.externalLinkText}
                                 </ExLink>
@@ -251,8 +297,8 @@ export default function Main() {
                                 <FaGithub />
                                 <ExLink
                                     href={project.githubLink}
-                                    bgGradient='linear(180deg, #fff, #adadad)'
-                                    bgClip='text'
+                                    bgGradient="linear(180deg, #fff, #adadad)"
+                                    bgClip="text"
                                 >
                                     {project.githubRepoName}
                                 </ExLink>
@@ -265,8 +311,8 @@ export default function Main() {
                                         {techStack.icon}
                                         <ExLink
                                             href={techStack.link}
-                                            bgGradient='linear(180deg, #fff, #adadad)'
-                                            bgClip='text'
+                                            bgGradient="linear(180deg, #fff, #adadad)"
+                                            bgClip="text"
                                         >
                                             {techStack.name}
                                         </ExLink>
@@ -275,10 +321,10 @@ export default function Main() {
                             ))}
                             {projects[i].githubRepoName === 'EmailForge' && (
                                 <Box pl={{ base: 0, md: 2 }}>
-                                    <Link href='https://openai.com/' isExternal>
+                                    <Link href="https://openai.com/" isExternal>
                                         <Image
-                                            src='/images/OpenAI.jpg'
-                                            alt='OpenAI'
+                                            src="/images/OpenAI.jpg"
+                                            alt="OpenAI"
                                             width={130}
                                             height={130}
                                         />

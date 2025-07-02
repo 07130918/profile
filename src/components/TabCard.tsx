@@ -25,8 +25,8 @@ const TabCard = () => {
             w={{ base: '100%', md: '75%' }}
             px={{ base: 1, md: 4 }}
             py={{ base: 0, md: 4 }}
-            position='relative'
-            variant='unstyled'
+            position="relative"
+            variant="unstyled"
         >
             <TabList fontSize={{ base: 'md', md: 'lg' }}>
                 {tabs.map(({ label, e }) => (
@@ -34,16 +34,24 @@ const TabCard = () => {
                         key={label}
                         fontSize={{ base: 'md', md: 'lg' }}
                         py={{ base: 0, md: 3 }}
-                        overflowX='hidden'
+                        overflowX="hidden"
                     >
-                        <Stack direction={{ base: 'column', sm: 'row' }} gap={{ base: 0, sm: 2 }}>
+                        <Stack
+                            direction={{ base: 'column', sm: 'row' }}
+                            gap={{ base: 0, sm: 2 }}
+                        >
                             <Box>{e}</Box>
                             <Box>{label}</Box>
                         </Stack>
                     </Tab>
                 ))}
             </TabList>
-            <TabIndicator mt='-1.5px' height='2px' bg='whiteAlpha.600' borderRadius='1px' />
+            <TabIndicator
+                mt="-1.5px"
+                height="2px"
+                bg="whiteAlpha.600"
+                borderRadius="1px"
+            />
             <TabPanels>
                 {tabs.map(({ Component, label }) => (
                     <TabPanel key={label}>

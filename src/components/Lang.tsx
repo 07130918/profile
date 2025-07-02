@@ -28,31 +28,32 @@ const Lang = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            role='region'
-            aria-label='Language selector'
+            // biome-ignore lint/a11y/useSemanticElements:
+            role="region"
+            aria-label="Language selector"
         >
             <HStack
                 spacing={0}
-                bg='rgba(0, 0, 0, 0.8)'
-                backdropFilter='blur(10px)'
-                borderRadius='full'
-                border='1px solid'
-                borderColor='whiteAlpha.200'
+                bg="rgba(0, 0, 0, 0.8)"
+                backdropFilter="blur(10px)"
+                borderRadius="full"
+                border="1px solid"
+                borderColor="whiteAlpha.200"
                 p={1}
-                shadow='xl'
-                position='relative'
-                overflow='hidden'
+                shadow="xl"
+                position="relative"
+                overflow="hidden"
                 minW={{ base: '120px', md: '140px' }}
                 h={{ base: '44px', md: '48px' }}
             >
                 <MotionBox
-                    position='absolute'
-                    top='4px'
-                    w='calc(50% - 4px)'
-                    h='calc(100% - 8px)'
-                    bgGradient='linear(135deg, #667eea 0%, #764ba2 100%)'
-                    borderRadius='full'
-                    shadow='lg'
+                    position="absolute"
+                    top="4px"
+                    w="calc(50% - 4px)"
+                    h="calc(100% - 8px)"
+                    bgGradient="linear(135deg, #667eea 0%, #764ba2 100%)"
+                    borderRadius="full"
+                    shadow="lg"
                     zIndex={1}
                     initial={false}
                     animate={{
@@ -66,15 +67,15 @@ const Lang = () => {
                     }}
                 />
                 <Button
-                    variant='ghost'
-                    size='sm'
-                    w='50%'
-                    h='100%'
-                    borderRadius='full'
+                    variant="ghost"
+                    size="sm"
+                    w="50%"
+                    h="100%"
+                    borderRadius="full"
                     fontWeight={lang === 'en' ? '700' : '500'}
                     fontSize={{ base: 'xs', md: 'sm' }}
                     color={lang === 'en' ? 'white' : 'whiteAlpha.700'}
-                    bg='transparent'
+                    bg="transparent"
                     _hover={{ bg: 'transparent', transform: 'scale(1.02)' }}
                     _active={{ bg: 'transparent', transform: 'scale(0.98)' }}
                     _focus={{
@@ -85,26 +86,26 @@ const Lang = () => {
                     }}
                     onClick={() => handleLangChange('en')}
                     onKeyDown={(e) => handleKeyDown(e, 'en')}
-                    aria-label='Switch to English'
+                    aria-label="Switch to English"
                     aria-pressed={lang === 'en'}
                     tabIndex={0}
-                    position='relative'
+                    position="relative"
                     zIndex={2}
-                    cursor='pointer'
-                    transition='all 0.1s ease'
+                    cursor="pointer"
+                    transition="all 0.1s ease"
                 >
                     EN
                 </Button>
                 <Button
-                    variant='ghost'
-                    size='sm'
-                    w='50%'
-                    h='100%'
-                    borderRadius='full'
+                    variant="ghost"
+                    size="sm"
+                    w="50%"
+                    h="100%"
+                    borderRadius="full"
                     fontWeight={lang === 'ja' ? '700' : '500'}
                     fontSize={{ base: 'xs', md: 'sm' }}
                     color={lang === 'ja' ? 'white' : 'whiteAlpha.700'}
-                    bg='transparent'
+                    bg="transparent"
                     _hover={{ bg: 'transparent', transform: 'scale(1.02)' }}
                     _active={{ bg: 'transparent', transform: 'scale(0.98)' }}
                     _focus={{
@@ -115,13 +116,13 @@ const Lang = () => {
                     }}
                     onClick={() => handleLangChange('ja')}
                     onKeyDown={(e) => handleKeyDown(e, 'ja')}
-                    aria-label='Switch to Japanese'
+                    aria-label="Switch to Japanese"
                     aria-pressed={lang === 'ja'}
                     tabIndex={0}
-                    position='relative'
+                    position="relative"
                     zIndex={2}
-                    cursor='pointer'
-                    transition='all 0.1s ease'
+                    cursor="pointer"
+                    transition="all 0.1s ease"
                 >
                     JA
                 </Button>

@@ -9,16 +9,16 @@ const Support = () => {
         <TabContainer>
             <Text
                 fontSize={{ base: 'xl', md: '3xl' }}
-                fontWeight='bold'
+                fontWeight="bold"
                 bgGradient={design.graduation.rainbow}
-                bgClip='text'
+                bgClip="text"
             >
                 Thank you for seeing this tab!
             </Text>
             <Text
                 fontSize={{ base: 'md', md: 'xl' }}
-                fontWeight='bold'
-                color='whiteAlpha.900'
+                fontWeight="bold"
+                color="whiteAlpha.900"
                 py={2}
             >
                 You can send me some tips easily!
@@ -39,13 +39,18 @@ const Support = () => {
                     />
                 </ExLink>
                 {isLargerThan480 && (
-                    <Image src={bmcImage.qr.src} alt={bmcImage.qr.alt} h={100} w={100} />
+                    <Image
+                        src={bmcImage.qr.src}
+                        alt={bmcImage.qr.alt}
+                        h={100}
+                        w={100}
+                    />
                 )}
             </HStack>
             <ExLink href={socialLink.paypal}>
                 <Image
-                    src='/images/paypal.png'
-                    alt='Paypal'
+                    src="/images/paypal.png"
+                    alt="Paypal"
                     h={{
                         base: '90px',
                         md: '100px',

@@ -37,16 +37,19 @@ export default function SocialMediaLinks() {
     return (
         <Wrap gap={0} spacing={1}>
             {socialMediaLinks.map(({ Icon, href, text }) => (
-                <WrapItem key={href} w={{ base: 'calc(50% - 4px)', md: '100%' }}>
-                    <HStack w='100%' spacing={2}>
+                <WrapItem
+                    key={href}
+                    w={{ base: 'calc(50% - 4px)', md: '100%' }}
+                >
+                    <HStack w="100%" spacing={2}>
                         <ExLink href={href}>
-                            <Icon color='whiteAlpha.600' />
+                            <Icon color="whiteAlpha.600" />
                         </ExLink>
                         <ExLink
                             href={href}
                             isTruncated
-                            bgGradient='linear(180deg, #fff, #adadad)'
-                            bgClip='text'
+                            bgGradient="linear(180deg, #fff, #adadad)"
+                            bgClip="text"
                         >
                             {text}
                         </ExLink>

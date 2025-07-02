@@ -15,7 +15,8 @@ export const socialLink = {
     x: 'https://twitter.com/tech_guy_kay' as const,
     github: 'https://github.com/07130918' as const,
     linkedIn: 'https://www.linkedin.com/in/kota-sato-228364215/' as const,
-    facebook: 'https://www.facebook.com/profile.php?id=100069795974235' as const,
+    facebook:
+        'https://www.facebook.com/profile.php?id=100069795974235' as const,
     buyMeACoffee: 'https://www.buymeacoffee.com/hi.im.kota' as const,
     paypal: 'https://www.paypal.com/paypalme/kotawebdev' as const,
 } as const;
@@ -30,7 +31,8 @@ export const serviceLink = {
     nextjs: 'https://nextjs.org/' as const,
     chakra: 'https://chakra-ui.com/' as const,
     vercel: 'https://vercel.com/' as const,
-    chromeExtension: 'https://chrome.google.com/webstore/category/extensions/' as const,
+    chromeExtension:
+        'https://chrome.google.com/webstore/category/extensions/' as const,
     mysql: 'https://www.mysql.com/' as const,
     dynamodb: 'https://aws.amazon.com/dynamodb/' as const,
     aws: 'https://aws.amazon.com/' as const,

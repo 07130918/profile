@@ -5,6 +5,11 @@
         "clientKind": "git",
         "useIgnoreFile": false
     },
+    "files": {
+        "ignore": [
+            "**/src/components/ChakraExtension.tsx"
+        ]
+    },
     "organizeImports": {
         "enabled": true
     },

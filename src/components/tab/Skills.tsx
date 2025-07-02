@@ -86,29 +86,34 @@ const skillSets = [
 
 const Skills = () => {
     return (
-        <TabContainer bgGradient='linear(180deg, #fff, #adadad)' bgClip='text'>
-            <Heading fontSize='2xl' color='#FAFAFA' mb={3}>
+        <TabContainer bgGradient="linear(180deg, #fff, #adadad)" bgClip="text">
+            <Heading fontSize="2xl" color="#FAFAFA" mb={3}>
                 My Skills
             </Heading>
             <Box mb={4}>
-                <Heading fontSize='lg' mb={2}>
+                <Heading fontSize="lg" mb={2}>
                     Natural Languages
                 </Heading>
                 <Text>Japanese / English</Text>
             </Box>
             {skillSets.map(({ genre, details }) => (
                 <Box key={genre}>
-                    <Heading fontSize='lg' mb={2}>
+                    <Heading fontSize="lg" mb={2}>
                         {genre}
                     </Heading>
                     <Stack direction={{ base: 'column', sm: 'row' }}>
                         {details.map(({ name, icon, link }) => (
-                            <SkillItem key={name} name={name} icon={icon} link={link} />
+                            <SkillItem
+                                key={name}
+                                name={name}
+                                icon={icon}
+                                link={link}
+                            />
                         ))}
                     </Stack>
                 </Box>
             ))}
-            <Image src='/images/AWS-badge.png' alt='AWS' w={40} h={40} />
+            <Image src="/images/AWS-badge.png" alt="AWS" w={40} h={40} />
         </TabContainer>
     );
 };
