@@ -45,7 +45,9 @@ const Lang = () => {
                     top="4px"
                     w="calc(50% - 4px)"
                     h="calc(100% - 8px)"
-                    bgGradient="linear(135deg, #667eea 0%, #764ba2 100%)"
+                    bgGradient="to-r"
+                    gradientFrom="#667eea"
+                    gradientTo="#764ba2"
                     borderRadius="full"
                     shadow="lg"
                     zIndex={1}
