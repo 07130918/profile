@@ -276,13 +276,13 @@ export default function Main() {
                             _hover={{ textDecoration: 'none' }}
                         >
                             <Heading
-                                size="lg"
+                                size={{ base: 'xl', md: '2xl' }}
                                 bgGradient="to-r"
                                 gradientFrom="#ff00cc"
                                 gradientTo="#3333cc"
                                 bgClip="text"
                                 color="transparent"
-                                fontWeight="extrabold"
+                                fontWeight="bold"
                             >
                                 {deployments[i].title}
                             </Heading>
@@ -296,11 +296,13 @@ export default function Main() {
                                 <BiLinkExternal color="whiteAlpha.600" />
                                 <ExLink
                                     href={project.link}
-                                    bgGradient="linear(180deg, #fff, #adadad)"
+                                    bgGradient="to-r"
+                                    gradientFrom="#fff"
+                                    gradientTo="#adadad"
                                     bgClip="text"
+                                    color="transparent"
                                     textDecoration="underline"
                                     textDecorationColor="#ADADAD"
-                                    color="#fff"
                                 >
                                     {project.externalLinkText}
                                 </ExLink>
@@ -309,8 +311,11 @@ export default function Main() {
                                 <FaGithub />
                                 <ExLink
                                     href={project.githubLink}
-                                    bgGradient="linear(180deg, #fff, #adadad)"
+                                    bgGradient="to-r"
+                                    gradientFrom="#fff"
+                                    gradientTo="#adadad"
                                     bgClip="text"
+                                    color="transparent"
                                 >
                                     {project.githubRepoName}
                                 </ExLink>
@@ -323,8 +328,11 @@ export default function Main() {
                                         {techStack.icon}
                                         <ExLink
                                             href={techStack.link}
-                                            bgGradient="linear(180deg, #fff, #adadad)"
+                                            bgGradient="to-r"
+                                            gradientFrom="#fff"
+                                            gradientTo="#adadad"
                                             bgClip="text"
+                                            color="transparent"
                                         >
                                             {techStack.name}
                                         </ExLink>
