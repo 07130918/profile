@@ -241,11 +241,10 @@ export default function Main() {
                     </Stack>
                 </Stack>
             </Box>
-            <Stack h="6dvh" />
-            <Stack pt={2}>
+            <Stack pt={6}>
                 <Text
                     fontWeight="bold"
-                    fontSize={{ base: '3xl', md: '4xl' }}
+                    fontSize={{ base: '2xl', md: '3xl' }}
                     bgGradient="to-r"
                     gradientFrom="#fff"
                     gradientTo="#adadad"
@@ -254,12 +253,7 @@ export default function Main() {
                 >
                     My personal projects
                 </Text>
-                <Stack
-                    w="100%"
-                    borderTop="1px"
-                    borderTopColor="whiteAlpha.600"
-                    pb={4}
-                />
+                <Box w="100%" h="1px" bg="whiteAlpha.600" mb={4} />
             </Stack>
             <Grid
                 templateColumns={[
