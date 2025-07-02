@@ -87,7 +87,7 @@ export default function ProfileCard() {
                         >
                             Kota Sato
                         </Text>
-                        <Text fontSize="lg" color="gray.400">
+                        <Text fontSize="lg" color="gray.500">
                             (he/him)
                         </Text>
                         <HStack color="gray.100">
