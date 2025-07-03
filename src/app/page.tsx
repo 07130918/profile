@@ -6,14 +6,11 @@ import { Box, Container, Stack } from '@chakra-ui/react';
 
 export default function Home() {
     return (
-        <Box bg="bg" minH="100vh" position="relative">
-            <Container
-                maxW="8xl"
-                centerContent
-                px={{ base: 4, md: 8 }}
-                py={{ base: 6, md: 12 }}
-            >
+        <Box bg="bg" minH="100dvh">
+            <Container maxW="8xl" centerContent p={{ base: 4, md: 8 }}>
                 <Stack
+                    position="relative"
+                    minH="96dvh"
                     direction={{ base: 'column', md: 'row' }}
                     gap={{ base: 6, md: 8 }}
                     w="100%"
@@ -21,7 +18,6 @@ export default function Home() {
                     bg="gray.900"
                     borderRadius="lg"
                     p={{ base: 4, md: 6 }}
-                    position="relative"
                     border="1px solid"
                     borderColor="gray.300"
                     boxShadow="card"
@@ -32,9 +28,9 @@ export default function Home() {
                 >
                     <Box
                         position="absolute"
-                        top={{ base: 4, md: 6 }}
-                        right={{ base: 4, md: 6 }}
-                        zIndex={10}
+                        top={{ base: 1, md: 4 }}
+                        right={{ base: 1, md: 4 }}
+                        zIndex={100}
                     >
                         <Lang />
                     </Box>
