@@ -10,7 +10,6 @@ export default function Home() {
             <Container maxW="8xl" centerContent p={{ base: 4, md: 8 }}>
                 <Stack
                     position="relative"
-                    minH="96dvh"
                     direction={{ base: 'column', md: 'row' }}
                     gap={{ base: 6, md: 8 }}
                     w="100%"
