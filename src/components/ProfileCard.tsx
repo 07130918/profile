@@ -50,7 +50,7 @@ export default function ProfileCard() {
                         >
                             Kota Sato
                         </Text>
-                        <Text fontSize="md" color="gray.500">
+                        <Text fontSize="md" color="gray.500" mb={3}>
                             (he/him)
                         </Text>
                     </VStack>
@@ -87,7 +87,7 @@ export default function ProfileCard() {
                         >
                             Kota Sato
                         </Text>
-                        <Text fontSize="lg" color="gray.500">
+                        <Text fontSize="lg" color="gray.500" mb={3}>
                             (he/him)
                         </Text>
                         <HStack color="gray.100">
