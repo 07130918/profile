@@ -104,6 +104,16 @@ const projects: ProjectProps[] = [
         ],
     },
     {
+        ...projectsElement.scribbles,
+        techStacks: [
+            techStack.ts,
+            techStack.react,
+            techStack.python,
+            techStack.chakra,
+            techStack.chromeExtension,
+        ],
+    },
+    {
         ...projectsElement.emailForge,
         techStacks: [
             techStack.ts,
@@ -120,16 +130,6 @@ const projects: ProjectProps[] = [
             techStack.chakra,
             techStack.langChain,
             techStack.vercel,
-        ],
-    },
-    {
-        ...projectsElement.scribbles,
-        techStacks: [
-            techStack.ts,
-            techStack.react,
-            techStack.python,
-            techStack.chakra,
-            techStack.chromeExtension,
         ],
     },
     {

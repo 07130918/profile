@@ -22,9 +22,9 @@ export const text = {
         },
         deployments: [
             { title: 'English Vocabulary Quiz Web App' },
+            { title: 'Notepad Chrome Extension' },
             { title: 'Email Body Generator Web App' },
             { title: 'English Proofreading Web App' },
-            { title: 'Notepad Chrome Extension' },
             { title: 'To-Do List Chrome Extension' },
         ],
     },
@@ -50,9 +50,9 @@ export const text = {
         },
         deployments: [
             { title: '英単語クイズwebアプリ' },
+            { title: 'メモ帳Chrome拡張機能' },
             { title: 'Eメール本文生成webアプリ' },
             { title: '英文校正webアプリ' },
-            { title: 'メモ帳Chrome拡張機能' },
             { title: 'To-DoリストChrome拡張機能' },
         ],
     },
