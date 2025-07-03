@@ -22,46 +22,52 @@ const TabCard = () => {
         tabs.find((tab) => tab.value === activeTab)?.Component || Main;
 
     return (
-        <Box
-            w={{ base: '100%', md: '75%' }}
-            px={{ base: 1, md: 4 }}
-            py={{ base: 0, md: 4 }}
-            position="relative"
-        >
+        <Box flex="1" minH="600px" position="relative">
             <Stack
                 direction="row"
-                gap={4}
-                mb={4}
+                gap={2}
+                mb={8}
                 borderBottom="1px solid"
                 borderColor="whiteAlpha.200"
-                pb={2}
+                pb={0}
             >
                 {tabs.map(({ label, e, value }) => (
                     <Button
                         key={value}
                         variant="ghost"
                         onClick={() => setActiveTab(value)}
-                        fontSize={{ base: 'md', md: 'lg' }}
-                        py={{ base: 0, md: 3 }}
+                        fontSize={{ base: 'sm', md: 'md' }}
+                        px={{ base: 3, md: 4 }}
+                        py={{ base: 2, md: 3 }}
                         bg="transparent"
-                        color={activeTab === value ? 'white' : 'whiteAlpha.600'}
+                        color={activeTab === value ? 'white' : '#a3a3a3'}
                         borderBottom={
-                            activeTab === value ? '2px solid white' : 'none'
+                            activeTab === value ? '2px solid' : 'none'
                         }
+                        borderBottomColor="whiteAlpha.900"
                         borderRadius={0}
-                        _hover={{ bg: 'whiteAlpha.100' }}
+                        transition="all 0.2s ease-in-out"
                     >
                         <Stack
                             direction={{ base: 'column', sm: 'row' }}
-                            gap={{ base: 0, sm: 2 }}
+                            gap={{ base: 1, sm: 2 }}
+                            align="center"
                         >
-                            <Box>{e}</Box>
-                            <Box>{label}</Box>
+                            <Box fontSize="lg">{e}</Box>
+                            <Box
+                                fontWeight={
+                                    activeTab === value ? 'semibold' : 'normal'
+                                }
+                            >
+                                {label}
+                            </Box>
                         </Stack>
                     </Button>
                 ))}
             </Stack>
-            <Box>{createElement(activeComponent)}</Box>
+            <Box transition="all 0.2s ease-in-out">
+                {createElement(activeComponent)}
+            </Box>
         </Box>
     );
 };
