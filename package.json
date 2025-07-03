@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
         "lint": "biome lint --write ./src",
@@ -21,23 +21,27 @@
         "@chakra-ui/icons": "2.1.1",
         "@chakra-ui/react": "3.21.1",
         "@emotion/react": "11.14.0",
-        "next": "14.2.5",
+        "next": "15.3.4",
         "next-themes": "^0.4.6",
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
+        "react": "19.1.0",
+        "react-dom": "19.1.0",
         "react-icons": "^5.5.0"
     },
     "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@types/node": "22.2.0",
-        "@types/react": "18.3.3",
-        "@types/react-dom": "18.3.0",
+        "@types/react": "19.1.8",
+        "@types/react-dom": "19.1.6",
         "@types/react-icons": "3.0.0",
         "eslint": "8.0.0",
-        "eslint-config-next": "14.2.5",
+        "eslint-config-next": "15.3.4",
         "husky": "9.1.4",
         "lint-staged": "15.2.8",
         "prettier": "3.3.3",
         "typescript": "5.5.4"
+    },
+    "overrides": {
+        "@types/react": "19.1.8",
+        "@types/react-dom": "19.1.6"
     }
 }
