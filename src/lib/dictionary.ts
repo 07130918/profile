@@ -56,4 +56,4 @@ export const text = {
             { title: 'To-DoリストChrome拡張機能' },
         ],
     },
-};
+} as const;

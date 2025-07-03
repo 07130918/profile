@@ -145,13 +145,7 @@ export default function Main() {
 
     return (
         <>
-            <TabContainer
-                bgGradient="to-r"
-                gradientFrom="#fff"
-                gradientTo="#adadad"
-                bgClip="text"
-                color="transparent"
-            >
+            <TabContainer bgClip="text" color="whiteAlpha.900">
                 <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
                     {t.greeting}
                 </Heading>
@@ -178,32 +172,34 @@ export default function Main() {
                         {t.work.addition}
                     </Text>
                 </Paragraph>
-                <Text>{t.current}</Text>
-                <Text>
-                    {t.travel}{' '}
-                    <Text color="black" as="span">
-                        🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
+                <Text mb={3}>{t.current}</Text>
+                <Paragraph>
+                    <Text>
+                        {t.travel}{' '}
+                        <Text color="black" as="span">
+                            🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
+                        </Text>
                     </Text>
-                </Text>
-                <Text>
-                    {t.into}{' '}
-                    <Text color="black" as="span">
-                        🛫
+                    <Text>
+                        {t.into}{' '}
+                        <Text color="black" as="span">
+                            🛫
+                        </Text>
                     </Text>
-                </Text>
-                <Text fontWeight="bold" color="whiteAlpha.600" pt={2}>
+                </Paragraph>
+                <Text fontWeight="bold" pt={2}>
                     {t.mindset}
                 </Text>
             </TabContainer>
             <Box pt={4} />
             <TabContainer>
                 <Box>
-                    <Heading fontSize="lg" bgClip="text" color="whiteAlpha.900">
+                    <Heading fontSize="lg" color="whiteAlpha.900">
                         {t.job_contact}
                     </Heading>
                     <HStack pt={2}>
                         <ExLink href={socialLink.gmail}>
-                            <Box color="white">
+                            <Box color="whiteAlpha.900">
                                 <EmailIcon />
                             </Box>
                         </ExLink>

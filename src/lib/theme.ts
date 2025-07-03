@@ -4,8 +4,12 @@ const customConfig = defineConfig({
     theme: {
         tokens: {
             fonts: {
-                heading: { value: `'Inter', sans-serif` },
-                body: { value: `'Inter', sans-serif` },
+                heading: {
+                    value: `'SF Pro JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif`,
+                },
+                body: {
+                    value: `'SF Pro JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif`,
+                },
             },
             colors: {
                 bg: {
