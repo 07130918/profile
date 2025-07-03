@@ -119,6 +119,24 @@ export default function ProfileCard() {
                             h={100}
                             w={100}
                         />
+                        <Box h={100} w={100} mt={4}>
+                            <HStack mb={1}>
+                                <Text fontSize="xl" color="whiteAlpha.900">
+                                    MBTI:
+                                </Text>
+                                <Text fontSize="xl" color="#88619a">
+                                    ENTP
+                                </Text>
+                            </HStack>
+                            <Image
+                                src="images/entp.webp"
+                                alt="ENTP Personality Type"
+                                h="100%"
+                                w="100%"
+                                borderRadius="sm"
+                                objectFit="cover"
+                            />
+                        </Box>
                     </Stack>
                 </Stack>
             </Box>

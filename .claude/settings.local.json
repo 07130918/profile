@@ -14,7 +14,11 @@
       "Bash(npx @chakra-ui/cli snippet:*)",
       "Bash(ls:*)",
       "Bash(grep:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "WebFetch(domain:*)",
+      "Bash(npm run check:*)",
+      "Bash(npm run type-check:*)",
+      "WebFetch(domain:chakra-ui.com)"
     ],
     "deny": []
   }

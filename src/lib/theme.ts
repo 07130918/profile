@@ -15,8 +15,17 @@ const customConfig = defineConfig({
                 bg: {
                     canvas: { value: '#000000' },
                 },
-                fg: {
-                    default: { value: '#ffffff' },
+            },
+            radii: {
+                lg: { value: '0.75rem' },
+                full: { value: '9999px' },
+            },
+            shadows: {
+                card: {
+                    value: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                },
+                cardHover: {
+                    value: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
                 },
             },
         },
@@ -25,9 +34,6 @@ const customConfig = defineConfig({
                 bg: {
                     DEFAULT: { value: '{colors.bg.canvas}' },
                 },
-                fg: {
-                    DEFAULT: { value: '{colors.fg.default}' },
-                },
             },
         },
     },
@@ -35,8 +41,12 @@ const customConfig = defineConfig({
         'html, body': {
             backgroundColor: 'bg',
             color: 'fg',
+            fontSmooth: 'antialiased',
+            textRendering: 'optimizeLegibility',
         },
-        // SVGアイコンの色は保持する
+        '*': {
+            transition: 'all 0.2s ease-in-out',
+        },
         svg: {
             color: 'inherit !important',
         },
