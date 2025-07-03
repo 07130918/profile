@@ -1,40 +1,55 @@
 import Main from '@/components/tab/Main';
 import Skills from '@/components/tab/Skills';
 import Support from '@/components/tab/Support';
-import {
-    Box,
-    Stack,
-    Tab,
-    TabIndicator,
-    TabList,
-    TabPanel,
-    TabPanels,
-    Tabs,
-} from '@chakra-ui/react';
+import { Box, Button, Stack } from '@chakra-ui/react';
+import { createElement, useState } from 'react';
 
 const TabCard = () => {
+    const [activeTab, setActiveTab] = useState('profile');
+
     const tabs = [
-        { label: 'Profile', e: '😎', Component: Main },
-        { label: 'Career / Skills', e: '👨‍💻', Component: Skills },
-        { label: 'Support', e: '🤝', Component: Support },
+        { label: 'Profile', e: '😎', Component: Main, value: 'profile' },
+        {
+            label: 'Career / Skills',
+            e: '👨‍💻',
+            Component: Skills,
+            value: 'skills',
+        },
+        { label: 'Support', e: '🤝', Component: Support, value: 'support' },
     ];
 
+    const activeComponent =
+        tabs.find((tab) => tab.value === activeTab)?.Component || Main;
+
     return (
-        <Tabs
-            isLazy
+        <Box
             w={{ base: '100%', md: '75%' }}
             px={{ base: 1, md: 4 }}
             py={{ base: 0, md: 4 }}
             position="relative"
-            variant="unstyled"
         >
-            <TabList fontSize={{ base: 'md', md: 'lg' }}>
-                {tabs.map(({ label, e }) => (
-                    <Tab
-                        key={label}
+            <Stack
+                direction="row"
+                gap={4}
+                mb={4}
+                borderBottom="1px solid"
+                borderColor="whiteAlpha.200"
+                pb={2}
+            >
+                {tabs.map(({ label, e, value }) => (
+                    <Button
+                        key={value}
+                        variant="ghost"
+                        onClick={() => setActiveTab(value)}
                         fontSize={{ base: 'md', md: 'lg' }}
                         py={{ base: 0, md: 3 }}
-                        overflowX="hidden"
+                        bg="transparent"
+                        color={activeTab === value ? 'white' : 'whiteAlpha.600'}
+                        borderBottom={
+                            activeTab === value ? '2px solid white' : 'none'
+                        }
+                        borderRadius={0}
+                        _hover={{ bg: 'whiteAlpha.100' }}
                     >
                         <Stack
                             direction={{ base: 'column', sm: 'row' }}
@@ -43,23 +58,11 @@ const TabCard = () => {
                             <Box>{e}</Box>
                             <Box>{label}</Box>
                         </Stack>
-                    </Tab>
+                    </Button>
                 ))}
-            </TabList>
-            <TabIndicator
-                mt="-1.5px"
-                height="2px"
-                bg="whiteAlpha.600"
-                borderRadius="1px"
-            />
-            <TabPanels>
-                {tabs.map(({ Component, label }) => (
-                    <TabPanel key={label}>
-                        <Component />
-                    </TabPanel>
-                ))}
-            </TabPanels>
-        </Tabs>
+            </Stack>
+            <Box>{createElement(activeComponent)}</Box>
+        </Box>
     );
 };
 

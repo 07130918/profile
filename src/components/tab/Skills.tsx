@@ -3,7 +3,6 @@ import {
     DynamoDBIcon,
     GCPIcon,
     JavaScriptIcon,
-    LangChainIcon,
     MySQLIcon,
     NextJsIcon,
     PythonIcon,
@@ -36,11 +35,6 @@ const techStack: TechStack = {
             name: 'Next.js',
             icon: <NextJsIcon />,
             link: serviceLink.nextjs,
-        },
-        {
-            name: 'LangChain',
-            icon: <LangChainIcon />,
-            link: serviceLink.langChain,
         },
     ],
     databases: [
@@ -86,7 +80,13 @@ const skillSets = [
 
 const Skills = () => {
     return (
-        <TabContainer bgGradient="linear(180deg, #fff, #adadad)" bgClip="text">
+        <TabContainer
+            bgGradient="to-r"
+            gradientFrom="#fff"
+            gradientTo="#adadad"
+            bgClip="text"
+            color="transparent"
+        >
             <Heading fontSize="2xl" color="#FAFAFA" mb={3}>
                 My Skills
             </Heading>

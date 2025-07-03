@@ -1,10 +1,7 @@
 'use client';
 import { LangContext } from '@/components/providers';
 import { Box, Button, HStack } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import { useContext } from 'react';
-
-const MotionBox = motion(Box);
 
 type LangType = 'en' | 'ja';
 
@@ -24,16 +21,13 @@ const Lang = () => {
     };
 
     return (
-        <MotionBox
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+        <Box
             // biome-ignore lint/a11y/useSemanticElements:
             role="region"
             aria-label="Language selector"
         >
             <HStack
-                spacing={0}
+                gap={0}
                 bg="rgba(0, 0, 0, 0.8)"
                 backdropFilter="blur(10px)"
                 borderRadius="full"
@@ -46,25 +40,19 @@ const Lang = () => {
                 minW={{ base: '120px', md: '140px' }}
                 h={{ base: '44px', md: '48px' }}
             >
-                <MotionBox
+                <Box
                     position="absolute"
                     top="4px"
                     w="calc(50% - 4px)"
                     h="calc(100% - 8px)"
-                    bgGradient="linear(135deg, #667eea 0%, #764ba2 100%)"
+                    bgGradient="to-r"
+                    gradientFrom="#667eea"
+                    gradientTo="#764ba2"
                     borderRadius="full"
                     shadow="lg"
                     zIndex={1}
-                    initial={false}
-                    animate={{
-                        left: lang === 'en' ? '4px' : 'calc(50% + 2px)',
-                    }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 500,
-                        damping: 40,
-                        duration: 0.15,
-                    }}
+                    left={lang === 'en' ? '4px' : 'calc(50% + 2px)'}
+                    transition="left 0.2s ease"
                 />
                 <Button
                     variant="ghost"
@@ -127,7 +115,7 @@ const Lang = () => {
                     JA
                 </Button>
             </HStack>
-        </MotionBox>
+        </Box>
     );
 };
 

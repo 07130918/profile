@@ -1,23 +1,13 @@
-import { ExLink, WhiteLinearText } from '@/components/ChakraExtension';
+import { ExLink } from '@/components/ChakraExtension';
 import SocialMediaLinks from '@/components/SocialMediaLinks';
 import { bmcImage, socialLink } from '@/lib/consts';
-import design from '@/lib/design';
-import {
-    Box,
-    HStack,
-    Image,
-    Stack,
-    Text,
-    VStack,
-    useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import { useSearchParams } from 'next/navigation';
 import { GrMapLocation } from 'react-icons/gr';
 
 const refList = ['linkedIn', 'job-hunting'];
 
 export default function ProfileCard() {
-    const isMobile = useBreakpointValue({ base: true, md: false });
     const searchParams = useSearchParams();
     const ref = searchParams.has('ref') ? searchParams.get('ref') : null;
     const imageNumber =
@@ -30,43 +20,49 @@ export default function ProfileCard() {
             pt={{ base: 2, md: 0 }}
             px={{ base: 2, md: 0 }}
         >
-            {isMobile ? (
-                <>
-                    <HStack spacing={4} align="start" w="100%">
-                        <Box
-                            bgGradient={design.graduation.blue}
+            <Box display={{ base: 'block', md: 'none' }}>
+                <HStack gap={4} align="start" w="100%">
+                    <Box
+                        bgGradient="to-r"
+                        gradientFrom="blue.100"
+                        gradientTo="blue.300"
+                        borderRadius="full"
+                        p={1}
+                    >
+                        <Image
+                            src={`images/me/${imageNumber}.jpg`}
+                            alt="Kota Sato"
+                            objectFit="cover"
                             borderRadius="full"
-                            p={1}
+                            w="90px"
+                            h="90px"
+                        />
+                    </Box>
+                    <VStack align="start" gap={0} pt={6}>
+                        <Text
+                            fontSize="2xl"
+                            fontWeight="bold"
+                            bgGradient="to-r"
+                            gradientFrom="#ff00cc"
+                            gradientTo="#3333cc"
+                            bgClip="text"
+                            color="transparent"
                         >
-                            <Image
-                                src={`images/me/${imageNumber}.jpg`}
-                                alt="Kota Sato"
-                                objectFit="cover"
-                                borderRadius="full"
-                                w="90px"
-                                h="90px"
-                            />
-                        </Box>
-                        <VStack align="start" spacing={0} pt={6}>
-                            <Text
-                                fontSize="2xl"
-                                fontWeight="bold"
-                                bgGradient={design.graduation.rainbow}
-                                bgClip="text"
-                            >
-                                Kota Sato
-                            </Text>
-                            <Text fontSize="md" color="gray.500">
-                                (he/him)
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <SocialMediaLinks />
-                </>
-            ) : (
+                            Kota Sato
+                        </Text>
+                        <Text fontSize="md" color="gray.500" mb={3}>
+                            (he/him)
+                        </Text>
+                    </VStack>
+                </HStack>
+                <SocialMediaLinks />
+            </Box>
+            <Box display={{ base: 'none', md: 'block' }}>
                 <Stack w="20vw">
                     <Box
-                        bgGradient={design.graduation.blue}
+                        bgGradient="to-r"
+                        gradientFrom="blue.100"
+                        gradientTo="blue.300"
                         borderRadius="full"
                         p={2}
                         w="fit-content"
@@ -83,17 +79,20 @@ export default function ProfileCard() {
                         <Text
                             fontSize="3xl"
                             fontWeight="bold"
-                            bgGradient={design.graduation.rainbow}
+                            bgGradient="to-r"
+                            gradientFrom="#ff00cc"
+                            gradientTo="#3333cc"
                             bgClip="text"
+                            color="transparent"
                         >
                             Kota Sato
                         </Text>
-                        <Text fontSize="lg" color="gray.500">
+                        <Text fontSize="lg" color="gray.500" mb={3}>
                             (he/him)
                         </Text>
-                        <HStack>
+                        <HStack color="gray.100">
                             <GrMapLocation />
-                            <WhiteLinearText>Tokyo/Japan</WhiteLinearText>
+                            <Text>Tokyo/Japan</Text>
                         </HStack>
                         <SocialMediaLinks />
                         <Box pt={2}>
@@ -122,7 +121,7 @@ export default function ProfileCard() {
                         />
                     </Stack>
                 </Stack>
-            )}
+            </Box>
         </Stack>
     );
 }

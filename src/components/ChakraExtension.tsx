@@ -1,8 +1,6 @@
-import design from '@/lib/design';
 import type { ExLinkProps } from '@/lib/types';
-import { Image } from '@chakra-ui/image';
 import type { BoxProps, LinkProps, TextProps } from '@chakra-ui/react';
-import { Box, Link, Text } from '@chakra-ui/react';
+import { Box, Image, Link, Text } from '@chakra-ui/react';
 import { AiFillChrome } from 'react-icons/ai';
 import { BiLink } from 'react-icons/bi';
 import { FaAws, FaPython, FaReact, FaVuejs } from 'react-icons/fa';
@@ -18,38 +16,72 @@ import {
 import { TbBrandNextjs } from 'react-icons/tb';
 
 export const AWSIcon = (props: any) => (
-    <FaAws size={24} color="#FF9900" {...props} />
+    <Box as="span" data-aws-icon="true" className="aws-icon" {...props}>
+        <FaAws
+            size={24}
+            style={{
+                color: "#FF9900",
+                fill: "#FF9900",
+                filter: "none"
+            }}
+        />
+    </Box>
 );
-export const ChakraIcon = (props: any) => <SiChakraui size={24} {...props} />;
-export const ChromeIcon = (props: any) => <AiFillChrome size={24} {...props} />;
+export const ChakraIcon = (props: any) => (
+    <SiChakraui size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const ChromeIcon = (props: any) => (
+    <AiFillChrome size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const DynamoDBIcon = (props: any) => (
-    <SiAmazondynamodb size={24} {...props} />
+    <SiAmazondynamodb size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
 export const GCPIcon = (props: any) => (
-    <SiGooglecloud size={24} color="#4285F4" {...props} />
+    <Box as="span" data-gcp-icon="true" className="gcp-icon" {...props}>
+        <SiGooglecloud
+            size={24}
+            style={{
+                color: "#4285F4",
+                fill: "#4285F4",
+                filter: "none"
+            }}
+        />
+    </Box>
 );
 export const JavaScriptIcon = (props: any) => (
-    <SiJavascript size={24} {...props} />
+    <SiJavascript size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const LangChainIcon = (props: any) => <BiLink size={24} {...props} />;
+export const LangChainIcon = (props: any) => (
+    <BiLink size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const LangChainImage = (props: any) => (
     <Image src="/images/langchain.png" alt="LangChain" w={5} h={5} {...props} />
 );
-export const MySQLIcon = (props: any) => <SiMysql size={24} {...props} />;
+export const MySQLIcon = (props: any) => (
+    <SiMysql size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const NextJsIcon = (props: any) => (
-    <TbBrandNextjs size={24} {...props} />
+    <TbBrandNextjs size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const PythonIcon = (props: any) => <FaPython size={24} {...props} />;
-export const ReactIcon = (props: any) => <FaReact size={24} {...props} />;
+export const PythonIcon = (props: any) => (
+    <FaPython size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const ReactIcon = (props: any) => (
+    <FaReact size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 export const TypeScriptIcon = (props: any) => (
-    <SiTypescript size={24} {...props} />
+    <SiTypescript size={24} style={{ color: "white", fill: "white" }} {...props} />
 );
-export const VueIcon = (props: any) => <FaVuejs size={24} {...props} />;
-export const VercelIcon = (props: any) => <IoLogoVercel size={24} {...props} />;
+export const VueIcon = (props: any) => (
+    <FaVuejs size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
+export const VercelIcon = (props: any) => (
+    <IoLogoVercel size={24} style={{ color: "white", fill: "white" }} {...props} />
+);
 
 export const Card = (props: BoxProps) => (
     <Box
-        boxShadow={design.boxShadow}
+        boxShadow="0px 4px 10px rgba(0, 0, 0, 0.6)"
         borderRadius="lg"
         overflow="auto"
         {...props}
@@ -73,11 +105,18 @@ export const ExLink = ({
     children,
     ...props
 }: ExLinkProps & LinkProps) => (
-    <Link href={href} isExternal {...props}>
+    <Link href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
     </Link>
 );
 
 export const WhiteLinearText = (props: TextProps) => (
-    <Text bgGradient="linear(180deg, #fff, #adadad)" bgClip="text" {...props} />
+    <Text
+        bgGradient="to-r"
+        gradientFrom="#fff"
+        gradientTo="#adadad"
+        bgClip="text"
+        color="transparent"
+        {...props}
+    />
 );

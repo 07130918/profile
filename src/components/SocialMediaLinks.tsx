@@ -1,7 +1,7 @@
 import { ExLink } from '@/components/ChakraExtension';
 import { socialLink } from '@/lib/consts';
 import { HStack, Wrap, WrapItem } from '@chakra-ui/react';
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
 
@@ -26,30 +26,26 @@ const socialMediaLinks = [
         href: socialLink.linkedIn,
         text: 'kota-sato-228364215',
     },
-    {
-        Icon: FaFacebook,
-        href: socialLink.facebook,
-        text: 'Kota-Sato',
-    },
 ];
 
 export default function SocialMediaLinks() {
     return (
-        <Wrap gap={0} spacing={1}>
+        <Wrap gap={1} py={{ base: 6, md: 0 }}>
             {socialMediaLinks.map(({ Icon, href, text }) => (
                 <WrapItem
                     key={href}
                     w={{ base: 'calc(50% - 4px)', md: '100%' }}
                 >
-                    <HStack w="100%" spacing={2}>
-                        <ExLink href={href}>
-                            <Icon color="whiteAlpha.600" />
+                    <HStack w="100%" gap={2}>
+                        <ExLink href={href} color="gray.100">
+                            <Icon />
                         </ExLink>
                         <ExLink
                             href={href}
-                            isTruncated
-                            bgGradient="linear(180deg, #fff, #adadad)"
-                            bgClip="text"
+                            textOverflow="ellipsis"
+                            overflow="hidden"
+                            whiteSpace="nowrap"
+                            color="gray.100"
                         >
                             {text}
                         </ExLink>

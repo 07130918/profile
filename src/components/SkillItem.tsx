@@ -5,13 +5,14 @@ import { ExLink } from './ChakraExtension';
 const SkillItem = ({ name, icon, link }: TechStackElement) => {
     return (
         <HStack key={name} alignItems="center" pb={[1, 1, 4]}>
-            <ExLink href={link} color="whiteAlpha.900">
-                {icon}
-            </ExLink>
+            <ExLink href={link}>{icon}</ExLink>
             <ExLink
                 href={link}
-                bgGradient="linear(180deg, #fff, #adadad)"
+                bgGradient="to-r"
+                gradientFrom="#fff"
+                gradientTo="#adadad"
                 bgClip="text"
+                color="transparent"
             >
                 {name}
             </ExLink>
