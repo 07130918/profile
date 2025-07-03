@@ -198,14 +198,7 @@ export default function Main() {
             <Box pt={4} />
             <TabContainer>
                 <Box>
-                    <Heading
-                        fontSize="xl"
-                        bgGradient="to-r"
-                        gradientFrom="#fff"
-                        gradientTo="#adadad"
-                        bgClip="text"
-                        color="transparent"
-                    >
+                    <Heading fontSize="lg" bgClip="text" color="whiteAlpha.900">
                         {t.job_contact}
                     </Heading>
                     <HStack pt={2}>
@@ -223,6 +216,7 @@ export default function Main() {
                             color="transparent"
                             fontWeight="bold"
                             textDecoration="underline"
+                            fontSize="lg"
                         >
                             tokyosato1@gmail.com
                         </ExLink>
