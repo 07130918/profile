@@ -279,7 +279,9 @@ export default function Main() {
                             direction={{ base: 'column', md: 'row' }}
                         >
                             <HStack>
-                                <BiLinkExternal color="whiteAlpha.600" />
+                                <Box color="white">
+                                    <BiLinkExternal />
+                                </Box>
                                 <ExLink
                                     href={project.link}
                                     bgGradient="to-r"
@@ -294,7 +296,9 @@ export default function Main() {
                                 </ExLink>
                             </HStack>
                             <HStack pl={{ base: 0, md: 2 }}>
-                                <FaGithub />
+                                <Box color="white">
+                                    <FaGithub />
+                                </Box>
                                 <ExLink
                                     href={project.githubLink}
                                     bgGradient="to-r"

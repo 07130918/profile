@@ -17,7 +17,8 @@
       "Bash(mkdir:*)",
       "WebFetch(domain:*)",
       "Bash(npm run check:*)",
-      "Bash(npm run type-check:*)"
+      "Bash(npm run type-check:*)",
+      "WebFetch(domain:chakra-ui.com)"
     ],
     "deny": []
   }
