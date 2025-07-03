@@ -11,7 +11,8 @@
       "Bash(rm:*)",
       "Bash(find:*)",
       "Bash(true)",
-      "Bash(npx @chakra-ui/cli snippet:*)"
+      "Bash(npx @chakra-ui/cli snippet:*)",
+      "Bash(ls:*)"
     ],
     "deny": []
   }
