@@ -3,19 +3,38 @@ import Skills from '@/components/tab/Skills';
 import Support from '@/components/tab/Support';
 import { Box, Button, Stack } from '@chakra-ui/react';
 import { createElement, useState } from 'react';
+import { GiSkills } from 'react-icons/gi';
+import { PiHandshake } from 'react-icons/pi';
+import { RxFace } from 'react-icons/rx';
 
 const TabCard = () => {
-    const [activeTab, setActiveTab] = useState('profile');
+    type Tab = 'profile' | 'skills' | 'support';
+    const [activeTab, setActiveTab] = useState<Tab>('profile');
 
-    const tabs = [
-        { label: 'Profile', e: '😎', Component: Main, value: 'profile' },
+    const tabs: {
+        label: string;
+        Icon: React.ReactNode;
+        Component: React.JSX.ElementType;
+        value: Tab;
+    }[] = [
+        {
+            label: 'Profile',
+            Icon: <RxFace />,
+            Component: Main,
+            value: 'profile',
+        },
         {
             label: 'Career / Skills',
-            e: '👨‍💻',
+            Icon: <GiSkills />,
             Component: Skills,
             value: 'skills',
         },
-        { label: 'Support', e: '🤝', Component: Support, value: 'support' },
+        {
+            label: 'Support',
+            Icon: <PiHandshake />,
+            Component: Support,
+            value: 'support',
+        },
     ];
 
     const activeComponent =
@@ -31,7 +50,7 @@ const TabCard = () => {
                 borderColor="whiteAlpha.200"
                 pb={0}
             >
-                {tabs.map(({ label, e, value }) => (
+                {tabs.map(({ label, Icon, value }) => (
                     <Button
                         key={value}
                         variant="ghost"
@@ -53,7 +72,7 @@ const TabCard = () => {
                             gap={{ base: 1, sm: 2 }}
                             align="center"
                         >
-                            <Box fontSize="lg">{e}</Box>
+                            <Box>{Icon}</Box>
                             <Box
                                 fontWeight={
                                     activeTab === value ? 'semibold' : 'normal'
