@@ -13,6 +13,7 @@ import {
     VercelIcon,
     VueIcon,
 } from '@/components/ChakraExtension';
+import TypingAnimation from '@/components/TypingAnimation';
 import { LangContext } from '@/components/providers';
 import {
     bmcImage,
@@ -147,7 +148,16 @@ export default function Main() {
         <>
             <TabContainer bgClip="text" color="whiteAlpha.900">
                 <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
-                    {t.greeting}
+                    <TypingAnimation
+                        text="Hi there! I'm Kota Sato, a software developer from Tokyo."
+                        mistakes={[
+                            {
+                                position: 'Hi there! '.length,
+                                mistakeText: 'Im',
+                                correctText: "I'm",
+                            },
+                        ]}
+                    />
                 </Heading>
                 <Paragraph>
                     <Text>
