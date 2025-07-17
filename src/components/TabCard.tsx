@@ -72,7 +72,7 @@ const TabCard = () => {
                             gap={{ base: 1, sm: 2 }}
                             align="center"
                         >
-                            <Box color="pink.500" fontSize="2xl">
+                            <Box color="pink.focusRing" fontSize="2xl">
                                 {Icon}
                             </Box>
                             <Box
