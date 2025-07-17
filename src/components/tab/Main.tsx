@@ -22,7 +22,6 @@ import {
 } from '@/lib/consts';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
-import { EmailIcon } from '@chakra-ui/icons';
 import {
     Box,
     Image as ChakraImage,
@@ -39,6 +38,7 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const techStack: Record<string, TechStackElement> = {
     python: {
@@ -200,7 +200,7 @@ export default function Main() {
                     <HStack pt={2}>
                         <ExLink href={socialLink.gmail}>
                             <Box color="whiteAlpha.900">
-                                <EmailIcon />
+                                <MdEmail />
                             </Box>
                         </ExLink>
                         <ExLink
