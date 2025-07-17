@@ -1,11 +1,11 @@
-import Main from '@/components/tab/Main';
-import Skills from '@/components/tab/Skills';
-import Support from '@/components/tab/Support';
 import { Box, Button, Stack } from '@chakra-ui/react';
 import { createElement, useState } from 'react';
 import { GiSkills } from 'react-icons/gi';
 import { PiHandshake } from 'react-icons/pi';
 import { RxFace } from 'react-icons/rx';
+import Main from '@/components/tab/Main';
+import Skills from '@/components/tab/Skills';
+import Support from '@/components/tab/Support';
 
 const TabCard = () => {
     type Tab = 'profile' | 'skills' | 'support';

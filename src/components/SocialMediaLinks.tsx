@@ -1,9 +1,9 @@
-import { ExLink } from '@/components/ChakraExtension';
-import { socialLink } from '@/lib/consts';
 import { HStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
+import { ExLink } from '@/components/ChakraExtension';
+import { socialLink } from '@/lib/consts';
 
 const socialMediaLinks = [
     {

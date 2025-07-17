@@ -1,7 +1,7 @@
 'use client';
-import { LangContext } from '@/components/providers';
 import { Box, Button, HStack } from '@chakra-ui/react';
 import { useContext } from 'react';
+import { LangContext } from '@/components/providers';
 
 type LangType = 'en' | 'ja';
 
@@ -21,11 +21,7 @@ const Lang = () => {
     };
 
     return (
-        <Box
-            // biome-ignore lint/a11y/useSemanticElements:
-            role="region"
-            aria-label="Language selector"
-        >
+        <Box as="section" aria-label="Language selector">
             <HStack
                 gap={0}
                 bg="rgba(0, 0, 0, 0.8)"

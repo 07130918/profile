@@ -1,4 +1,21 @@
 import {
+    Box,
+    Image as ChakraImage,
+    Grid,
+    Heading,
+    HStack,
+    Link,
+    Stack,
+    Text,
+    Wrap,
+    WrapItem,
+} from '@chakra-ui/react';
+import Image from 'next/image';
+import { useContext } from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import {
     ChakraIcon,
     ChromeIcon,
     ExLink,
@@ -23,23 +40,6 @@ import {
 } from '@/lib/consts';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
-import {
-    Box,
-    Image as ChakraImage,
-    Grid,
-    HStack,
-    Heading,
-    Link,
-    Stack,
-    Text,
-    Wrap,
-    WrapItem,
-} from '@chakra-ui/react';
-import Image from 'next/image';
-import { useContext } from 'react';
-import { BiLinkExternal } from 'react-icons/bi';
-import { FaGithub } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
 
 const techStack: Record<string, TechStackElement> = {
     python: {

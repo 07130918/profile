@@ -1,8 +1,8 @@
 'use client';
-import { system } from '@/lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
 import type { Dispatch, SetStateAction } from 'react';
-import { Suspense, createContext, useState } from 'react';
+import { createContext, Suspense, useState } from 'react';
+import { system } from '@/lib/theme';
 
 type Lang = 'en' | 'ja';
 

@@ -1,8 +1,8 @@
 'use client';
+import { Box, Container, Stack } from '@chakra-ui/react';
 import Lang from '@/components/Lang';
 import ProfileCard from '@/components/ProfileCard';
 import TabCard from '@/components/TabCard';
-import { Box, Container, Stack } from '@chakra-ui/react';
 
 export default function Home() {
     return (
