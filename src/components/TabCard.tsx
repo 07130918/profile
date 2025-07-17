@@ -72,7 +72,9 @@ const TabCard = () => {
                             gap={{ base: 1, sm: 2 }}
                             align="center"
                         >
-                            <Box>{Icon}</Box>
+                            <Box color="pink.500" fontSize="2xl">
+                                {Icon}
+                            </Box>
                             <Box
                                 fontWeight={
                                     activeTab === value ? 'semibold' : 'normal'
