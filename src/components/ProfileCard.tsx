@@ -1,9 +1,9 @@
-import { ExLink } from '@/components/ChakraExtension';
-import SocialMediaLinks from '@/components/SocialMediaLinks';
-import { bmcImage, socialLink } from '@/lib/consts';
 import { Box, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import { useSearchParams } from 'next/navigation';
 import { GrMapLocation } from 'react-icons/gr';
+import { ExLink } from '@/components/ChakraExtension';
+import SocialMediaLinks from '@/components/SocialMediaLinks';
+import { bmcImage, socialLink } from '@/lib/consts';
 
 const refList = ['linkedIn', 'job-hunting'];
 

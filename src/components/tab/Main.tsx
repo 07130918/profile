@@ -1,4 +1,21 @@
 import {
+    Box,
+    Image as ChakraImage,
+    Grid,
+    Heading,
+    HStack,
+    Link,
+    Stack,
+    Text,
+    Wrap,
+    WrapItem,
+} from '@chakra-ui/react';
+import Image from 'next/image';
+import { useContext } from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import {
     ChakraIcon,
     ChromeIcon,
     ExLink,
@@ -14,6 +31,7 @@ import {
     VueIcon,
 } from '@/components/ChakraExtension';
 import { LangContext } from '@/components/providers';
+import TypingAnimation from '@/features/typingAnimation';
 import {
     bmcImage,
     projectsElement,
@@ -22,23 +40,6 @@ import {
 } from '@/lib/consts';
 import { text } from '@/lib/dictionary';
 import type { ProjectProps, TechStackElement } from '@/lib/types';
-import { EmailIcon } from '@chakra-ui/icons';
-import {
-    Box,
-    Image as ChakraImage,
-    Grid,
-    HStack,
-    Heading,
-    Link,
-    Stack,
-    Text,
-    Wrap,
-    WrapItem,
-} from '@chakra-ui/react';
-import Image from 'next/image';
-import { useContext } from 'react';
-import { BiLinkExternal } from 'react-icons/bi';
-import { FaGithub } from 'react-icons/fa';
 
 const techStack: Record<string, TechStackElement> = {
     python: {
@@ -147,7 +148,16 @@ export default function Main() {
         <>
             <TabContainer bgClip="text" color="whiteAlpha.900">
                 <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
-                    {t.greeting}
+                    <TypingAnimation
+                        text="Hi there! I'm Kota Sato, a software developer from Tokyo."
+                        mistakes={[
+                            {
+                                position: 'Hi there! '.length,
+                                mistakeText: 'Im',
+                                correctText: "I'm",
+                            },
+                        ]}
+                    />
                 </Heading>
                 <Paragraph>
                     <Text>
@@ -177,7 +187,7 @@ export default function Main() {
                     <Text>
                         {t.travel}{' '}
                         <Text color="black" as="span">
-                            🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭
+                            🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭 🇹🇼
                         </Text>
                     </Text>
                     <Text>
@@ -200,7 +210,7 @@ export default function Main() {
                     <HStack pt={2}>
                         <ExLink href={socialLink.gmail}>
                             <Box color="whiteAlpha.900">
-                                <EmailIcon />
+                                <MdEmail />
                             </Box>
                         </ExLink>
                         <ExLink

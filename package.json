@@ -18,30 +18,24 @@
         ]
     },
     "dependencies": {
-        "@chakra-ui/icons": "2.1.1",
-        "@chakra-ui/react": "3.21.1",
+        "@chakra-ui/react": "3.22.0",
         "@emotion/react": "11.14.0",
-        "next": "15.3.4",
-        "next-themes": "^0.4.6",
+        "next": "15.4.1",
+        "next-themes": "0.4.6",
         "react": "19.1.0",
         "react-dom": "19.1.0",
-        "react-icons": "^5.5.0"
+        "react-icons": "5.5.0"
     },
     "devDependencies": {
-        "@biomejs/biome": "1.9.4",
+        "@biomejs/biome": "2.1.1",
         "@types/node": "22.2.0",
         "@types/react": "19.1.8",
         "@types/react-dom": "19.1.6",
         "@types/react-icons": "3.0.0",
-        "eslint": "8.0.0",
-        "eslint-config-next": "15.3.4",
+        "eslint": "9.31.0",
+        "eslint-config-next": "15.4.1",
         "husky": "9.1.4",
-        "lint-staged": "15.2.8",
-        "prettier": "3.3.3",
-        "typescript": "5.5.4"
-    },
-    "overrides": {
-        "@types/react": "19.1.8",
-        "@types/react-dom": "19.1.6"
+        "lint-staged": "16.1.2",
+        "typescript": "5.8.3"
     }
 }

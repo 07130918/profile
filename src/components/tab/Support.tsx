@@ -1,7 +1,6 @@
+import { HStack, Image, Text } from '@chakra-ui/react';
 import { ExLink, TabContainer } from '@/components/ChakraExtension';
 import { bmcImage, socialLink } from '@/lib/consts';
-
-import { HStack, Image, Text } from '@chakra-ui/react';
 
 const Support = () => {
     return (

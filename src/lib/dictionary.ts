@@ -1,8 +1,6 @@
 export const text = {
     en: {
         introduction: {
-            greeting:
-                "Hi there! I'm Kota Sato, a software developer from Tokyo.",
             work: {
                 now: 'I currently work at ',
                 inc1: 'TechsPlus Inc. ',
@@ -30,7 +28,6 @@ export const text = {
     },
     ja: {
         introduction: {
-            greeting: 'こんにちは、佐藤宏太です!',
             work: {
                 now: '私は現在、',
                 inc1: 'TechsPlus株式会社',

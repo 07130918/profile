@@ -1,3 +1,4 @@
+import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import {
     AWSIcon,
     DynamoDBIcon,
@@ -12,7 +13,6 @@ import {
 import SkillItem from '@/components/SkillItem';
 import { serviceLink } from '@/lib/consts';
 import type { TechStack } from '@/lib/types';
-import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 
 const techStack: TechStack = {
     programmingLangs: [
