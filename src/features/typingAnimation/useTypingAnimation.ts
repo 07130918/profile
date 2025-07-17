@@ -1,34 +1,24 @@
-'use client';
-import { Box, Text } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import type { Mistake } from './types';
 
-interface Mistake {
-    position: number;
-    mistakeText: string;
-    correctText: string;
-}
-interface Props {
+type Step = {
+    type: 'type' | 'mistake' | 'delete' | 'correct' | 'pause';
     text: string;
-    mistakes: Mistake[];
-}
+    delay?: number;
+};
 
-const typingSpeed = 80;
-const mistakeDelay = 800;
-const deleteSpeed = 50;
+export const useTypingAnimation = (text: string, mistakes: Mistake[]) => {
+    const typingSpeed = 80;
+    const mistakeDelay = 800;
+    const deleteSpeed = 50;
 
-const TypingAnimation = ({ text, mistakes }: Props) => {
     const [displayText, setDisplayText] = useState('');
     const [isComplete, setIsComplete] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
 
     // テキストを処理してステップの配列を作成
     const createSteps = () => {
-        const steps: Array<{
-            type: 'type' | 'mistake' | 'delete' | 'correct' | 'pause';
-            text: string;
-            delay?: number;
-        }> = [];
-
+        const steps: Step[] = [];
         // ミスタイプの位置でソート
         const sortedMistakes = [...mistakes].sort(
             (a, b) => a.position - b.position,
@@ -119,23 +109,5 @@ const TypingAnimation = ({ text, mistakes }: Props) => {
         return () => clearTimeout(timer);
     }, [currentStep, steps]);
 
-    return (
-        <Box display="inline-block" position="relative">
-            <Text as="span" whiteSpace="pre-wrap">
-                {displayText}
-            </Text>
-            {!isComplete && (
-                <Text
-                    as="span"
-                    color="pink.300"
-                    fontWeight="bold"
-                    fontSize="xl"
-                >
-                    |
-                </Text>
-            )}
-        </Box>
-    );
+    return { displayText, isComplete };
 };
-
-export default TypingAnimation;

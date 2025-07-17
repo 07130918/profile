@@ -13,8 +13,8 @@ import {
     VercelIcon,
     VueIcon,
 } from '@/components/ChakraExtension';
-import TypingAnimation from '@/components/TypingAnimation';
 import { LangContext } from '@/components/providers';
+import TypingAnimation from '@/features/typingAnimation';
 import {
     bmcImage,
     projectsElement,
