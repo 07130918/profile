@@ -34,7 +34,7 @@
         "@types/react-icons": "3.0.0",
         "eslint": "9.31.0",
         "eslint-config-next": "15.4.1",
-        "husky": "9.1.4",
+        "husky": "9.1.7",
         "lint-staged": "16.1.2",
         "typescript": "5.8.3"
     }
