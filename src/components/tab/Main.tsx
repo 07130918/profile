@@ -288,21 +288,23 @@ export default function Main() {
                                     {project.externalLinkText}
                                 </ExLink>
                             </HStack>
-                            <HStack pl={{ base: 0, md: 2 }}>
-                                <Box color="white">
-                                    <FaGithub />
-                                </Box>
-                                <ExLink
-                                    href={project.githubLink}
-                                    bgGradient="to-r"
-                                    gradientFrom="#fff"
-                                    gradientTo="#adadad"
-                                    bgClip="text"
-                                    color="transparent"
-                                >
-                                    {project.githubRepoName}
-                                </ExLink>
-                            </HStack>
+                            {project.githubLink && project.githubRepoName && (
+                                <HStack pl={{ base: 0, md: 2 }}>
+                                    <Box color="white">
+                                        <FaGithub />
+                                    </Box>
+                                    <ExLink
+                                        href={project.githubLink}
+                                        bgGradient="to-r"
+                                        gradientFrom="#fff"
+                                        gradientTo="#adadad"
+                                        bgClip="text"
+                                        color="transparent"
+                                    >
+                                        {project.githubRepoName}
+                                    </ExLink>
+                                </HStack>
+                            )}
                         </Stack>
                         <Wrap pt={2}>
                             {project.techStacks.map((techStack) => (

@@ -47,8 +47,6 @@ export const projectsElement: ProjectsElementProps = {
     nashForge: {
         link: 'https://poker.k0ta.dev/' as const,
         externalLinkText: 'NashForge' as const,
-        githubLink: 'https://github.com/07130918/NashForge' as const,
-        githubRepoName: 'NashForge' as const,
     } as const,
     scribbles: {
         link: 'https://chrome.google.com/webstore/detail/scribbles/kjbdhcdgdcipnifdhnpldjibglpjnjib?hl=ja&authuser=0' as const,
