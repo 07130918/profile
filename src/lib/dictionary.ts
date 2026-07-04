@@ -7,7 +7,7 @@ export const text = {
                 and: 'and ',
                 inc2: 'AICE Inc.',
                 addition:
-                    ', building learning-support web applications used by thousands of people.',
+                    ', building web applications and APIs used by thousands of people.',
             },
             current:
                 'I enjoy turning rough ideas into products people can actually use. At work and in side projects, I focus on shaping ambiguous problems into simple interfaces and reliable systems.',
@@ -33,7 +33,7 @@ export const text = {
                 and: 'と',
                 inc2: 'AICE株式会社',
                 addition:
-                    'で、数千人が使う学習支援Webアプリケーションを開発しています。',
+                    'で、数千人が使うWebアプリケーション, APIを開発しています。',
             },
             current:
                 'ゼロから何かを作り上げるのが好きです。仕事でも個人開発でも、まだ曖昧な課題を整理し、使う人に届くシンプルなUIと信頼できる仕組みに落とし込むことを大切にしています。',
