@@ -31,7 +31,7 @@ export default function ProfileCard() {
                     >
                         <Image
                             src={`images/me/${imageNumber}.jpg`}
-                            alt="Kota Sato"
+                            alt="Kota Ikeda"
                             objectFit="cover"
                             borderRadius="full"
                             w="90px"
@@ -48,7 +48,7 @@ export default function ProfileCard() {
                             bgClip="text"
                             color="transparent"
                         >
-                            Kota Sato
+                            Kota Ikeda
                         </Text>
                         <Text fontSize="md" color="gray.500" mb={3}>
                             (he/him)
@@ -69,7 +69,7 @@ export default function ProfileCard() {
                     >
                         <Image
                             src={`images/me/${imageNumber}.jpg`}
-                            alt="Kota Sato"
+                            alt="Kota Ikeda"
                             objectFit="cover"
                             borderRadius="full"
                             boxSize="190px"
@@ -85,7 +85,7 @@ export default function ProfileCard() {
                             bgClip="text"
                             color="transparent"
                         >
-                            Kota Sato
+                            Kota Ikeda
                         </Text>
                         <Text fontSize="lg" color="gray.500" mb={3}>
                             (he/him)

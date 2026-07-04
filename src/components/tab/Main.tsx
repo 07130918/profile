@@ -132,7 +132,7 @@ export default function Main() {
             <TabContainer bgClip="text" color="whiteAlpha.900">
                 <Heading fontSize="xl" mb={3} color="whiteAlpha.900">
                     <TypingAnimation
-                        text="Hi there! I'm Kota Sato, a software developer from Tokyo."
+                        text="Hi there! I'm Kota Ikeda, a software developer from Tokyo."
                         mistakes={[
                             {
                                 position: 'Hi there! '.length,
