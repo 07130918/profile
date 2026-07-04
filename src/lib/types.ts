@@ -21,8 +21,7 @@ export type ProjectElementProps = {
 
 export type ProjectsElementProps = {
     wordPopQuiz: ProjectElementProps;
-    emailForge: ProjectElementProps;
-    gpProofreader: ProjectElementProps;
+    nashForge: ProjectElementProps;
     scribbles: ProjectElementProps;
     toDoList: ProjectElementProps;
 };
