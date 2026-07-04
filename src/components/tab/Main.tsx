@@ -4,13 +4,11 @@ import {
     Grid,
     Heading,
     HStack,
-    Link,
     Stack,
     Text,
     Wrap,
     WrapItem,
 } from '@chakra-ui/react';
-import Image from 'next/image';
 import { useContext } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
@@ -105,6 +103,10 @@ const projects: ProjectProps[] = [
         ],
     },
     {
+        ...projectsElement.nashForge,
+        techStacks: [techStack.ts, techStack.nextjs, techStack.vercel],
+    },
+    {
         ...projectsElement.scribbles,
         techStacks: [
             techStack.ts,
@@ -112,25 +114,6 @@ const projects: ProjectProps[] = [
             techStack.python,
             techStack.chakra,
             techStack.chromeExtension,
-        ],
-    },
-    {
-        ...projectsElement.emailForge,
-        techStacks: [
-            techStack.ts,
-            techStack.nextjs,
-            techStack.chakra,
-            techStack.vercel,
-        ],
-    },
-    {
-        ...projectsElement.gpProofreader,
-        techStacks: [
-            techStack.ts,
-            techStack.nextjs,
-            techStack.chakra,
-            techStack.langChain,
-            techStack.vercel,
         ],
     },
     {
@@ -305,21 +288,23 @@ export default function Main() {
                                     {project.externalLinkText}
                                 </ExLink>
                             </HStack>
-                            <HStack pl={{ base: 0, md: 2 }}>
-                                <Box color="white">
-                                    <FaGithub />
-                                </Box>
-                                <ExLink
-                                    href={project.githubLink}
-                                    bgGradient="to-r"
-                                    gradientFrom="#fff"
-                                    gradientTo="#adadad"
-                                    bgClip="text"
-                                    color="transparent"
-                                >
-                                    {project.githubRepoName}
-                                </ExLink>
-                            </HStack>
+                            {project.githubLink && project.githubRepoName && (
+                                <HStack pl={{ base: 0, md: 2 }}>
+                                    <Box color="white">
+                                        <FaGithub />
+                                    </Box>
+                                    <ExLink
+                                        href={project.githubLink}
+                                        bgGradient="to-r"
+                                        gradientFrom="#fff"
+                                        gradientTo="#adadad"
+                                        bgClip="text"
+                                        color="transparent"
+                                    >
+                                        {project.githubRepoName}
+                                    </ExLink>
+                                </HStack>
+                            )}
                         </Stack>
                         <Wrap pt={2}>
                             {project.techStacks.map((techStack) => (
@@ -341,22 +326,6 @@ export default function Main() {
                                     </HStack>
                                 </WrapItem>
                             ))}
-                            {projects[i].githubRepoName === 'EmailForge' && (
-                                <Box pl={{ base: 0, md: 2 }}>
-                                    <Link
-                                        href="https://openai.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Image
-                                            src="/images/OpenAI.jpg"
-                                            alt="OpenAI"
-                                            width={130}
-                                            height={130}
-                                        />
-                                    </Link>
-                                </Box>
-                            )}
                         </Wrap>
                     </TabContainer>
                 ))}

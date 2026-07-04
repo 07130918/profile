@@ -7,22 +7,21 @@ export const text = {
                 and: 'and ',
                 inc2: 'AICE Inc.',
                 addition:
-                    ', building web applications used by thousands of people.',
+                    ', building web applications and APIs used by thousands of people.',
             },
             current:
-                "I'm passionate about building things from scratch! From lecture management systems to student review platforms, I've created web apps that make people's lives easier. In my personal projects, I also develop Chrome extensions. I love taking complex problems and turning them into simple, elegant solutions using TypeScript and Python.",
+                'I enjoy turning rough ideas into products people can actually use. At work and in side projects, I focus on shaping ambiguous problems into simple interfaces and reliable systems.',
             travel: 'I love traveling!',
-            into: "Recently, I've been really into learning English and playing poker.",
+            into: "Recently, I've been diving deeper into English and poker. My main side project is NashForge, a poker strategy web app where I explore product design, game logic, and practical tooling for players.",
             mindset:
-                "I'm endlessly curious and always building something. Whether it's exploring a new tech stack or working on a fun side project, I believe the best way to learn is by rolling up your sleeves and creating something awesome!",
+                "I'm curious, hands-on, and happiest when I'm learning by building. Whether it's a new technical challenge or a small product idea, I like moving from prototype to something polished enough to share.",
             job_contact:
                 'For business inquiries, feel free to reach out via X (Twitter) DM or email below!',
         },
         deployments: [
             { title: 'English Vocabulary Quiz Web App' },
+            { title: 'Poker Strategy Web App' },
             { title: 'Notepad Chrome Extension' },
-            { title: 'Email Body Generator Web App' },
-            { title: 'English Proofreading Web App' },
             { title: 'To-Do List Chrome Extension' },
         ],
     },
@@ -34,22 +33,21 @@ export const text = {
                 and: 'と',
                 inc2: 'AICE株式会社',
                 addition:
-                    'で、数千人が使うWebアプリケーションを開発しています。',
+                    'で、数千人が使うWebアプリケーション, APIを開発しています。',
             },
             current:
-                'ゼロから何かを作り上げるのが大好きです! 講師管理システムから学生向けレビューサイトまで、人々の生活を便利にするWebアプリを作ってきました。個人開発では、Chrome拡張機能なども作っています。TypeScriptやPythonを使って複雑な問題をシンプルで美しいソリューションに変えるのが得意です。',
+                'ゼロから何かを作り上げるのが好きです。仕事でも個人開発でも、まだ曖昧な課題を整理し、使う人に届くシンプルなUIと信頼できる仕組みに落とし込むことを大切にしています。',
             travel: '旅行が大好きです!',
-            into: '最近は英語とポーカーにハマっています。',
+            into: '最近は英語とポーカーにハマっています。個人開発ではNashForgeを中心に、ポーカー戦略を扱うWebアプリとして、プロダクト設計・ゲームロジック・プレイヤー向けツール作りを試しています。',
             mindset:
-                '好奇心旺盛で、常に何かを作り続けています。新しい技術スタックでも面白いサイドプロジェクトでも、手を動かしてものを作るのが一番の学習方法だと思っています！',
+                '好奇心旺盛で、手を動かしながら学ぶのが好きです。新しい技術でも小さなプロダクト案でも、まず試作し、公開できる品質まで磨き込む過程を楽しんでいます。',
             job_contact:
                 'お仕事依頼はX(Twitter)のDMか以下のメールアドレスまでお願いします!',
         },
         deployments: [
             { title: '英単語クイズwebアプリ' },
+            { title: 'ポーカー戦略webアプリ' },
             { title: 'メモ帳Chrome拡張機能' },
-            { title: 'Eメール本文生成webアプリ' },
-            { title: '英文校正webアプリ' },
             { title: 'To-DoリストChrome拡張機能' },
         ],
     },

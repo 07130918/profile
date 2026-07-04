@@ -3,9 +3,7 @@ import {
     AWSIcon,
     DynamoDBIcon,
     GCPIcon,
-    JavaScriptIcon,
     MySQLIcon,
-    NextJsIcon,
     PythonIcon,
     TabContainer,
     TypeScriptIcon,
@@ -25,16 +23,6 @@ const techStack: TechStack = {
             name: 'TypeScript',
             icon: <TypeScriptIcon />,
             link: serviceLink.ts,
-        },
-        {
-            name: 'JavaScript',
-            icon: <JavaScriptIcon />,
-            link: serviceLink.js,
-        },
-        {
-            name: 'Next.js',
-            icon: <NextJsIcon />,
-            link: serviceLink.nextjs,
         },
     ],
     databases: [

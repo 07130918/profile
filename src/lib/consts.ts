@@ -44,18 +44,9 @@ export const projectsElement: ProjectsElementProps = {
         githubLink: 'https://github.com/07130918/word-pop-quiz' as const,
         githubRepoName: 'word-pop-quiz' as const,
     } as const,
-    emailForge: {
-        link: 'https://everybody-can-make-emails-easily.vercel.app/' as const,
-        externalLinkText: 'EMail Forge' as const,
-        githubLink: 'https://github.com/07130918/EmailForge' as const,
-        githubRepoName: 'EmailForge' as const,
-    } as const,
-    gpProofreader: {
-        link: 'https://gp-proofreader.vercel.app/' as const,
-        externalLinkText: 'GP-proofreader' as const,
-        githubLink:
-            'https://github.com/07130918/LLM-Playground/tree/main/proofread-web-app' as const,
-        githubRepoName: 'LLM-Playground' as const,
+    nashForge: {
+        link: 'https://poker.k0ta.dev/' as const,
+        externalLinkText: 'NashForge' as const,
     } as const,
     scribbles: {
         link: 'https://chrome.google.com/webstore/detail/scribbles/kjbdhcdgdcipnifdhnpldjibglpjnjib?hl=ja&authuser=0' as const,
