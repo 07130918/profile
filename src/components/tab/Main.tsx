@@ -170,7 +170,7 @@ export default function Main() {
                     <Text>
                         {t.travel}{' '}
                         <Text color="black" as="span">
-                            🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭 🇹🇼
+                            🇯🇵 🇬🇧 🇻🇳 🇸🇬 🇦🇺 🇵🇭 🇳🇿 🇭🇰 🇲🇴 🇮🇹 🇻🇦 🇰🇷 🇹🇭 🇹🇼 🇮🇩
                         </Text>
                     </Text>
                     <Text>
