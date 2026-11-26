@@ -1,0 +1,31 @@
+# Kota Ikeda — Software Engineer Portfolio
+
+> Tokyo-based Software Engineer specializing in full-stack web applications, APIs, and end-to-end product engineering.
+
+- Website: https://profile.k0ta.dev
+- Email: tokyosato1@gmail.com
+- GitHub: https://github.com/07130918
+- X (Twitter): https://x.com/tech_guy_kay
+- LinkedIn: https://www.linkedin.com/in/kota-sato-228364215/
+
+## Current Experience
+
+- **TechsPlus Inc.** (https://techsplus.co.jp/): Developing production web applications and APIs used by thousands of users.
+- **AICE Inc.** (https://aice.co.jp/): Developing full-stack web applications and backend APIs.
+
+## Featured Projects
+
+- **NashForge** (https://poker.k0ta.dev/ | Case Study: https://profile.k0ta.dev/projects/nashforge): GTO (Game Theory Optimal) poker strategy trainer based on Nash Equilibrium, built with TypeScript, Next.js App Router, Chakra UI, Clerk, PWA, and Vercel.
+- **Agents** (https://github.com/07130918/Agents): Global agent instructions, skills, and shared workflows for Codex and Claude Code.
+- **Word Pop Quiz** (https://word-pop-quiz.vercel.app/): English vocabulary quiz web application (TypeScript, Next.js, Chakra UI, Vercel).
+- **Scribbles** (https://chromewebstore.google.com/detail/scribbles/kjbdhcdgdcipnifdhnpldjibglpjnjib): Notepad Chrome extension (TypeScript, React, Python, Chakra UI).
+- **Simple To-Do List** (https://chromewebstore.google.com/detail/to-do-list/chaiaabmmjdihkcjlpmbadcdmefaljib): Minimal To-Do Chrome extension (Vue.js, JavaScript).
+
+## Core Skills & Certifications
+
+- Frontend: TypeScript, React, Next.js, Chakra UI, Vue.js, Chrome Extensions
+- Backend & APIs: Python, TypeScript, REST APIs, Clerk
+- Database & Cloud: AWS, GCP, MySQL, DynamoDB, Vercel
+- AI & Developer Tooling: Claude Code / Codex workflows, LLM Integration, Biome, GitHub Actions
+- Certification: AWS Certified Solutions Architect – Associate
+- Languages: Japanese (Native), English (Working)

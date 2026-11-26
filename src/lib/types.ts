@@ -1,36 +1,61 @@
-import type { JSX, ReactNode } from 'react';
+export type Lang = 'en' | 'ja';
 
-export type TechStackElement = {
-    name: string;
-    icon: JSX.Element;
-    link: string;
-};
+export type LocalizedText = Readonly<Record<Lang, string>>;
 
-export type TechStack = {
-    programmingLangs: TechStackElement[];
-    databases: TechStackElement[];
-    cloudPlatforms: TechStackElement[];
-};
+export type LocalizedList = Readonly<Record<Lang, readonly string[]>>;
 
-export type ProjectElementProps = {
-    link: string;
-    externalLinkText: string;
-    githubLink?: string;
-    githubRepoName?: string;
-};
+export type ProjectCategory =
+    | 'web-app'
+    | 'developer-tools'
+    | 'chrome-extension';
 
-export type ProjectsElementProps = {
-    wordPopQuiz: ProjectElementProps;
-    nashForge: ProjectElementProps;
-    scribbles: ProjectElementProps;
-    toDoList: ProjectElementProps;
-};
-
-export interface ProjectProps extends ProjectElementProps {
-    techStacks: TechStackElement[];
+export interface ProjectItem {
+    readonly slug: string;
+    readonly name: string;
+    readonly featured: boolean;
+    readonly category: ProjectCategory;
+    readonly categoryLabel: LocalizedText;
+    readonly status: LocalizedText;
+    readonly tagline: LocalizedText;
+    readonly summary: LocalizedText;
+    readonly problem: LocalizedText;
+    readonly architecture: LocalizedText;
+    readonly highlights: LocalizedList;
+    readonly techStack: readonly string[];
+    readonly liveUrl?: string;
+    readonly githubUrl?: string;
+    readonly githubRepoName?: string;
 }
 
-export type ExLinkProps = {
-    href: string;
-    children: string | ReactNode;
-};
+export interface ExperienceItem {
+    readonly id: string;
+    readonly company: LocalizedText;
+    readonly url: string;
+    readonly role: LocalizedText;
+    readonly period: LocalizedText;
+    readonly summary: LocalizedText;
+    readonly highlights: LocalizedList;
+    readonly techStack: readonly string[];
+}
+
+export interface SkillGroup {
+    readonly id: string;
+    readonly title: LocalizedText;
+    readonly description: LocalizedText;
+    readonly skills: readonly string[];
+}
+
+export interface CertificationItem {
+    readonly id: string;
+    readonly name: string;
+    readonly issuer: string;
+    readonly badgeSrc: string;
+    readonly badgeAlt: string;
+    readonly summary: LocalizedText;
+}
+
+export interface CountryVisit {
+    readonly code: string;
+    readonly flag: string;
+    readonly name: LocalizedText;
+}
