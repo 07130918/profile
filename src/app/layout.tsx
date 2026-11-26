@@ -1,25 +1,15 @@
 import type { Metadata, Viewport } from 'next';
-import {
-    JetBrains_Mono,
-    Noto_Sans_JP,
-    Plus_Jakarta_Sans,
-} from 'next/font/google';
+import { JetBrains_Mono, Noto_Sans_JP } from 'next/font/google';
 import CommandPalette from '@/components/CommandPalette';
 import { Providers } from '@/components/providers';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import { PROFILE, SITE_URL } from '@/lib/profile-data';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-    subsets: ['latin'],
-    variable: '--font-sans',
-    display: 'swap',
-});
-
 const notoSansJp = Noto_Sans_JP({
     subsets: ['latin'],
-    weight: ['400', '500', '700'],
-    variable: '--font-jp',
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-sans',
     display: 'swap',
 });
 
@@ -129,7 +119,7 @@ export default function RootLayout({
         <html
             lang="en"
             suppressHydrationWarning
-            className={`${plusJakartaSans.variable} ${notoSansJp.variable} ${jetbrainsMono.variable}`}
+            className={`${notoSansJp.variable} ${jetbrainsMono.variable}`}
         >
             <body>
                 <script

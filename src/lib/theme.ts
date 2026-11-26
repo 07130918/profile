@@ -5,10 +5,10 @@ const customConfig = defineConfig({
         tokens: {
             fonts: {
                 heading: {
-                    value: `var(--font-sans), var(--font-jp), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
+                    value: `var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
                 },
                 body: {
-                    value: `var(--font-sans), var(--font-jp), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
+                    value: `var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
                 },
                 mono: {
                     value: `var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`,
