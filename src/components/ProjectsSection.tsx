@@ -78,19 +78,7 @@ export default function ProjectsSection() {
                         borderRadius="card"
                         p={{ base: 5, md: 8 }}
                         boxShadow="card"
-                        position="relative"
-                        overflow="hidden"
                     >
-                        <Box
-                            aria-hidden="true"
-                            position="absolute"
-                            top={0}
-                            left={0}
-                            right={0}
-                            h="2px"
-                            bg="accent.primary"
-                        />
-
                         <Grid
                             templateColumns={{
                                 base: '1fr',
